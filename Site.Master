@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Site.master.cs" Inherits="WineMan.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/jquery-ui.css" rel="stylesheet"/>
+
+    <script type="text/javascript" language="javascript" src='<%=ResolveUrl("~/JQGridReq/jquery-1.9.0.min.js") %>' ></script>
+    <script type="text/javascript" language="javascript" src='<%=ResolveUrl("~/JQGridReq/jquery.jqGrid.js") %>' ></script>
+    <script type="text/javascript" language="javascript" src='<%=ResolveUrl("~/JQGridReq/grid.locale-en.js") %>' ></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <asp:Panel ID="Panel1" runat="server">
+                <h1>
+                    WineMan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label_Today" runat="server" Text="Label"></asp:Label>
+                </h1>
+                </asp:Panel>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                        ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/" />
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink" id="MainMenu">
+
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal" RenderingMode="Default">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/Customers/Customers.aspx" Text="Customers" />
+                        <asp:MenuItem Text="Transactions" >
+                            <asp:MenuItem NavigateUrl="~/Transactions/AddTransaction.aspx" Text="New" />
+                            <asp:MenuItem NavigateUrl="~/Transactions/Transactions.aspx" Text="View all" />
+                         </asp:MenuItem>
+                        <asp:MenuItem Text="Start the Day" >
+                            <asp:MenuItem NavigateUrl="~/Transactions/RendezVous.aspx" Text="Bottling Stations" />
+                            <asp:MenuItem NavigateUrl="~/Work/WorkToComplete_Print.aspx?mode=start" Text="Print Work To Do Today" />
+                         </asp:MenuItem>
+                        <asp:MenuItem Text="Close the Day" >
+                            <asp:MenuItem NavigateUrl="~/Work/WorkToComplete.aspx?mode=close" Text="Transactions Steps To complete" />
+                         </asp:MenuItem>
+                        <asp:MenuItem Text="Admin" >
+                            <asp:MenuItem NavigateUrl="~/Admin/holidays.aspx" Text="Holidays" />
+                            <asp:MenuItem Text="Wine Kinds Manager >>" >
+                                <asp:MenuItem NavigateUrl="~/Admin/WineBrandManager.aspx" Text="Wine Brands" />
+                                <asp:MenuItem NavigateUrl="~/Admin/WineTypesManager.aspx" Text="Wine Types" />
+                                <asp:MenuItem NavigateUrl="~/Admin/WineCategoriesManager.aspx" Text="Wine Categories" />
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/todo.aspx" Text="Settings" />
+                            <asp:MenuItem NavigateUrl="~/todo.aspx" Text="Backup" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                         </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main" id="MainContent">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>
