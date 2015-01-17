@@ -1,25 +1,29 @@
-﻿
-Time
-------
-7 jours
-28 sept - 8h
-1 oct -2h
-2 oct -3h
-4 oct -5h
-5 oct -3h
-23 oct - 3h
-
-TODO:
+﻿TODO:
 =============
 * Be able to complete a transaction
+* code de produit
+    - admin peut en creer (no and color)
+    - ajout a la transaction
+* pouvoir reseter une date de depart sur une transaction STEP 
+* showall completed is buggy
+* bouton mal place dans transaction
+* db pour les symboles
+* setting: heures d'ouverture pour les jours
+* rapport show the print dialog
+* menu: WineWork - tx + tx steps
+* menu: Bottling - rendez vous
+* adda app name and icon
+* Add location in transaction when doing filtration
+* ajouter case remarque dans tx and afficher dans le rapport
+* Date: MMM/dd/yyyy
+*
 
-
+- add a red button when the tx is dirty
 - send an email with the transaction (and add pub)
 - Admin:
     - only for adminitrator
 - Ajouter tous les champs a une transaction 
     location
-*- pouvoir reseter une date de depart sur une transaction en retard
 - etre capable de changer les dates
 - faire un ecran d'operations pour une transaciton
 
@@ -27,28 +31,10 @@ TODO:
 - lock db
 
 
-Programming tasks
------------------
-- add a red button when the tx is dirty
-
 Questions
 ============
-- est ce qu'on devrait permerttre de changer une categorie?  un type de vin peux avoir differente recette?
-- qu'est ce qui termine une transaction? automatic ou manuel?  maintenant c'est manuel et il faut faire de quoi
 
-- Est ce que le la levure commmence la date de la transaction ou le lendemain?
-- la localisation d'une transaction est setté ou?
-- client avec adresse au etats unis? ou autre pays?
-- la feuille de transaction faut elle etre bilingue?
-- quel est la liste des symbole et les couleurs?
-- feuille de transaction
-    - feuille de transaction bas gauche : c'est vide?
-    - c'est quoi la category du produit sur la feuille de transaction?
-    - removal date?
-    - heure de sortie? ce n'est pas l'heure du rendez vous?
-- what date format you prefer?
-- location?  quel genre de champs et qui va le setter?
-- Quel est la liste des symboles
+
 
 TEST:
 --------------------------
