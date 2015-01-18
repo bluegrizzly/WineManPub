@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `wine_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `wine_types` (
-  `id` int(11) NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `brand_id` int(11) DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
   `active` bit(1) DEFAULT b'1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `wine_types` (
 
 LOCK TABLES `wine_types` WRITE;
 /*!40000 ALTER TABLE `wine_types` DISABLE KEYS */;
-INSERT INTO `wine_types` VALUES (1,'Sauvignon Blanc',1,1,''),(2,'Barolo',2,13,''),(3,'Cabernet-Sauvignon',3,32,''),(4,'Cabernet-Sauvignon/Merlot',2,32,''),(5,'Chianti',3,51,'');
+INSERT INTO `wine_types` VALUES (1,'Sauvignon Blanc',1,1,''),(2,'Barolo',2,13,''),(3,'Cabernet-Sauvignon',3,32,''),(4,'Cabernet-Sauvignon/Merlot',2,32,''),(5,'Chianti',3,51,''),(6,'sdfsd',1,1,'');
 /*!40000 ALTER TABLE `wine_types` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-11 12:46:27
+-- Dump completed on 2015-01-18 17:19:20

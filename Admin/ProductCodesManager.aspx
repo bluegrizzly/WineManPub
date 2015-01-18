@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WineBrandManager.aspx.cs" Inherits="WineMan.Admin.WineBrandManager" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductCodesManager.aspx.cs" Inherits="WineMan.Admin.ProductCodeManager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-       Wine Brand Manager
+       Product Codes Manager
     </h2>
 
     <table class="auto-style1">
@@ -18,7 +18,21 @@
         </tr>
         <tr>
             <td valign="top" align="right" >
-                &nbsp;</td>
+                Colors:<br />
+                <asp:Panel ID="Panel2" runat="server" BackColor="Brown" ForeColor="Black" HorizontalAlign="Center">
+                    Brown</asp:Panel>
+                <asp:Panel ID="Panel3" runat="server" BackColor="Green" ForeColor="Black" HorizontalAlign="Center">
+                    Green
+                </asp:Panel>
+                <asp:Panel ID="Panel4" runat="server" BackColor="Gold" ForeColor="Black" HorizontalAlign="Center">
+                    Gold
+                </asp:Panel>
+                <asp:Panel ID="Panel5" runat="server" BackColor="Red" ForeColor="Black" HorizontalAlign="Center">
+                    Red</asp:Panel>
+                <asp:Panel ID="Panel6" runat="server" BackColor="RoyalBlue" ForeColor="Black" HorizontalAlign="Center">
+                    Royal Blue
+                </asp:Panel>
+            </td>
             <td valign="top">
                 &nbsp;</td>
         </tr>
@@ -36,18 +50,20 @@
 
     <script type="text/javascript">
         jQuery("#jQGridDemo").jqGrid({
-            url: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=wine_brands") %>',
+            url: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=product_codes&explicitsetid=true") %>',
             datatype: "json",
             ajaxSelectOptions: { cache: false },
-            colNames: ['Id', 'Name', 'Active'],
+            colNames: ['Id', 'Name', 'Color'],
             colModel: [
-                        { name: 'id', index: 'id', width: 20, stype: 'text', sortable: true, sorttype: 'int', editable: false, hidden:false},
+                        { name: 'id', index: 'id', width: 30, stype: 'int', sortable: true, sorttype: 'int', editable: true},
                         { name: 'name', index: 'name', width: 200, stype: 'text', sortable: true, editable: true },
-                        {
-                            name: 'active', width: 50, index: 'active',
+                        { name: 'color', index: 'color', width: 200,
+                            sortable: true,
+                            stype: 'select',
+                            align: 'center',
                             editable: true,
-                            edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
-                            formatter: "checkbox", formatoptions: { disabled: true }
+                            edittype: 'select',
+                            formatter: 'select', editoptions: { value: "Brown:Brown;Green:Green;Gold:Gold;Red:Red;RoyalBlue:RoyalBlue" }
                         }],
             rowNum: 10,
             height: 250,
@@ -61,7 +77,7 @@
             viewrecords: true,
             sortorder: 'asc',
             caption: "Wine Brands",
-            editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=wine_brands") %>'
+            editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=product_codes&explicitsetid=true") %>'
         });
 
         $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',

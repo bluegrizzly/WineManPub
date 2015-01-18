@@ -38,7 +38,6 @@
             width: 39px;
         }
         .auto-style22 {
-            width: 140px;
         }
     .auto-style23 {
         width: 121px;
@@ -145,7 +144,7 @@
 
         <asp:Panel ID="Panel2" runat="server" BorderWidth="2" Width="400" Height="300">
             
-            <table style="width:100%;" cellspacing="3">
+            <table style="width:100%; height: 275px;" cellspacing="3">
             <tr>
                 <td align="left" class="auto-style22"><h3>&nbsp;2. Choose Wine</h3></td>
 
@@ -183,6 +182,26 @@
                         <asp:Label ID="Label_Price" runat="server" Text="0"></asp:Label>
                 </td>
             </tr>
+
+                <tr>
+                    <td class="auto-style4" colspan="2" style="background-color: #000080"></td>
+                </tr>
+                <tr>
+                    <td align="center" class="auto-style22" colspan="2">Location:
+                        <asp:TextBox ID="TextBox_Location" runat="server" BackColor="#E1E8F0" Width="47px" AutoPostBack="True"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" class="auto-style22" colspan="2">Product Code:
+                        <asp:DropDownList ID="DropDownList_ProductCode" runat="server" BackColor="#E1E8F0" AutoPostBack="True">
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="auto-style22" colspan="2">Comments<br />
+                        <asp:TextBox ID="TextBox_Comment" runat="server" BackColor="#E1E8F0" Font-Size="Small" Height="140%" TextMode="MultiLine" Width="374px" AutoPostBack="True"></asp:TextBox>
+                    </td>
+                </tr>
 
             </table>
             </asp:Panel>
@@ -249,7 +268,7 @@
                         <td class="auto-style23" colspan="2">
                             <p>
                                 Transaction ID:
-                                <asp:Label ID="Label_TransactionID" runat="server" DefaultValue="0" Name="TxID" Text="Label" Font-Size="Large" style="font-weight: 700"></asp:Label>
+                                <asp:Label ID="Label_TransactionID" runat="server" DefaultValue="0" Name="TxID" Text="Label" Font-Size="Large" style="font-weight: 700" ForeColor="Black"></asp:Label>
                                 <br />
                                 <br />
                                 <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" />

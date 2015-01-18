@@ -59,14 +59,17 @@
 
                         <asp:Panel id="pnlContents" runat = "server">
                         <fieldset>
-                            <asp:Label ID="Label1" runat="server" Text="Step"></asp:Label>
-                            <asp:DropDownList ID="DropDownList_FilterStep" runat="server" AutoPostBack="True"></asp:DropDownList>
+                            <asp:Label ID="Label2" runat="server" Text="TransactionID:"></asp:Label>
+                            <asp:TextBox ID="TextBox_TxID" runat="server" Width="45px" AutoPostBack="True"></asp:TextBox>
+                            &nbsp;<asp:Button ID="Button_ClearTxID" runat="server" OnClick="Button_ClearTxID_Click" Text="X" Width="20px" />
+&nbsp;<asp:Label ID="Label1" runat="server" Text="Step"></asp:Label>
+                            <asp:DropDownList ID="DropDownList_FilterStep" runat="server" AutoPostBack="True">
+                            </asp:DropDownList>
                             &nbsp;
                             <asp:CheckBox ID="CheckBox_ShowLate" runat="server" Text="Show late work" AutoPostBack="True" Checked="True" />
                             <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show work done" AutoPostBack="True" />
                             
-                        </fieldset>
-                            <asp:Label ID="Label_SelectedDate" runat="server" Font-Names="Arial Rounded MT Bold" Font-Size="Large" Text="99 oct 2014"></asp:Label>
+                            &nbsp;</fieldset>
                             <table id="jQGridDemo"></table>
                         </asp:Panel>
                         <div id="jQGridDemoPager">
@@ -104,7 +107,9 @@
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
                 "&showlate=" + document.getElementById('<%= CheckBox_ShowLate.ClientID %>').checked +
                 "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
-                "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex,
+                "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex +
+                "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value + 
+                "&showtx=false",
             datatype: "json",
             colNames: ['id', 'TxId', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Done'],
             colModel: [
@@ -146,24 +151,6 @@
             editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>'
         });
 
-        $("#print").click(function () {
-            PrintPanel();
-        });
-
-        function PrintPanel() {
-            var panel = document.getElementById("<%=pnlContents.ClientID %>");
-             var printWindow = window.open('', '', 'height=400,width=1200');
-             printWindow.document.write('<html><head><title>DIV Contents</title>');
-             printWindow.document.write('</head><body >');
-             printWindow.document.write(panel.innerHTML);
-             printWindow.document.write('</body></html>');
-             printWindow.document.close();
-             setTimeout(function () {
-                 printWindow.print();
-             }, 500);
-             return false;
-         }
-
         $("#selectAll").click(function () {
             grid.jqGrid('resetSelection');
             var ids = grid.jqGrid('getDataIDs');
@@ -190,7 +177,7 @@
                 var jsonData = JSON.stringify(names);
                 $.ajax({
                     type: "POST",
-                    url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?operation=settodone") %>',
+                    url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?operation=settodone&showtx=false") %>',
                     data: jsonData,
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",

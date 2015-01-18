@@ -1,23 +1,27 @@
 ﻿TODO:
 =============
-* Be able to complete a transaction
-* code de produit
-    - admin peut en creer (no and color)
-    - ajout a la transaction
+Suite au meeting le 15 janvier
+------------------------------
+* Be able to complete a transaction  (DONE)
+* code de produit   (DONE)
+    - admin peut en creer (no and color)(DONE)
+    - ajout a la transaction(DONE)
+* showall completed is buggy (DONE)
+* menu: WineWork - tx + tx steps (DONE)
+* menu: Bottling - rendez vous (DONE)
+* adda app name and icon (DONE)
+* Add location in transaction when doing filtration (DONE)
 * pouvoir reseter une date de depart sur une transaction STEP 
-* showall completed is buggy
 * bouton mal place dans transaction
 * db pour les symboles
 * setting: heures d'ouverture pour les jours
 * rapport show the print dialog
-* menu: WineWork - tx + tx steps
-* menu: Bottling - rendez vous
-* adda app name and icon
-* Add location in transaction when doing filtration
 * ajouter case remarque dans tx and afficher dans le rapport
 * Date: MMM/dd/yyyy
-*
+* Mettre l'icon de microvin plus sur la transaction print
 
+Autres dans le backlog
+----------------------
 - add a red button when the tx is dirty
 - send an email with the transaction (and add pub)
 - Admin:

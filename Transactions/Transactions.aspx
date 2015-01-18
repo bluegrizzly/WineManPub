@@ -39,10 +39,12 @@
             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="21px" />
     <asp:CheckBox ID="ShowCompletedCheckBox" runat="server" Text="Show completed tx" AutoPostBack="True" />
         </fieldset>
+        <asp:Panel ID="Panel2" runat="server" ScrollBars="Auto">
             <table id="jQGridDemo">
             </table>
             <div id="jQGridDemoPager">
             </div>
+        </asp:Panel>
         </td>
     </tr>
     <tr>
@@ -61,9 +63,9 @@
                         "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
                         "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
                     datatype: "json",
-                    colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Done'],
+                    colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Done', 'Location', 'Code'],
                     colModel: [
-                                { name: 'id', index: 'id', width: 50, stype: 'text', sortable: true, sorttype: 'int' },
+                                { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
    		                        { name: 'client_id', index: 'client_id', width: 140, sortable: true },
    		                        { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
                                 { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
@@ -79,7 +81,7 @@
                                     },
                                 },
                                 {
-                                    name: 'date_bottling', index: 'date_bottling', width: 120, stype: 'text', sortable: true,
+                                    name: 'date_bottling', index: 'date_bottling', width: 110, stype: 'text', sortable: true,
                                     formatter: 'date',
                                     datefmt: 'yyyy/MM/dd',
                                     formatoptions: {
@@ -96,7 +98,9 @@
                                     editable: true,
                                     edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
                                     formatter: "checkbox", formatoptions: { disabled: true }
-                                }
+                                },
+                                { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
+                                { name: 'product_code', index: 'product_code', width: 20, sortable: true, align: 'center' }
                     ],
                     rowNum: 20,
                     height: 250,
