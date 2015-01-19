@@ -46,6 +46,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
+INSERT INTO `customers` VALUES (1,'Alain','Dessureaux','4666 mignault','Montreal','Quebec','H1M-1Y7','alain.dessureaux@gmail.com','514 885-0570','514 999-4567','',0),(2,'Johny','Dep','asdsa',NULL,'Quebec',NULL,NULL,'324234234',NULL,NULL,0),(4,'gerard','D L','12313 asjklsdfjsdlf',NULL,'Quebec',NULL,'gerard@gmail.com','514 998-0098',NULL,NULL,0),(7,'Iolanda','Colangelo','4666 mignault','Montreal','Quebec','H1m1y7','IOLANDA.COLANGELO@GMAIL.COM','324-345-4535','324-345-4535','324-345-4535',1),(8,'Robert','Lepage','',NULL,'Quebec',NULL,NULL,NULL,NULL,NULL,0),(9,'Laurent','Dessureaux','2035 st-hubert','MOntreal','Quebec','H23-3F9','laurent.dessureaux@gmail.com','514-885-9595','','',0),(10,'Leanne','Dessureaux','',NULL,'Quebec',NULL,'','514 999-0987',NULL,NULL,0),(12,'Danielle','Barcelo','',NULL,'Quebec',NULL,NULL,NULL,NULL,NULL,0),(13,'Jo','Blow','',NULL,'Quebec',NULL,NULL,NULL,NULL,NULL,0),(14,'Jonathan','coterzi','345345 rue des bobo','Pointe claire','Quebec','h3sd7d3','kljsdhflasdkhfalkjsdfh@gmail.com','514-979-3434','','',0),(15,'Rooooooooooooooodrigo','tresssssssssssssssslonggggggggHEY','',NULL,'Quebec',NULL,NULL,'',NULL,NULL,0),(16,'Charles','Dessureaux','656 askjahs',NULL,'Quebec',NULL,'','450-494-3938',NULL,NULL,0);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -312,4 +313,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-18 19:57:04
+-- Dump completed on 2015-01-18 20:11:51
