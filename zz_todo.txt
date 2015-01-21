@@ -11,14 +11,16 @@ Suite au meeting le 15 janvier
 * menu: Bottling - rendez vous (DONE)
 * adda app name and icon (DONE)
 * Add location in transaction when doing filtration (DONE)
+* setting: heures d'ouverture pour les jours (DONE)
+* ajouter case remarque dans tx and afficher dans le rapport (DONE)
 * pouvoir reseter une date de depart sur une transaction STEP 
 * bouton mal place dans transaction
 * db pour les symboles
-* setting: heures d'ouverture pour les jours
 * rapport show the print dialog
-* ajouter case remarque dans tx and afficher dans le rapport
 * Date: MMM/dd/yyyy
 * Mettre l'icon de microvin plus sur la transaction print
+
+- remove show late work in transaction steps
 
 Autres dans le backlog
 ----------------------
@@ -37,7 +39,7 @@ Autres dans le backlog
 
 Questions
 ============
-
+- Symbol et code semble donner la meme information
 
 
 TEST:

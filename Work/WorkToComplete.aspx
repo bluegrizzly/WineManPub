@@ -66,7 +66,6 @@
                             <asp:DropDownList ID="DropDownList_FilterStep" runat="server" AutoPostBack="True">
                             </asp:DropDownList>
                             &nbsp;
-                            <asp:CheckBox ID="CheckBox_ShowLate" runat="server" Text="Show late work" AutoPostBack="True" Checked="True" />
                             <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show work done" AutoPostBack="True" />
                             
                             &nbsp;</fieldset>
@@ -105,7 +104,6 @@
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
                 document.getElementById('<%= txtDate.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
-                "&showlate=" + document.getElementById('<%= CheckBox_ShowLate.ClientID %>').checked +
                 "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
                 "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex +
                 "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value + 

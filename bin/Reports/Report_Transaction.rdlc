@@ -970,6 +970,73 @@
                     </TablixCell>
                   </TablixCells>
                 </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox51">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Location:</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox51</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox52">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=First(Fields!location.Value, "DataSetTx")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox52</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
@@ -987,6 +1054,7 @@
                     <TablixMember />
                     <TablixMember />
                     <TablixMember />
+                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
@@ -994,7 +1062,7 @@
             <DataSetName>DataSetCategory</DataSetName>
             <Top>0.49417cm</Top>
             <Left>0.00001cm</Left>
-            <Height>2.95484cm</Height>
+            <Height>3.55484cm</Height>
             <Width>5.34993cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -1619,7 +1687,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox118</rd:DefaultName>
-                <Top>1.17748cm</Top>
+                <Top>1.2167cm</Top>
                 <Left>0.16446cm</Left>
                 <Height>0.6cm</Height>
                 <Width>3.47896cm</Width>
@@ -1634,7 +1702,7 @@
                 </Style>
               </Textbox>
               <Line Name="Line1">
-                <Top>2.38126cm</Top>
+                <Top>2.42048cm</Top>
                 <Left>0.16446cm</Left>
                 <Height>0cm</Height>
                 <Width>7.54543cm</Width>
@@ -1660,7 +1728,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>0.1719cm</Top>
+                <Top>0.21112cm</Top>
                 <Left>0.16446cm</Left>
                 <Height>0.6cm</Height>
                 <Width>4.56295cm</Width>
@@ -1690,7 +1758,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.1719cm</Top>
+                <Top>0.21112cm</Top>
                 <Left>4.79797cm</Left>
                 <Height>0.6cm</Height>
                 <Width>2.5cm</Width>
@@ -1708,7 +1776,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Left>4.94455cm</Left>
-            <Height>2.54883cm</Height>
+            <Height>2.58805cm</Height>
             <Width>7.84777cm</Width>
             <Style>
               <Border>
@@ -1716,10 +1784,39 @@
               </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox50">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!comments.Value, "DataSetTx")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox49</rd:DefaultName>
+            <Left>0.02335cm</Left>
+            <Height>2.56844cm</Height>
+            <Width>4.90927cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>11.35102cm</Top>
-        <Height>2.54883cm</Height>
+        <Top>11.3118cm</Top>
+        <Height>2.59785cm</Height>
         <Width>5.03635in</Width>
         <ZIndex>7</ZIndex>
         <Style>
@@ -2648,6 +2745,74 @@
                     </TablixCell>
                   </TablixCells>
                 </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox53">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Location:</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox53</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox54">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=First(Fields!location.Value, "DataSetTx")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox54</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
@@ -2665,6 +2830,7 @@
                     <TablixMember />
                     <TablixMember />
                     <TablixMember />
+                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
@@ -2672,7 +2838,7 @@
             <DataSetName>DataSetCategory</DataSetName>
             <Top>0.49417cm</Top>
             <Left>0.00001cm</Left>
-            <Height>2.95484cm</Height>
+            <Height>3.55484cm</Height>
             <Width>5.34993cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -3394,11 +3560,39 @@
               </Border>
             </Style>
           </Rectangle>
+          <Textbox Name="Textbox49">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!comments.Value, "DataSetTx")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox49</rd:DefaultName>
+            <Height>2.56844cm</Height>
+            <Width>4.90927cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>11.33141cm</Top>
         <Left>13.70943cm</Left>
-        <Height>2.54883cm</Height>
+        <Height>2.56844cm</Height>
         <Width>5.03635in</Width>
         <ZIndex>13</ZIndex>
         <Style>
@@ -3768,10 +3962,22 @@
           <DataField>done</DataField>
           <rd:TypeName>System.UInt64</rd:TypeName>
         </Field>
+        <Field Name="comments">
+          <DataField>comments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="location">
+          <DataField>location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="product_code">
+          <DataField>product_code</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetTx</rd:DataSetName>
-        <rd:SchemaPath>C:\AlainD\Dev\GitHub\WineMan\DataSetTx.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\AlainD\Dev\GitHub\WineMan\DataSets\DataSetTx.xsd</rd:SchemaPath>
         <rd:TableName>transactions</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

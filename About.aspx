@@ -20,6 +20,7 @@ Version 0.6: (xx jan 2015)
 - New Menu separation (Bottling / WineWork)
 - New page to complete transactions
 - New page icon
+- Backup Page. for manual backups (backup path is in settings)
 
 Version 0.5: (15 jan 2015)
 -----------------------

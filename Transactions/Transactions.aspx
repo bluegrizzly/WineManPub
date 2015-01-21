@@ -95,8 +95,11 @@
                                 {
                                     name: 'done', width: 30, index: 'done',
                                     align: 'center',
+                                    stype: 'checkbox',
+                                    search: true,
                                     editable: true,
-                                    edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
+                                    edittype: 'checkbox',
+                                    editoptions: { value: "0:1", defaultValue: "1" },
                                     formatter: "checkbox", formatoptions: { disabled: true }
                                 },
                                 { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },

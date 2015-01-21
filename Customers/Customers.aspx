@@ -33,14 +33,15 @@
                         {
                             name: 'language', width: 50, index: 'language',
                             align: 'center',
+                            search: true,
                             editable: true,
                             edittype:'select',
                             stype: 'select',
-                            formatter:'select', editoptions:{value:"0:English;1:French"} 
-                        }
-                    ],
+                            formatter:'select', editoptions:{value:"0:English;1:French"},
+                            searchoptions: {value:"0:English;1:French"} 
+                        }],
             rowNum: 20,
-            height: 250,
+            height: 300,
             mtype: 'GET',
             loadonce: true,
             rowList: [20, 50, 200, 500],
@@ -71,17 +72,7 @@
                        //                       dataheight: 280,
                        closeOnEscape: true,//Closes the popup on pressing escape key
                        reloadAfterSubmit: true,
-                       drag: true,
                        width: 400,
-                       beforeShowForm: function ($form) {
-                           $form.find("td.DataTD").each(function () {
-                               var html = $(this).html().trim();  // &nbsp;<span>&nbsp;</span>
-                               if (html.substr(0, 6) === "&nbsp;" && html.trim().length > 6) {
-                                   $(this).html(html.substr(6));
-                               }
-                           });
-                           $form.closest(".ui-jqdialog").find(".ui-jqdialog-titlebar-close").attr("tabindex", "-1");
-                       },
                        afterSubmit: function (response, postdata) {
                            if (response.responseText == "") {
 

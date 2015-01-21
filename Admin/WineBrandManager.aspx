@@ -51,7 +51,7 @@
                         }],
             rowNum: 10,
             height: 250,
-            width:700,
+            width:750,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,

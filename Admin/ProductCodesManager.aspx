@@ -23,15 +23,21 @@
                     Brown</asp:Panel>
                 <asp:Panel ID="Panel3" runat="server" BackColor="Green" ForeColor="Black" HorizontalAlign="Center">
                     Green
+                    <asp:Panel ID="Panel8" runat="server" BackColor="Gray" ForeColor="Black" HorizontalAlign="Center">
+                        Gray</asp:Panel>
                 </asp:Panel>
                 <asp:Panel ID="Panel4" runat="server" BackColor="Gold" ForeColor="Black" HorizontalAlign="Center">
                     Gold
+                    <asp:Panel ID="Panel9" runat="server" BackColor="Orange" ForeColor="Black" HorizontalAlign="Center">
+                        Orange</asp:Panel>
                 </asp:Panel>
                 <asp:Panel ID="Panel5" runat="server" BackColor="Red" ForeColor="Black" HorizontalAlign="Center">
                     Red</asp:Panel>
                 <asp:Panel ID="Panel6" runat="server" BackColor="RoyalBlue" ForeColor="Black" HorizontalAlign="Center">
                     Royal Blue
                 </asp:Panel>
+                <asp:Panel ID="Panel7" runat="server" BackColor="Pink" ForeColor="Black" HorizontalAlign="Center">
+                    Pink</asp:Panel>
             </td>
             <td valign="top">
                 &nbsp;</td>
@@ -63,11 +69,11 @@
                             align: 'center',
                             editable: true,
                             edittype: 'select',
-                            formatter: 'select', editoptions: { value: "Brown:Brown;Green:Green;Gold:Gold;Red:Red;RoyalBlue:RoyalBlue" }
+                            formatter: 'select', editoptions: { value: "Brown:Brown;Green:Green;Gray:Gray;Gold:Gold;Orange:Orange;Red:Red;RoyalBlue:RoyalBlue;Pink:Pink" }
                         }],
             rowNum: 10,
             height: 250,
-            width:700,
+            width:750,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,

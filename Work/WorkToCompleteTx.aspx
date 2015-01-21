@@ -100,7 +100,6 @@
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
                 document.getElementById('<%= txtDate.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
-                "&showlate=false" +
                 "&showdone=false" +
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
                 "&showtx=true",
