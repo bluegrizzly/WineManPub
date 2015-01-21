@@ -71,7 +71,6 @@
                                 <asp:MenuItem NavigateUrl="~/Admin/WineCategoriesManager.aspx" Text="Wine Categories" />
                                 <asp:MenuItem NavigateUrl="~/Admin/ProductCodesManager.aspx" Text="Product Codes" />
                             </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/todo.aspx" Text="Settings" />
                             <asp:MenuItem NavigateUrl="~/Work/DoBackup.aspx" Text="Backup" />
                             <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
                          </asp:MenuItem>

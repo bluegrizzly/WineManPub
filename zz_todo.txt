@@ -16,7 +16,7 @@ Suite au meeting le 15 janvier
 * pouvoir reseter une date de depart sur une transaction STEP 
 * bouton mal place dans transaction
 * db pour les symboles
-* rapport show the print dialog
+* Show the print dialog when printing work to complete
 * Date: MMM/dd/yyyy
 * Mettre l'icon de microvin plus sur la transaction print
 
