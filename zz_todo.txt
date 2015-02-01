@@ -1,5 +1,13 @@
 ﻿TODO:
 =============
+Commetns #1
+-----------
+- new microvinplus image
+- client sorted by last name alphabetic order (DONE)
+- New customer, use enter for next key
+- add dash to telephone number (DONE)
+- ignore caps for customer name search (DONE all DBs)
+
 Suite au meeting le 15 janvier
 ------------------------------
 * Be able to complete a transaction  (DONE)
@@ -13,14 +21,16 @@ Suite au meeting le 15 janvier
 * Add location in transaction when doing filtration (DONE)
 * setting: heures d'ouverture pour les jours (DONE)
 * ajouter case remarque dans tx and afficher dans le rapport (DONE)
-* pouvoir reseter une date de depart sur une transaction STEP 
+* pouvoir reseter une date de depart sur une transaction STEP (DONE)
 * bouton mal place dans transaction
-* db pour les symboles
+* db pour les symboles (DONE)
 * Show the print dialog when printing work to complete
-* Date: MMM/dd/yyyy
+* Date: MMM/dd/yyyy (DONE)
 * Mettre l'icon de microvin plus sur la transaction print
 
 - remove show late work in transaction steps
+- delete all trnasactionsteps when deleting a transaction
+
 
 Autres dans le backlog
 ----------------------

@@ -11,15 +11,29 @@
         Created by Alain Dessureaux<br />alain.dessureaux@gmail.com<br /> Copyright (C) 2015 AndyFire Studio. All rights reserved.
     </p>
 <p>
-        &nbsp;</p>
+        <strong>Versions</strong>:</p>
 <p>
-        Versions:</p>
-<p>
-        <asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="147px" ReadOnly="True" TextMode="MultiLine" Width="557px">
-Version 0.6: (xx jan 2015)
+        <asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="214px" ReadOnly="True" TextMode="MultiLine" Width="841px">
+Version 0.7: (1 fev 2015)
+- Customers:
+    - Customers sorted by last name alphabetic order 
+    - Add dash to telephone number automatically
+    - Ignore caps for customer name search (for all databases also)
+- Fixed messagebox bug
+- Fixed date formats to be all in MM-DD-YY
+- Transaction Page:
+    - Ability to change the data of a transaction step
+    - Modify button has been removed. 
+    - Transaction record is updated after any modifications.
+    - Validation is done on transaction modification.
+    - When the transaction step date changes, the rendez-vous date need to be updated before changing the transaction
+
+Version 0.6: (23 jan 2015)
 - New Menu separation (Bottling / WineWork)
 - New page to complete transactions
 - New page icon
+- New fields in transaction: Location, comments and Product  Code
+- New Product Code manager page (under Admin->Managers)
 - Backup Page. for manual backups (backup path is in settings)
 
 Version 0.5: (15 jan 2015)

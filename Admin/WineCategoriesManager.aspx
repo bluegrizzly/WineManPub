@@ -66,6 +66,7 @@
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
+            ignoreCase: true,
             rowList: [50, 100, 500],
             pager: '#jQGridDemoPager',
             sortname: 'id',

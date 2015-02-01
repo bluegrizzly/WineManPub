@@ -63,6 +63,14 @@
 
 <script language="javascript" type="text/javascript">
     $(function () {
+        $("#<%= TextBox_Date.ClientID %>").datepicker({
+              autoclose: true,
+              dateFormat: "M-dd-yy",
+              minDate:0
+          });
+    });
+
+      $(function () {
         $('#<%=txtLastName.ClientID%>').autocomplete({
             source: function (request, response) {
                 $.ajax({
@@ -96,7 +104,6 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
     <table style="width:100%;">
     <tr>
         <td class="auto-style1" > 
@@ -134,7 +141,7 @@
                 <div class="ui-widget" style="text-align:center" >
                       <asp:TextBox ID="txtLastName" runat="server" Width="150px" CssClass="textboxAuto"  Font-Size="12px" OnTextChanged="txtLastName_TextChanged" BackColor="#E1E8F0" AutoPostBack="True" />
                       <br />
-                      <asp:Label ID="Label1" runat="server" Font-Italic="True" Font-Size="7pt" ForeColor="#999999" Text="Type name or phone to select"></asp:Label>
+                      <asp:Label ID="Label1" runat="server" Font-Italic="True" Font-Size="7pt" ForeColor="#999999" Text="Type name, ID or phone to select"></asp:Label>
                 </div>    
                 </fieldset>
             </asp:Panel>
@@ -188,18 +195,18 @@
                 </tr>
                 <tr>
                     <td align="center" class="auto-style22" colspan="2">Location:
-                        <asp:TextBox ID="TextBox_Location" runat="server" BackColor="#E1E8F0" Width="47px" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="TextBox_Location" runat="server" BackColor="#E1E8F0" Width="47px" AutoPostBack="True" OnTextChanged="TextBox_Location_TextChanged"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td align="center" class="auto-style22" colspan="2">Product Code:
-                        <asp:DropDownList ID="DropDownList_ProductCode" runat="server" BackColor="#E1E8F0" AutoPostBack="True">
+                        <asp:DropDownList ID="DropDownList_ProductCode" runat="server" BackColor="#E1E8F0" AutoPostBack="True" OnSelectedIndexChanged="DropDownList_ProductCode_SelectedIndexChanged">
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
                     <td align="left" class="auto-style22" colspan="2">Comments<br />
-                        <asp:TextBox ID="TextBox_Comment" runat="server" BackColor="#E1E8F0" Font-Size="Small" Height="140%" TextMode="MultiLine" Width="374px" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="TextBox_Comment" runat="server" BackColor="#E1E8F0" Font-Size="Small" Height="140%" TextMode="MultiLine" Width="374px" AutoPostBack="True" OnTextChanged="TextBox_Comment_TextChanged"></asp:TextBox>
                     </td>
                 </tr>
 
@@ -273,7 +280,7 @@
                                 <br />
                                 <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" />
                                 <asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" />
-                                <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="81px" />
+                                <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="66px" Font-Size="X-Small" Height="22px" style="margin-top: 0px" />
                             </p>
                         </td>
                     </tr>
@@ -292,6 +299,12 @@
                         <td class="auto-style10" valign="top">
                             <asp:Table ID="Table_Dates" runat="server" BorderWidth="2px" CellPadding="1" CellSpacing="1" GridLines="Both" Height="62px" HorizontalAlign="Center" Width="670px">
                             </asp:Table>
+                            <asp:CheckBox ID="CheckBox_EditDates" runat="server" Text="Edit Dates" AutoPostBack="True" OnCheckedChanged="CheckBox_EditDates_CheckedChanged" />
+                            <asp:DropDownList ID="DropDownList_Steps" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="id" OnSelectedIndexChanged="DropDownList_Steps_SelectedIndexChanged" AutoPostBack="True" Visible="False">
+                            </asp:DropDownList>
+                            <asp:TextBox ID="TextBox_Date" runat="server" Width="85px" Visible="False"></asp:TextBox>
+                            <asp:Button ID="Button_ChangeDate" runat="server" Text="Change Date" OnClick="Button_ChangeDate_Click" Visible="False" />
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:winemanConnectionString %>" ProviderName="<%$ ConnectionStrings:winemanConnectionString.ProviderName %>" SelectCommand="SELECT id, name FROM steps"></asp:SqlDataSource>
                         </td>
                     </tr>
                 </table>

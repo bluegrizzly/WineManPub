@@ -135,6 +135,7 @@
             height: 250,
             mtype: 'GET',
             loadonce: true,
+            ignoreCase: true,
             rowList: [50, 200, 500],
             pager: '#jQGridDemoPager',
             sortname: 'id',

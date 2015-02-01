@@ -34,6 +34,8 @@
 <body onload="DoPrint()">
     <form id="form1" runat="server">
     <div>
+<asp:Button ID="btnPrint" runat="server" Text="Print" OnClientClick = "return PrintPanel();" Height="31px" Width="65px" />
+&nbsp;<asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" Height="31px" Width="58px" />
         <asp:Panel ID="Panel_Main" runat="server" Font-Names="Arial">
             <table class="auto-style2">
                 <tr>
@@ -56,8 +58,6 @@
             </table>
             <br />
         </asp:Panel>
-    <asp:Button ID="btnPrint" runat="server" Text="Print" OnClientClick = "return PrintPanel();" />
-        <asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" />
     </div>
     </form>
 </body>

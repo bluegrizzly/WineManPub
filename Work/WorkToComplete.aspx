@@ -35,13 +35,13 @@
       $(function () {
           $("#<%= txtDate.ClientID %>").datepicker({
               autoclose: true,
-              dateFormat: "yy-mm-dd"
+              dateFormat: "M-dd-yy"
           });
       });
       $(function () {
           $("#<%= txtDateEnd.ClientID %>").datepicker({
               autoclose: true,
-              dateFormat: "yy-mm-dd"
+              dateFormat: "M-dd-yy"
           });
       });
   </script>
@@ -138,6 +138,7 @@
             height: 250,
             mtype: 'GET',
             loadonce: true,
+            ignoreCase: true,
             rowList: [20, 50, 100],
             pager: '#jQGridDemoPager',
             sortname: 'step',

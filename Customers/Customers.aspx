@@ -27,9 +27,9 @@
                         { name: 'province', index: 'province', width: 30, editable: true },
                         { name: 'postal_code', index: 'postal_code', width: 50, editable: true },
                         { name: 'email', index: 'email', width: 100, editable: true },
-                        { name: 'telephone', index: 'telephone', width: 70, editable: true },
-                        { name: 'telephone_bur', index: 'telephone_bur', width: 70, editable: true },
-                        { name: 'telephone_fax', index: 'telephone_fax', width: 65, editable: true },
+                        { name: 'telephone', index: 'telephone', width: 78, editable: true, formatter: formatPhoneNumber },
+                        { name: 'telephone_bur', index: 'telephone_bur', width: 78, editable: true, formatter: formatPhoneNumber },
+                        { name: 'telephone_fax', index: 'telephone_fax', width: 65, editable: true, formatter: formatPhoneNumber },
                         {
                             name: 'language', width: 50, index: 'language',
                             align: 'center',
@@ -46,13 +46,18 @@
             loadonce: true,
             rowList: [20, 50, 200, 500],
             pager: '#jQGridDemoPager',
-            sortname: 'id',
+            sortname: 'last_name',
             viewrecords: true,
             sortorder: 'desc',
             caption: "Customers Details",
+            ignoreCase: true,
             editurl: '<%=ResolveUrl("~/Customers/CustomersHandler.ashx") %>'
         });
-
+        function formatPhoneNumber(cellvalue, options, rowObject) {
+            var re = new RegExp("([0-9]{3})([0-9]{3})([0-9]{3,6})", "g");
+            cellvalue = cellvalue.replace(re, "($1)-$2-$3");
+            return cellvalue;
+        }
         $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',
                    {
                        edit: true,
@@ -93,6 +98,7 @@
                        }
                    },
                    {//ADD portion
+                       closeOnEscape: true,//Closes the popup on pressing escape key
                        closeAfterAdd: true,//Closes the add window after add
                        width: 400,
                        afterSubmit: function (response, postdata) {
