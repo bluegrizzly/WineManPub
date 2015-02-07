@@ -55,8 +55,8 @@
    		                    sorttype: 'date',
    		                    datefmt: 'Y/M/d',
    		                    formatoptions: {
-   		                        srcformat: 'd/m/Y H:i:s',
-   		                        newformat: 'Y/M/d',
+   		                        srcformat: 'm/d/Y H:i:s',
+   		                        newformat: 'Y-M-d',
    		                        defaultValue: null 
    		                        },
    		                        edittype: 'text',
@@ -65,7 +65,7 @@
                                     size: 12,
                                     maxlengh: 12,
                                     dataInit: function (element) {
-                                        $(element).datepicker({ dateFormat: 'yy/mm/dd'})
+                                        $(element).datepicker({ dateFormat: 'yy-mm-dd'})
                                     }
                                 },
                                 editrules: {
@@ -184,6 +184,6 @@
             );
 
     </script>
-    Date Format: yy/mm/dd 
+     
     
 </asp:Content>

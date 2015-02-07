@@ -73,10 +73,9 @@
                                 {
                                     name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
                                     formatter: 'date',
-                                    datefmt: 'yyyy/MM/dd',
                                     formatoptions: {
-                                        srcformat: 'd/m/Y H:i:s',
-                                        newformat: 'Y/M/d',
+                                        srcformat: 'm/d/Y h:i:s',
+                                        newformat: 'Y-M-d',
                                         defaultValue: null
                                     },
                                 },
@@ -85,8 +84,8 @@
                                     formatter: 'date',
                                     datefmt: 'yyyy/MM/dd',
                                     formatoptions: {
-                                        srcformat: 'd/m/Y H:i:s',
-                                        newformat: 'Y/M/d H:i',
+                                        srcformat: 'm/d/Y h:i:s A',
+                                        newformat: 'Y-M-d H:i',
                                         defaultValue: null
                                     },
                                 },

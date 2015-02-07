@@ -1,5 +1,17 @@
 ﻿TODO:
 =============
+Comments Charles
+----------------
+- check name doublon when adding. (brand etc)
+- change bottling for Wine Ready
+- add steps in manager
+- transactiona: popup pour le customer
+- transaction step to complete : add  customer filter??
+- rapport: tous les produits faits entre 2 dates avec choix.
+- assurer qu'on ajoute pas un client qui existe deja
+- login
+- disable delete brand 
+
 Commetns #1
 -----------
 - new microvinplus image
@@ -50,7 +62,12 @@ Autres dans le backlog
 Questions
 ============
 - Symbol et code semble donner la meme information
-
+- Do you want teh bottling step to be the same as the appointement?
+- edit transaction:  allow changing name?
+- edit transation: are you sure popup.
+- what is the process of setting location. enregistrement de la localisation (1 page pour les faires tous)
+- tableau synthese de fabrication.  besoin?
+- travaux interne: tu peux utiliser un client pascal Interne
 
 TEST:
 --------------------------

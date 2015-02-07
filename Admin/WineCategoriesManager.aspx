@@ -61,15 +61,15 @@
                             formatter:'select', editoptions:{value:"W:W;R:R;X:X;F:F;RQ:RQ;B:B;S:S"} 
                         }
                         ],
-            rowNum: 50,
+            rowNum: 200,
             height: 250,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [50, 100, 500],
+            rowList: [200, 400, 600],
             pager: '#jQGridDemoPager',
-            sortname: 'id',
+            sortname: 'name',
             viewrecords: true,
             sortorder: 'asc',
             caption: "Wine Categories",

@@ -85,7 +85,7 @@
             rowList: [10, 20, 50, 100],
             pager: '#jQGridDemoPager',
             gridview: true,
-            sortname: 'date',
+            sortname: 'name',
             sortorder: 'asc',
             viewrecords: true,
             caption: "Wine Types",
