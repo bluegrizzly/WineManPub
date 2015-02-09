@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WineBrandManager.aspx.cs" Inherits="WineMan.Admin.WineBrandManager" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StepsManager.aspx.cs" Inherits="WineMan.Admin.StepsManager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-       Wine Brand Manager
+       Production Steps Manager
     </h2>
 
     <table class="auto-style1">
@@ -17,10 +17,6 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td valign="top" align="right" >
-                &nbsp;</td>
-            <td valign="top">
-                &nbsp;</td>
         </tr>
         <tr>
             <td valign="top" align="right" >
@@ -36,33 +32,42 @@
 
     <script type="text/javascript">
         jQuery("#jQGridDemo").jqGrid({
-            url: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=wine_brands") %>',
+            url: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=steps&explicitsetid=true") %>',
             datatype: "json",
             ajaxSelectOptions: { cache: false },
-            colNames: ['Id', 'Name', 'Active'],
+            colNames: ['Id', 'Name', 'Name French', 'Final Step', 'Active'],
             colModel: [
-                        { name: 'id', index: 'id', width: 20, stype: 'text', sortable: true, sorttype: 'int', editable: false, hidden:false},
+                        { name: 'id', index: 'id', width: 30, stype: 'int', sortable: true, sorttype: 'int', editable: true },
                         { name: 'name', index: 'name', width: 200, stype: 'text', sortable: true, editable: true },
+                        { name: 'name_french', index: 'name_french', width: 200, stype: 'text', sortable: true, editable: true },
+                        {
+                            name: 'final_step', width: 50, index: 'final_step',
+                            align: 'center',
+                            editable: false,
+                            edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
+                            formatter: "checkbox", formatoptions: { disabled: true }
+                        },
                         {
                             name: 'active', width: 50, index: 'active',
+                            align: 'center',
                             editable: true,
                             edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
                             formatter: "checkbox", formatoptions: { disabled: true }
                         }],
-            rowNum: 10,
-            height: 250,
-            width:750,
+            rowNum: 50,
+            height: 300,
+            width: 750,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [10, 20, 50, 100],
+            rowList: [50, 100, 200],
             pager: '#jQGridDemoPager',
             sortname: 'name',
             viewrecords: true,
             sortorder: 'asc',
             caption: "Wine Brands",
-            editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=wine_brands") %>'
+            editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=steps&explicitsetid=true") %>'
         });
 
         $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',

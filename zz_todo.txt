@@ -2,17 +2,18 @@
 =============
 Comments Charles
 ----------------
-- check name doublon when adding. (brand etc)
-- change bottling for Wine Ready
-- add steps in manager
-- transactiona: popup pour le customer
+- add steps in manager (DONE)
+- disable delete brand (DONE)
+- change bottling for Wine Ready (DONE) (NEED TO do it on the )
+- check name doublon when adding. (brand etc, customer) (DONE)
+- assurer qu'on ajoute pas un client qui existe deja (DONE)
+- add a search in customer page (DONE)
+- transaction: popup pour le customer bug (DONE)
 - transaction step to complete : add  customer filter??
 - rapport: tous les produits faits entre 2 dates avec choix.
-- assurer qu'on ajoute pas un client qui existe deja
 - login
-- disable delete brand 
 
-Commetns #1
+Comments #1
 -----------
 - new microvinplus image
 - client sorted by last name alphabetic order (DONE)

@@ -5,7 +5,14 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 327px;
+            width: 190px;
+        }
+        .auto-style3 {
+            width: 190px;
+            height: 35px;
+        }
+        .auto-style4 {
+            height: 35px;
         }
     </style>
 </asp:Content>
@@ -24,6 +31,14 @@
         <tr>
             <td>
                 <asp:TextBox ID="TextBox_Log" runat="server" Height="78px" TextMode="MultiLine" Width="425px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="auto-style3">
+                <asp:Button ID="Button_ImportCustomers" runat="server" Height="31px" OnClick="Button_ImportCustomers_Click" Text="Import Customers" Visible="False" />
+            </td>
+            <td class="auto-style4">
+                <asp:FileUpload ID="FileUpload1" runat="server" Visible="False" />
             </td>
         </tr>
     </table>

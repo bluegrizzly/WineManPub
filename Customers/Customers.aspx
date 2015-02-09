@@ -6,7 +6,12 @@
     <h2>
        Customers
     </h2>
-
+    <div style="text-align:center">
+            <asp:Label ID="Label1" runat="server" Text="Search: "></asp:Label>
+            <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True" Width="128px"></asp:TextBox>
+            <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="21px" />
+    &nbsp;<asp:Label ID="Label2" runat="server" Font-Size="X-Small" Text="(name or tel or id)"></asp:Label>
+    </div>
         <asp:Panel ID="Panel1" runat="server" ScrollBars="Horizontal" Width="100%">
     <table id="jQGridDemo">
     </table>
@@ -15,7 +20,8 @@
         </asp:Panel>
     <script type="text/javascript">
         jQuery("#jQGridDemo").jqGrid({
-            url: '<%=ResolveUrl("~/Customers/CustomersHandler.ashx") %>',
+            url: '<%=ResolveUrl("~/Customers/CustomersHandler.ashx") %>' +
+                        "?filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value,
             datatype: "json",
             colNames: ['Id', 'First Name', 'Last Name', 'Address', 'City', 'Province', 'Postal Code', 'Email', 'Tel', 'Tel Bur', 'Fax', 'Language'],
             colModel: [
@@ -25,7 +31,7 @@
                         { name: 'address', index: 'address', width: 100, editable: true },
                         { name: 'city', index: 'city', width: 80, editable: true },
                         { name: 'province', index: 'province', width: 30, editable: true },
-                        { name: 'postal_code', index: 'postal_code', width: 50, editable: true },
+                        { name: 'postal_code', index: 'postal_code', width: 50, editable: true, formatter: formatPostalCode },
                         { name: 'email', index: 'email', width: 100, editable: true },
                         { name: 'telephone', index: 'telephone', width: 78, editable: true, formatter: formatPhoneNumber },
                         { name: 'telephone_bur', index: 'telephone_bur', width: 78, editable: true, formatter: formatPhoneNumber },
@@ -57,6 +63,9 @@
             var re = new RegExp("([0-9]{3})([0-9]{3})([0-9]{3,6})", "g");
             cellvalue = cellvalue.replace(re, "($1)-$2-$3");
             return cellvalue;
+        }
+        function formatPostalCode(cellvalue, options, rowObject) {
+            return cellvalue.toUpperCase().replace("/\W/g", '').replace("/(...)/", '$1 ');
         }
         $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',
                    {
@@ -116,17 +125,16 @@
                        closeOnEscape: true,
                        closeAfterDelete: true,
                        reloadAfterSubmit: true,
-                       closeOnEscape: true,
                        drag: true,
                        afterSubmit: function (response, postdata) {
                            if (response.responseText == "") {
 
                                $("#jQGridDemo").trigger("reloadGrid", [{ current: true }]);
-                               return [false, response.responseText]
+                               return [true, response.responseText]
                            }
                            else {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')
-                               return [true, response.responseText]
+                               return [false, response.responseText]
                            }
                        },
                        delData: {

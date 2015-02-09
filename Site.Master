@@ -70,6 +70,7 @@
                                 <asp:MenuItem NavigateUrl="~/Admin/WineTypesManager.aspx" Text="Wine Types" />
                                 <asp:MenuItem NavigateUrl="~/Admin/WineCategoriesManager.aspx" Text="Wine Categories" />
                                 <asp:MenuItem NavigateUrl="~/Admin/ProductCodesManager.aspx" Text="Product Codes" />
+                                <asp:MenuItem NavigateUrl="~/Admin/StepsManager.aspx" Text="Production Steps" />
                             </asp:MenuItem>
                             <asp:MenuItem Text="Reports >>" >
                                 <asp:MenuItem NavigateUrl="~/Reports/Analysis_Transactions.aspx" Text="Transactions Analysis" />

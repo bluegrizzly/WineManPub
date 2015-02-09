@@ -114,7 +114,6 @@
                         {
                             name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
                             formatter: 'date',
-                            datefmt: 'yyyy/MM/dd',
                             formatoptions: {
                                 srcformat: 'm/d/Y h:i:s A',
                                 newformat: 'Y-M-d',

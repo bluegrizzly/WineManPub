@@ -91,7 +91,7 @@
                    {
                        edit: true,
                        add: true,
-                       del: true,
+                       del: false,
                        search: true,
                        searchtext: "Search",
                        addtext: "Add",

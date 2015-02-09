@@ -82,7 +82,6 @@
                                 {
                                     name: 'date_bottling', index: 'date_bottling', width: 110, stype: 'text', sortable: true,
                                     formatter: 'date',
-                                    datefmt: 'yyyy/MM/dd',
                                     formatoptions: {
                                         srcformat: 'm/d/Y h:i:s A',
                                         newformat: 'Y-M-d H:i',
