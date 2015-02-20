@@ -20,6 +20,7 @@ Version 0.9: (19 fev 2015)
 - Do not show the brand,type if they are not active
 - Allow deleting transactions. By doing so, all transaction steps related to the transaction will be deleted as well.
 - In Transactions page, you can now type the full name of a customer or customer ID or phone to search all his transactions.
+- Improved changind transaction step dates. We will change the ulterior dates only if the step needs to, regarding teh category recipes. A better messages now explain also what has been done.
 
 Version 0.8: (10 fev 2015)
 - New page to manage the production steps. Admin->Managers->Production Steps
