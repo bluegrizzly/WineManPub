@@ -65,8 +65,7 @@
     $(function () {
         $("#<%= TextBox_Date.ClientID %>").datepicker({
               autoclose: true,
-              dateFormat: "M-dd-yy",
-              minDate:0
+              dateFormat: "M-dd-yy"
           });
     });
 

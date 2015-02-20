@@ -110,6 +110,7 @@
                        closeOnEscape: true,//Closes the popup on pressing escape key
                        closeAfterAdd: true,//Closes the add window after add
                        width: 400,
+                       closeAfterEdit: true,
                        afterSubmit: function (response, postdata) {
                            if (response.responseText == "") {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
@@ -119,6 +120,7 @@
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
                                return [false, response.responseText]
                            }
+                           $('#jQGridDemo').autoclose;
                        }
                    },
                    {   //DELETE
@@ -126,6 +128,14 @@
                        closeAfterDelete: true,
                        reloadAfterSubmit: true,
                        drag: true,
+                       width: 400,
+                       beforeShowForm: function ($form) {
+                           var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
+                           $("td.delmsg", $form[0]).html("\nDo you really want to delete the customer:\n<b>" +
+                                 $('#jQGridDemo').jqGrid('getCell', sel_id, 'first_name') + " " +
+                                 $('#jQGridDemo').jqGrid('getCell', sel_id, 'last_name') +
+                                 "</b>?");
+                       },
                        afterSubmit: function (response, postdata) {
                            if (response.responseText == "") {
 

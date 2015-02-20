@@ -96,7 +96,7 @@
                    {
                        edit: true,
                        add: true,
-                       del: false,
+                       del: true,
                        search: true,
                        searchtext: "Search",
                        addtext: "Add",
@@ -160,11 +160,11 @@
                            if (response.responseText == "") {
 
                                $("#jQGridDemo").trigger("reloadGrid", [{ current: true }]);
-                               return [false, response.responseText]
+                               return [true, response.responseText]
                            }
                            else {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')
-                               return [true, response.responseText]
+                               return [false, response.responseText]
                            }
                        },
                        delData: {
