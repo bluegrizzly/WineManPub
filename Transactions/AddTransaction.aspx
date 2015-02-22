@@ -279,7 +279,7 @@
                                 <br />
                                 <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" />
                                 <asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" />
-                                <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="66px" Font-Size="X-Small" Height="22px" style="margin-top: 0px" />
+                                <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="66px" Font-Size="X-Small" Height="22px" style="margin-top: 0px" Visible="False" />
                             </p>
                         </td>
                     </tr>
