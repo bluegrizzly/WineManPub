@@ -32,7 +32,7 @@
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Admin login</a>
+                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
                         ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
@@ -76,8 +76,8 @@
                                 <asp:MenuItem NavigateUrl="~/Reports/Analysis_Transactions.aspx" Text="Transactions Analysis" />
                             </asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Work/DoBackup.aspx" Text="Backup" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
                          </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
                     </Items>
                 </asp:Menu>
             </div>

@@ -24,9 +24,7 @@
                 <strong>Notes:</strong><br />
                 * Step 1 is necessary<br />
                 * Days are from the start (step1)<br />
-                * The name need to be the same&nbsp; for the same recipe<br />
-                <br />
-                * If you change the recipes (ex nb days) the existing transactions will not be updated</td>
+                * The name need to be the same&nbsp; for the same recipe</td>
         </tr>
         <tr>
             <td valign="top">

@@ -8,14 +8,14 @@ Comments Charles
 ----------------
 - add steps in manager (DONE)
 - disable delete brand (DONE)
-- change bottling for Wine Ready (DONE) (NEED TO do it on the DB)
+- change bottling for Wine Ready (DONE) (NEED TO do it on the )
 - check name doublon when adding. (brand etc, customer) (DONE)
 - assurer qu'on ajoute pas un client qui existe deja (DONE)
 - add a search in customer page (DONE)
 - transaction: popup pour le customer bug (DONE)
 - transaction step to complete : add  customer filter??
 - rapport: tous les produits faits entre 2 dates avec choix.
-- login (DONE)
+- login
 
 Comments #1
 -----------
@@ -41,31 +41,38 @@ Suite au meeting le 15 janvier
 * pouvoir reseter une date de depart sur une transaction STEP (DONE)
 * bouton mal place dans transaction
 * db pour les symboles (DONE)
-* Show the print dialog when printing work to complete (DONE)
+* Show the print dialog when printing work to complete
 * Date: MMM/dd/yyyy (DONE)
-* Mettre l'icon de microvin plus sur la transaction print (DONE)
+* Mettre l'icon de microvin plus sur la transaction print
 
-- remove show late work in transaction steps (DONE)
-- delete all trnasactionsteps when deleting a transaction (DONE)
+- remove show late work in transaction steps
+- delete all trnasactionsteps when deleting a transaction
 
 
 Autres dans le backlog
 ----------------------
+- add a red button when the tx is dirty
 - send an email with the transaction (and add pub)
 - Admin:
-    - only for adminitrator (DONE)
-- if a type or brand is disabled, we need to see them when editing old transactions. but not see them with new tx (DONE)
+    - only for adminitrator
+- Ajouter tous les champs a une transaction 
+    location
+- etre capable de changer les dates
+- faire un ecran d'operations pour une transaciton
+
+-standardize the dates
+- lock db
 
 
 Questions
 ============
-- edit transaction:  allow changing client name?
+- Symbol et code semble donner la meme information
+- Do you want teh bottling step to be the same as the appointement?
+- edit transaction:  allow changing name?
 - edit transation: are you sure popup.
 - what is the process of setting location. enregistrement de la localisation (1 page pour les faires tous)
 - tableau synthese de fabrication.  besoin?
 - travaux interne: tu peux utiliser un client pascal Interne
-- If a recipes changes (category) we need to update all existing transactions?
-- How do you want to treat the obsolete brand, type, category.   Delete ?  replace by what in the old tx
 
 TEST:
 --------------------------
