@@ -74,7 +74,7 @@
                    {
                        edit: true,
                        add: true,
-                       del: false,
+                       del: true,
                        search: true,
                        searchtext: "Search",
                        addtext: "Add",
@@ -117,6 +117,7 @@
                        closeOnEscape: true,//Closes the popup on pressing escape key
                        closeAfterAdd: true,//Closes the add window after add
                        closeAfterEdit: true,
+                       width: 400,
                        afterSubmit: function (response, postdata) {
                            if (response.responseText == "") {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
@@ -138,11 +139,11 @@
                            if (response.responseText == "") {
 
                                $("#jQGridDemo").trigger("reloadGrid", [{ current: true }]);
-                               return [false, response.responseText]
+                               return [true, response.responseText]
                            }
                            else {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')
-                               return [true, response.responseText]
+                               return [false, response.responseText]
                            }
                        },
                        delData: {
