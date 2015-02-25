@@ -146,7 +146,16 @@
             gridview: true,
             sortorder: 'desc',
             caption: "Transactions steps",
-            editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>'
+            editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>',
+            gridComplete: function () {
+                var rows = $("#jQGridDemo").getDataIDs();
+                for (var i = 0; i < rows.length; i++) {
+                    var status = $("#jQGridDemo").getCell(rows[i], "done");
+                    if (status == "1") {
+                        $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: 'green' });
+                    }
+                }
+            }
         });
 
         $("#selectAll").click(function () {

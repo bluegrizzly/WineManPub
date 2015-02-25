@@ -97,7 +97,7 @@
                                     search: true,
                                     editable: true,
                                     edittype: 'checkbox',
-                                    editoptions: { value: "0:1", defaultValue: "1" },
+                                    editoptions: { value: "1:0", defaultValue: "1" },
                                     formatter: "checkbox", formatoptions: { disabled: true }
                                 },
                                 { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
@@ -118,6 +118,15 @@
 
                     onSelectRow: function (ids) {
                         url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
+                    },
+                    gridComplete: function () {
+                        var rows = $("#jQGridDemo").getDataIDs();
+                        for (var i = 0; i < rows.length; i++) {
+                            var status = $("#jQGridDemo").getCell(rows[i], "done");
+                            if (status == "1") {
+                                $("#jQGridDemo" ).jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: 'green' });
+                            }
+                        }
                     }
                 });
 

@@ -54,7 +54,7 @@
             <table class="auto-style1" cellspacing="3">
                 <tr>
                     <td class="auto-style4" valign="top">
-                        <h2>TransactionS </h2>
+                        <h2>Transactions to complete </h2>
                     </td>
                     <td rowspan="3" valign="top" align="center">
 
@@ -143,9 +143,23 @@
             caption: "Transactions",
             editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
 
-                    onSelectRow: function (ids) {
-                        url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
-                    }
+            onSelectRow: function (ids) {
+                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
+            },
+            gridComplete: function () {
+                var rows = $("#jQGridDemo").getDataIDs();
+                for (var i = 0; i < rows.length; i++) {
+                    var status = $("#jQGridDemo").getCell(rows[i], "steps_done");
+                    if (status.charAt(0) == "0") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF0000' }); }
+                    if (status.charAt(0) == "1") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF3300' }); }
+                    if (status.charAt(0) == "2") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#ff6600' }); }
+                    if (status.charAt(0) == "3") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ff9900' }); }
+                    if (status.charAt(0) == "4") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#FFCC00' }); }
+                    if (status.charAt(0) == "5") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ccff00' }); }
+                    if (status.charAt(0) == "6") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#66ff00' }); }
+                    if (status.charAt(0) == "7") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#00FF00' }); }
+                }
+            }
         });
 
 
