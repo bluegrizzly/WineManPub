@@ -10,14 +10,6 @@
         </style>
 
   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-  <script>
-      $(function () {
-          $("#datepicker").datepicker({
-              autoclose: true, 
-              dateFormat: "mm-dd-yy"
-          });
-      });
-  </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -53,10 +45,10 @@
    		                    name: 'date', index: 'date', width: 160, stype: 'text', sortable: true, editable: true, formatter: 'date',
                             align: 'center',
    		                    sorttype: 'date',
-   		                    datefmt: 'Y/M/d',
    		                    formatoptions: {
-   		                        srcformat: 'm/d/Y H:i:s',
-   		                        newformat: 'Y-M-d',
+   		                        srcformat: 'M/d/Y h:i:s A',
+   		                        newformat: 'Y-m-d',
+   		                        reformatAfterEdit : false,
    		                        defaultValue: null 
    		                        },
    		                        edittype: 'text',
@@ -65,7 +57,7 @@
                                     size: 12,
                                     maxlengh: 12,
                                     dataInit: function (element) {
-                                        $(element).datepicker({ dateFormat: 'yy-mm-dd'})
+                                        $(element).datepicker({  dateFormat: 'yy-mm-dd'})
                                     }
                                 },
                                 editrules: {
@@ -88,10 +80,6 @@
             viewrecords: true,
             caption: "Holiday dates",
             editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=holidays") %>'
-        });
-
-        $("#datepicker").change(function () {
-//            var currentDate = $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val()
         });
 
         $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',

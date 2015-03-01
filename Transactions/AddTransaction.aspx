@@ -84,7 +84,7 @@
                         }))
                     },
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
-                        alert(textStatus);
+                        alert("Ajax error: " + textStatus);
                     }
                 });
             },

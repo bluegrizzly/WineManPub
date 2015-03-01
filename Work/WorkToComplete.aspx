@@ -5,7 +5,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 214px;
+            width: 149px;
         }
         #setToDone {
             width: 135px;
@@ -17,14 +17,14 @@
             width: 135px;
         }
         .auto-style3 {
-            width: 214px;
+            width: 149px;
             height: 129px;
         }
         #print {
             width: 135px;
         }
         .auto-style4 {
-            width: 214px;
+            width: 149px;
             height: 43px;
         }
     </style>
@@ -33,7 +33,7 @@
 
   <script>
       $(function () {
-          $("#<%= txtDate.ClientID %>").datepicker({
+          $("#<%= txtDateStart.ClientID %>").datepicker({
               autoclose: true,
               dateFormat: "M-dd-yy"
           });
@@ -79,10 +79,12 @@
                     <td class="auto-style3" valign="top">
                         <fieldset>
                             Date Start:
-                            <asp:TextBox ID="txtDate" runat="server" AutoPostBack="True"></asp:TextBox>
+                            <asp:TextBox ID="txtDateStart" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearStart" runat="server" Height="19px" OnClick="Button_ClearStart_Click" Text="X" Width="16px" Font-Bold="False" Font-Size="X-Small" />
                             <br />
                             <br />Date End :
-                            <asp:TextBox ID="txtDateEnd" runat="server" AutoPostBack="True"></asp:TextBox>
+                            <asp:TextBox ID="txtDateEnd" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearEnd" runat="server" Height="19px" OnClick="Button_ClearEnd_Click" Text="X" Width="16px" Font-Bold="False" Font-Size="X-Small" />
                         </fieldset></td>
                 </tr>
                 <tr>
@@ -102,7 +104,7 @@
 
         grid.jqGrid({
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
-                document.getElementById('<%= txtDate.ClientID %>').value +
+                document.getElementById('<%= txtDateStart.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
                 "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
                 "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex +
@@ -147,7 +149,24 @@
             sortorder: 'desc',
             caption: "Transactions steps",
             editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>',
+            onSelectRow: function (id) {
+                // Check if we are selecting a row that is already done 
+                // in such case we allow reverting to not done instead.
+                var ids = grid.jqGrid('getGridParam', 'selarrrow');
+                var reset = true;
+                if (ids.length == 1) {
+                    var isDone = grid.getCell(id, "done");
+                    if (isDone == "1") {
+                        document.getElementById("setToDone").value = "Undo";
+                        reset = false;
+                    }
+                }
+                if (reset) {
+                    document.getElementById("setToDone").value = "Set to Done";
+                }
+            },
             gridComplete: function () {
+                // Show the row in green if they are done
                 var rows = $("#jQGridDemo").getDataIDs();
                 for (var i = 0; i < rows.length; i++) {
                     var status = $("#jQGridDemo").getCell(rows[i], "done");

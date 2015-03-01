@@ -5,7 +5,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 146px;
+            width: 149px;
         }
         #setToDone {
             width: 135px;
@@ -17,14 +17,14 @@
             width: 135px;
         }
         .auto-style3 {
-            width: 146px;
+            width: 149px;
             height: 129px;
         }
         #print {
             width: 135px;
         }
         .auto-style4 {
-            width: 146px;
+            width: 149px;
             height: 43px;
         }
         #editRow {
@@ -36,7 +36,7 @@
 
   <script>
       $(function () {
-          $("#<%= txtDate.ClientID %>").datepicker({
+          $("#<%= txtDateStart.ClientID %>").datepicker({
               autoclose: true,
               dateFormat: "yy-mm-dd"
           });
@@ -62,7 +62,8 @@
                         <fieldset>
                             &nbsp;
                             <asp:CheckBox ID="CheckBox_ShowReady" runat="server" Text="Show Ready Only (all steps done)" AutoPostBack="True" />
-                            
+                            <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show Transactions Done" AutoPostBack="True" />
+
                         </fieldset>
                             <table id="jQGridDemo"></table>
                         </asp:Panel>
@@ -74,10 +75,12 @@
                     <td class="auto-style3" valign="top">
                         <fieldset>
                             Date Start:
-                            <asp:TextBox ID="txtDate" runat="server" AutoPostBack="True" Width="107px"></asp:TextBox>
+                            <asp:TextBox ID="txtDateStart" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearStart" runat="server" Height="19px" OnClick="Button_ClearStart_Click" Text="X" Width="16px" Font-Bold="False" Font-Size="X-Small" />
                             <br />
                             <br />Date End :
-                            <asp:TextBox ID="txtDateEnd" runat="server" AutoPostBack="True" Width="107px"></asp:TextBox>
+                            <asp:TextBox ID="txtDateEnd" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearEnd" runat="server" Height="19px" Text="X" Width="16px" Font-Size="X-Small" OnClick="Button_ClearEnd_Click" />
                         </fieldset></td>
                 </tr>
                 <tr>
@@ -98,9 +101,9 @@
 
         grid.jqGrid({
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
-                document.getElementById('<%= txtDate.ClientID %>').value +
+                document.getElementById('<%= txtDateStart.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
-                "&showdone=false" +
+                "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
                 "&showtx=true",
             datatype: "json",
@@ -143,21 +146,36 @@
             caption: "Transactions",
             editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
 
-            onSelectRow: function (ids) {
-                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
+            onSelectRow: function (id) {
+                // Check if we are selecting a row that is already done 
+                // in such case we allow reverting to not done instead.
+                var ids = grid.jqGrid('getGridParam', 'selarrrow');
+                var reset = true;
+                if (ids.length == 1) {
+                    var isDone = grid.getCell(id, "done");
+                    if (isDone == "1") {
+                        document.getElementById("setToDone").value = "Undo";
+                        reset = false;
+                    }
+                }
+                if (reset) {
+                    document.getElementById("setToDone").value = "Set to Done";
+                }
             },
             gridComplete: function () {
-                var rows = $("#jQGridDemo").getDataIDs();
+                var rows = grid.getDataIDs();
                 for (var i = 0; i < rows.length; i++) {
-                    var status = $("#jQGridDemo").getCell(rows[i], "steps_done");
-                    if (status.charAt(0) == "0") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF0000' }); }
-                    if (status.charAt(0) == "1") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF3300' }); }
-                    if (status.charAt(0) == "2") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#ff6600' }); }
-                    if (status.charAt(0) == "3") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ff9900' }); }
-                    if (status.charAt(0) == "4") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#FFCC00' }); }
-                    if (status.charAt(0) == "5") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ccff00' }); }
-                    if (status.charAt(0) == "6") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#66ff00' }); }
-                    if (status.charAt(0) == "7") { $("#jQGridDemo").jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#00FF00' }); }
+                    var status = grid.getCell(rows[i], "steps_done");
+                    var isDone = grid.getCell(rows[i], "done");
+                    if (isDone == "1") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: 'gray' }); }
+                    else if (status.charAt(0) == "0") { grid.jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF0000' }); }
+                    else if (status.charAt(0) == "1") { grid.jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#FF3300' }); }
+                    else if (status.charAt(0) == "2") { grid.jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: '#ff6600' }); }
+                    else if (status.charAt(0) == "3") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ff9900' }); }
+                    else if (status.charAt(0) == "4") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#FFCC00' }); }
+                    else if (status.charAt(0) == "5") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#ccff00' }); }
+                    else if (status.charAt(0) == "6") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#66ff00' }); }
+                    else if (status.charAt(0) == "7") { grid.jqGrid('setRowData', rows[i], false, { color: 'black', weightfont: 'bold', background: '#00FF00' }); }
                 }
             }
         });

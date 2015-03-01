@@ -14,7 +14,14 @@
             <strong>
             <br />
             <br />
-            Versions: 0.95</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+            Versions: 1.0</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.0 (1 mars 2015)
+- Allow setting appointment before the wine is ready (witha warning message)
+- Transaction to complete page: Added a check box to show transactions already done.
+- Both in Transaction to complete & transaction steps to complete page: 
+    - If you select a transaction that is done. The button "Set to Done" change to Undo. if you select it, the transaction or transaction step reset to not done.
+    - Added X buttons to clear the date fields
+
 Version 0.95 (23 fev 2015)
 - Added color code : 
     -Transactions page : Green when transaction is done
