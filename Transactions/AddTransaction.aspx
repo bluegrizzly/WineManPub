@@ -55,6 +55,12 @@
             /* add padding to account for vertical scrollbar */
             padding-right: 20px;
         } 
+    .auto-style25 {
+        width: 100%;
+    }
+    .auto-style26 {
+        width: 51px;
+    }
 </style>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
@@ -98,7 +104,22 @@
                 });
             }
         });
-    });
+      });
+
+    function ConfirmDropDownValueChange(source, arguments) {
+        // Only ask confirmation for transaction editing
+        if (document.getElementById('<%=Label_TransactionID.ClientID%>').innerText == "-") {
+            arguments.IsValid = true;
+            return;
+        }
+            
+        arguments.IsValid = confirm("Are you sure? \nThis operation will change all transaction step dates.");
+        if (!arguments.IsValid)
+        {
+            // Replace old value here.
+        }
+    }
+
 </script>
 
 </asp:Content>
@@ -147,7 +168,6 @@
         </td>
         <td  > 
 
-
         <asp:Panel ID="Panel2" runat="server" BorderWidth="2" Width="400" Height="300">
             
             <table style="width:100%; height: 275px;" cellspacing="3">
@@ -175,8 +195,9 @@
             <tr>
                 <td align="right" class="auto-style22">Category :&nbsp;</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList_Category" runat="server" AutoPostBack="True" BackColor="#E1E8F0" OnSelectedIndexChanged="DropDownList_Category_SelectedIndexChanged">
+                    <asp:DropDownList ID="DropDownList_Category" runat="server" BackColor="#E1E8F0" OnSelectedIndexChanged="DropDownList_Category_SelectedIndexChanged" CausesValidation="True" ValidationGroup="Group1" AutoPostBack="True">
                     </asp:DropDownList>
+                    <asp:CustomValidator ID="ConfirmDropDownValidator" runat="server" ClientValidationFunction="ConfirmDropDownValueChange" Display="Dynamic" ValidationGroup="Group1" />
                 </td>
             </tr>
                 <tr>
@@ -213,7 +234,6 @@
             </asp:Panel>
         </td>
         <td class="auto-style14"  > 
-
 
             <asp:Panel ID="Panel15" runat="server" BorderWidth="2" Width="315" Height="300" HorizontalAlign="Left">
                 <table width="100%">
@@ -298,11 +318,33 @@
                         <td class="auto-style10" valign="top">
                             <asp:Table ID="Table_Dates" runat="server" BorderWidth="2px" CellPadding="1" CellSpacing="1" GridLines="Both" Height="62px" HorizontalAlign="Center" Width="670px">
                             </asp:Table>
-                            <asp:CheckBox ID="CheckBox_EditDates" runat="server" Text="Edit Dates" AutoPostBack="True" OnCheckedChanged="CheckBox_EditDates_CheckedChanged" />
-                            <asp:DropDownList ID="DropDownList_Steps" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="id" OnSelectedIndexChanged="DropDownList_Steps_SelectedIndexChanged" AutoPostBack="True" Visible="False">
-                            </asp:DropDownList>
-                            <asp:TextBox ID="TextBox_Date" runat="server" Width="85px" Visible="False"></asp:TextBox>
-                            <asp:Button ID="Button_ChangeDate" runat="server" Text="Change Date" OnClick="Button_ChangeDate_Click" Visible="False" />
+                            <table class="auto-style25">
+                            <tr>
+                                <td>
+                                    <asp:CheckBox ID="CheckBox_EditDates" runat="server" Text="Edit Dates" AutoPostBack="True" OnCheckedChanged="CheckBox_EditDates_CheckedChanged" />
+                                </td>
+                                <td>
+                            <asp:Panel ID="Panel_EditDates" runat="server" >
+                                <table class="auto-style25">
+                                    <tr>
+                                        <td>
+                                            
+                                        </td>
+                                        <td align="center" style="background-color: #E1E8F0">
+                                            <asp:DropDownList ID="DropDownList_Steps" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="id" OnSelectedIndexChanged="DropDownList_Steps_SelectedIndexChanged" AutoPostBack="True" Visible="False">
+                                            </asp:DropDownList>
+                                            <asp:TextBox ID="TextBox_Date" runat="server" Width="85px" Visible="False"></asp:TextBox>
+                                            <asp:Button ID="Button_ChangeDate" runat="server" Text="Change Date" OnClick="Button_ChangeDate_Click" Visible="False" />
+                                        </td>
+                                        <td class="auto-style26"></td>
+                                        <td align="center" style="background-color: #E1E8F0">
+                                             <asp:Button ID="Button_ResetDate" runat="server" Text="Reset Dates (today)" OnClick="Button_ResetDate_Click" Visible="False" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                            </td>
+                                </tr></table>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:winemanConnectionString %>" ProviderName="<%$ ConnectionStrings:winemanConnectionString.ProviderName %>" SelectCommand="SELECT id, name FROM steps"></asp:SqlDataSource>
                         </td>
                     </tr>

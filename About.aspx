@@ -14,8 +14,20 @@
             <strong>
             <br />
             <br />
-            Versions: 1.0</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
-Version 1.0 (1 mars 2015)
+            Versions: 1.01</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.01
+- Add Transaction page: 
+    - New button to reset the dates of the transaction steps starting the yeast today. All steps dates are adjusted.
+    - If you change the yeast date the date of all steps are adjusted. You can change also dates of other steps but in such a case no modificaiton are done to other steps and it makes the transaction not following the recipes.
+    - Confirm window before changing the category on an existing transaction.
+-Transaction page:
+    - Moved done column to th end to be consistent
+- Transaction to complete page:
+    - Added a button and text box to set location of selected transaction.
+- New Settings page.
+- Now handle the default printer.  You need to set the default printer in the Settings page in order to be able to print.
+
+Version 1.0 (01 mars 2015)
 - Allow setting appointment before the wine is ready (witha warning message)
 - Transaction to complete page: Added a check box to show transactions already done.
 - Both in Transaction to complete & transaction steps to complete page: 

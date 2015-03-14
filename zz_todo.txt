@@ -54,17 +54,16 @@ Autres dans le backlog
 - send an email with the transaction (and add pub)
 - Admin:
     - only for adminitrator (DONE)
-- if a type or brand is disabled, we need to see them when editing old transactions. but not see them with new tx (DONE)
-
+- If a type or brand is disabled, we need to see them when editing old transactions. but not see them with new tx (DONE)
+- Log Page. Every operation should log a command to see what happen
 
 Questions
 ============
-- edit transaction:  allow changing client name?
-- edit transation: are you sure popup.
+- edit transaction:  allow changing client name?   oui
 - what is the process of setting location. enregistrement de la localisation (1 page pour les faires tous)
-- tableau synthese de fabrication.  besoin?
+- tableau synthese de fabrication.  besoin?  non meme chose que 
 - travaux interne: tu peux utiliser un client pascal Interne
-- If a recipes changes (category) we need to update all existing transactions?
+- If a recipes changes (category) we need to update all existing transactions?  seulement future
 - How do you want to treat the obsolete brand, type, category.   Delete ?  replace by what in the old tx
 
 TEST:

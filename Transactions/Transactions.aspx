@@ -63,7 +63,7 @@
                         "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
                         "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
                     datatype: "json",
-                    colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Done', 'Location', 'Code'],
+                    colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
                     colModel: [
                                 { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
    		                        { name: 'client_id', index: 'client_id', width: 140, sortable: true },
@@ -90,6 +90,8 @@
                                 },
 
                                 { name: 'bottling_station', index: 'bottling_station', width: 40, sortable: true, align: 'center' },
+                                { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
+                                { name: 'product_code', index: 'product_code', width: 25, sortable: true, align: 'center' },
                                 {
                                     name: 'done', width: 30, index: 'done',
                                     align: 'center',
@@ -99,9 +101,7 @@
                                     edittype: 'checkbox',
                                     editoptions: { value: "1:0", defaultValue: "1" },
                                     formatter: "checkbox", formatoptions: { disabled: true }
-                                },
-                                { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
-                                { name: 'product_code', index: 'product_code', width: 20, sortable: true, align: 'center' }
+                                }
                     ],
                     rowNum: 20,
                     height: 250,

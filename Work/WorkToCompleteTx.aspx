@@ -30,6 +30,12 @@
         #editRow {
             width: 135px;
         }
+        #Text1 {
+            width: 32px;
+        }
+        #txtLocation {
+            width: 24px;
+        }
     </style>
 
   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -90,7 +96,10 @@
                             <input id="setToDone" type="button" value="Set to Done"/><br />
                             <input id="selectAll" type="button" value="Select All"/><br />
                             <input id="clear" type="button" value="Clear Selection"/><br />
-                            <br />&nbsp;&nbsp;<br />
+                            <br />
+                            <input id="setLocation" type="button" value="Set Location"/>
+                            <input id="txtLocation" type="text" /><br />
+                            <br />
                             <input id="editRow" type="button" value="Edit tx"/> <br />
                         </fieldset></td>
                 </tr>
@@ -107,7 +116,7 @@
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
                 "&showtx=true",
             datatype: "json",
-            colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Steps Status', 'Done'],
+            colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Steps Status', 'Location', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 50, stype: 'text', sortable: true, sorttype: 'int' },
                         { name: 'client_id', index: 'client_id', width: 140, sortable: true },
@@ -123,7 +132,8 @@
                                 defaultValue: null
                             },
                         },
-                        { name: 'steps_done', index: 'steps_done', width: 100, stype: 'text', sortable: true, editable:false },
+                        { name: 'steps_done', index: 'steps_done', width: 50, stype: 'text', sortable: true, editable: false, align: 'center' },
+                        { name: 'location', index: 'location', width: 50, stype: 'text', sortable: true, editable: true, align: 'center', cellEdit:true },
                         {
                             name: 'done', width: 30, index: 'done',
                             align: 'center',
@@ -228,6 +238,33 @@
                         'Confirm': function () {
                             alert("Confirm");
                         }
+                    }
+                });
+            }
+        });
+
+        $("#setLocation").click(function () {
+            var ids = grid.jqGrid('getGridParam', 'selarrrow');
+            if (ids.length > 0) {
+                var names = [];
+                for (var i = 0, il = ids.length; i < il; i++) {
+                    var name = grid.jqGrid('getCell', ids[i], 'id');
+                    names.push(name);
+                }
+                $("#names").html(names.join(", "));
+                var jsonData = JSON.stringify(names);
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?operation=setlocation&showtx=true&location=") %>' +
+                            txtLocation.value,
+                    data: jsonData,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        window.location.reload();
+                    },
+                    error: function (res, status, exeption) {
+                        alert(res);
                     }
                 });
             }

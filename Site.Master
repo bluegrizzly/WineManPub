@@ -77,6 +77,7 @@
                                 <asp:MenuItem NavigateUrl="~/Reports/Analysis_Transactions.aspx" Text="Transactions Analysis" />
                             </asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Work/DoBackup.aspx" Text="Backup" />
+                            <asp:MenuItem NavigateUrl="~/Admin/Settings.aspx" Text="Settings" />
                          </asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
                     </Items>
