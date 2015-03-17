@@ -20,6 +20,7 @@ Version 1.01
     - New button to reset the dates of the transaction steps starting the yeast today. All steps dates are adjusted.
     - If you change the yeast date the date of all steps are adjusted. You can change also dates of other steps but in such a case no modificaiton are done to other steps and it makes the transaction not following the recipes.
     - Confirm window before changing the category on an existing transaction.
+    - If a transaction doesn't follow the recipes anymore because a step date changed, there is an indication in red: *Broken Recipes
 -Transaction page:
     - Moved done column to th end to be consistent
 - Transaction to complete page:

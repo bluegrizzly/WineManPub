@@ -312,10 +312,13 @@
             <asp:Panel ID="Panel3" runat="server" BorderWidth="2" Width="725" Height="110" CssClass="Panal" ScrollBars="Auto">
                 <table style="width:100%; height:100%" cellspacing="0" cellpadding="0">
                     <tr >
-                        <td colspan="0" valign="top" class="auto-style12" rowspan="0"><h3>Dates</h3></td>
+                        <td valign="top" class="auto-style12" rowspan="0"><h3>Dates</h3></td>
+                        <td align="right" class="auto-style12" rowspan="0" valign="top">
+                            <asp:Label ID="Label_BrokenRecipes" runat="server" Font-Bold="True" ForeColor="#CC0000" Text="*Broken Recipes" Visible="False"></asp:Label>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="auto-style10" valign="top">
+                        <td class="auto-style10" valign="top" colspan="2">
                             <asp:Table ID="Table_Dates" runat="server" BorderWidth="2px" CellPadding="1" CellSpacing="1" GridLines="Both" Height="62px" HorizontalAlign="Center" Width="670px">
                             </asp:Table>
                             <table class="auto-style25">
@@ -336,7 +339,7 @@
                                             <asp:TextBox ID="TextBox_Date" runat="server" Width="85px" Visible="False"></asp:TextBox>
                                             <asp:Button ID="Button_ChangeDate" runat="server" Text="Change Date" OnClick="Button_ChangeDate_Click" Visible="False" />
                                         </td>
-                                        <td class="auto-style26"></td>
+                                        <td class="auto-style26">&nbsp;</td>
                                         <td align="center" style="background-color: #E1E8F0">
                                              <asp:Button ID="Button_ResetDate" runat="server" Text="Reset Dates (today)" OnClick="Button_ResetDate_Click" Visible="False" />
                                         </td>
