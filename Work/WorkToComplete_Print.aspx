@@ -59,7 +59,7 @@
     
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <asp:Button ID="Button_Show" runat="server" OnClick="Button_Show_Click" Text="Show" />
+        <asp:Button ID="Button_Show" runat="server" OnClick="Button_Show_Click" Text="Show" Visible="False" />
         <asp:Button ID="PrintButton" runat="server" disabled="disabled" Text="Print..." OnClientClick="onPrintButtonClicked();return false;" />
         <asp:Button ID="Button_Print" runat="server" Text="OLDPrint" OnClick="Button_Print_Click" Visible="False" />
         &nbsp;<asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" />
