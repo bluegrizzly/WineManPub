@@ -17,3 +17,13 @@ Installation notes
 
 - Install mysql server+ workbench
 	- set password: piepasri
+
+------------
+security
+https://msdn.microsoft.com/en-us/library/ms251693.aspx
+
+In internet properties (http://support.myvisionexpress.com/index.php?/Knowledgebase/Article/View/444/154/how-to-activate-activex-for-google-chrome--firefox-for-single-sign-on-feature-for-rd-web-access)
+	- CustomLevels...
+	- set Run Activex controls and plugins to enable
+	- set download signed activeX control to enable
+	- set download unsigned activeX control to enable

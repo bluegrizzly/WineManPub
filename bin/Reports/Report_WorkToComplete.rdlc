@@ -99,25 +99,25 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.00828cm</Width>
+              <Width>1.74842cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.1425cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.75986cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.74014cm</Width>
+              <Width>3.86702cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.03458cm</Width>
+              <Width>3.18791cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.87042cm</Width>
+              <Width>2.28834cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -427,7 +427,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Lookup(Fields!step_id.Value,Fields!id.Value,Fields!name.Value, "DataSetStepNames")</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -457,7 +459,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!transaction_id.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -489,7 +493,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=FORMAT(Fields!date.Value,"MMM-dd-yyyy")</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -519,7 +525,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!name.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -549,7 +557,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Expr2.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -579,7 +589,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!first_name.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -609,7 +621,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!last_name.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -639,7 +653,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!telephone.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -688,7 +704,7 @@
         <DataSetName>DataSetA</DataSetName>
         <Top>1.87537cm</Top>
         <Height>1.2cm</Height>
-        <Width>23.91328cm</Width>
+        <Width>20.99405cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -700,14 +716,14 @@
     <Height>1.98958in</Height>
     <Style />
   </Body>
-  <Width>9.41468in</Width>
+  <Width>8.26537in</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <LeftMargin>0.2in</LeftMargin>
+    <RightMargin>0.2in</RightMargin>
+    <TopMargin>0.2in</TopMargin>
+    <BottomMargin>0.2in</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

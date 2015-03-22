@@ -18,14 +18,14 @@
         <tr>
             <td align="right" style="background-color: #E1E8F0">Default Printer</td>
             <td style="background-color: #E1E8F0">
-                <asp:DropDownList ID="DropDownList_Printers" runat="server" AutoPostBack="True" Height="16px" Width="314px">
+                <asp:DropDownList ID="DropDownList_Printers" runat="server" Height="20px" Width="314px">
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td align="right" style="background-color: #E1E8F0">Backup Path</td>
             <td style="background-color: #E1E8F0">
-                <asp:TextBox ID="TextBox_BackupPath" runat="server" AutoPostBack="True" Width="305px"></asp:TextBox>
+                <asp:TextBox ID="TextBox_BackupPath" runat="server" Width="305px" Height="16px"></asp:TextBox>
             </td>
         </tr>
         <tr>
