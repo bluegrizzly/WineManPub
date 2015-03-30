@@ -60,7 +60,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
         <asp:Button ID="Button_Show" runat="server" OnClick="ButtonShow_Click" Text="Show" Visible="False"/>
-        <asp:Button ID="PrintButton" runat="server" disabled="disabled" Text="IE Print..." OnClientClick="onPrintButtonClicked();return false;" />
+        <asp:Button ID="PrintButton" runat="server" disabled="disabled" Text="IE Print..." OnClientClick="onPrintButtonClicked();return false;" Visible="False" />
         <asp:Button ID="Button_Print" runat="server" OnClick="ButtonPrint_Click" Text="Local Print" />
 &nbsp;<asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" />
 &nbsp;&nbsp;Transaction:<asp:Label ID="Label_Tx" runat="server" Text="Label"></asp:Label>

@@ -13,10 +13,12 @@ Installation notes
 	- create wineman app with port 58404
 	- In iis manager: application pool of wineman, set .net to 4
 	- web.config may need to change .net to 4.0
-	
+	- Set the application pool->Advanced settings->ProcessModel : Identity to username which can see all printers.
 
 - Install mysql server+ workbench
 	- set password: piepasri
+
+
 
 ------------
 security

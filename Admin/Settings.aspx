@@ -16,9 +16,16 @@
 <asp:Panel ID="Panel2" runat="server">
     <table class="auto-style1">
         <tr>
-            <td align="right" style="background-color: #E1E8F0">Default Printer</td>
+            <td align="right" style="background-color: #E1E8F0">Default Printer [<strong>Transactions</strong>]</td>
             <td style="background-color: #E1E8F0">
                 <asp:DropDownList ID="DropDownList_Printers" runat="server" Height="20px" Width="314px">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" style="background-color: #E1E8F0">Default Printer [<strong>Reports</strong>]</td>
+            <td style="background-color: #E1E8F0">
+                <asp:DropDownList ID="DropDownList_PrintersReports" runat="server" Height="20px" Width="314px">
                 </asp:DropDownList>
             </td>
         </tr>
@@ -29,7 +36,7 @@
             </td>
         </tr>
         <tr>
-            <td align="right" style="background-color: #E1E8F0">Auto Print (no print dialog for transactions)</td>
+            <td align="right" style="background-color: #E1E8F0">Auto Print (no print preview for transactions)</td>
             <td style="background-color: #E1E8F0">
                 <asp:CheckBox ID="CheckBox_AutoPrint" runat="server" />
             </td>
