@@ -14,8 +14,11 @@
             <strong>
             <br />
             <br />
-            Versions: 1.01</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
-Version 1.01
+            Versions: 1.02</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.01 (2 avril 2015)
+- New printer settings for reports in addition of the transaction default printer.
+
+Version 1.01 (19 mars 2015)
 - Add Transaction page: 
     - New button to reset the dates of the transaction steps starting the yeast today. All steps dates are adjusted.
     - If you change the yeast date the date of all steps are adjusted. You can change also dates of other steps but in such a case no modificaiton are done to other steps and it makes the transaction not following the recipes.

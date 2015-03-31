@@ -34,21 +34,21 @@
 
         var hookedPropertyChangedEvent = false;
 
-        function pageLoad() {
+        //function pageLoad() {
 
-            if (!hookedPropertyChangedEvent) {
+        //    if (!hookedPropertyChangedEvent) {
 
-                var reportViewer = $find("ReportViewer1");
-                reportViewer.add_propertyChanged(onReportViewerLoadingChanged);
+        //        var reportViewer = $find("ReportViewer1");
+        //        reportViewer.add_propertyChanged(onReportViewerLoadingChanged);
 
-                // Make sure the input controls are in the correct state initially
-                setInputEnableState(reportViewer);
+        //        // Make sure the input controls are in the correct state initially
+        //        setInputEnableState(reportViewer);
 
-                // pageLoad is called after each asynchronous postback.  Only
-                // hook the property changed event once.
-                hookedPropertyChangedEvent = true;
-            }
-        }
+        //        // pageLoad is called after each asynchronous postback.  Only
+        //        // hook the property changed event once.
+        //        hookedPropertyChangedEvent = true;
+        //    }
+        //}
     </script>
 
 </head>
@@ -61,7 +61,7 @@
         </asp:ScriptManager>
         <asp:Button ID="Button_Show" runat="server" OnClick="ButtonShow_Click" Text="Show" Visible="False"/>
         <asp:Button ID="PrintButton" runat="server" disabled="disabled" Text="IE Print..." OnClientClick="onPrintButtonClicked();return false;" Visible="False" />
-        <asp:Button ID="Button_Print" runat="server" OnClick="ButtonPrint_Click" Text="Local Print" />
+        <asp:Button ID="Button_Print" runat="server" OnClick="ButtonPrint_Click" Text="Print" />
 &nbsp;<asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" />
 &nbsp;&nbsp;Transaction:<asp:Label ID="Label_Tx" runat="server" Text="Label"></asp:Label>
 &nbsp;<rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="10.5in" Height="8.4in">
