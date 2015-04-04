@@ -23,7 +23,7 @@
         <td valign="top" rowspan="2">
         <fieldset>
             <asp:Label ID="Label3" runat="server" Text="Dates:"></asp:Label>
-            <asp:DropDownList ID="DropDownList_Filter" runat="server" AutoPostBack="True">
+            <asp:DropDownList ID="DropDownList_Filter" runat="server" AutoPostBack="True" ToolTip="Filter the transactions by their creation date">
                 <asp:ListItem Value="0">All</asp:ListItem>
                 <asp:ListItem Value="1">Today</asp:ListItem>
                 <asp:ListItem Value="2">This Week</asp:ListItem>
@@ -31,13 +31,13 @@
                 <asp:ListItem Value="4">Last 4 Weeks</asp:ListItem>
             </asp:DropDownList>
             &nbsp; <asp:Label ID="Label2" runat="server" Text="Transaction ID:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox_TxIDSearch" runat="server" AutoPostBack="True" Width="37px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="TextBox_TxIDSearch" runat="server" AutoPostBack="True" Width="37px" ToolTip="Search transaction by it's unique ID"></asp:TextBox>
 <asp:Button ID="Button_ClearTxID" runat="server" OnClick="Button_ClearTxID_Click" Text="X" Width="21px" />
             &nbsp;
             <asp:Label ID="Label1" runat="server" Text="Customer: "></asp:Label>
-            <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True" ToolTip="Search transaction with customer. Can be beginning or ending part  of the first or last name."></asp:TextBox>
             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="21px" />
-    <asp:CheckBox ID="ShowCompletedCheckBox" runat="server" Text="Show completed tx" AutoPostBack="True" />
+    <asp:CheckBox ID="ShowCompletedCheckBox" runat="server" Text="Show completed tx" AutoPostBack="True" ToolTip="Show the transactions that have been marked as completed." />
         </fieldset>
         <asp:Panel ID="Panel2" runat="server" ScrollBars="Auto">
             <table id="jQGridDemo">
@@ -104,7 +104,7 @@
                                 }
                     ],
                     rowNum: 20,
-                    height: 250,
+                    height: 270,
                     mtype: 'GET',
                     loadonce: true,
                     ignoreCase: true,

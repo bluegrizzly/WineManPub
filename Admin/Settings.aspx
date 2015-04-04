@@ -42,6 +42,13 @@
             </td>
         </tr>
 
+        <tr>
+            <td align="right" style="background-color: #E1E8F0">Transaction ID Start at:</td>
+            <td style="background-color: #E1E8F0">
+                <asp:TextBox ID="TextBox_StartTXID" runat="server" TextMode="Number"></asp:TextBox>
+            </td>
+        </tr>
+
     </table>
 
 
@@ -49,7 +56,7 @@
         <tr>
             <td align="center">
                 <br />
-                <asp:Button ID="Button_Save" runat="server" OnClick="Button_Save_Click" Text="Save Settings" />
+                <asp:Button ID="Button_Save" runat="server" OnClick="Button_Save_Click" Text="Save Settings" TabIndex="2" UseSubmitBehavior="False" />
             </td>
         </tr>
     </table>

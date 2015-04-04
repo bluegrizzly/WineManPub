@@ -1,5 +1,12 @@
 ﻿TODO:
 =============
+Comments #3
+- customer: recherche par no de tel (DONE)
+- add customer research in the 2 reports (DONE)
+- add a printer combo box for reports (DONE)
+- transaction step doit utiliser les filters (date/type) (DONE)
+- Changer la date warning avant le filtering (DONE)
+
 Comments #2
 - Need to be allowed to change any dates.
 - Need a button to confirm when doing a modification

@@ -82,7 +82,7 @@
                                         <asp:ListItem>50</asp:ListItem>
                                         <asp:ListItem>55</asp:ListItem>
                                     </asp:DropDownList>
-                                    &nbsp;<asp:Button ID="Button_AddHour_S1" runat="server" Text="Add" />
+                                    &nbsp;<asp:Button ID="Button_AddHour_S1" runat="server" Text="Add" ToolTip="Insert a specific hour in the table." />
                                 </td>
                                 <td align="center">&nbsp;</td>
                             </tr>

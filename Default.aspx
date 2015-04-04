@@ -8,7 +8,7 @@
             height: 211px;
         }
         .auto-style2 {
-            width: 100%;
+            width: 483%;
         }
     </style>
 </asp:Content>
@@ -17,21 +17,14 @@
        Welcome to WineMan
     </h2>
     <p>
-        <table class="auto-style2">
+        <br />
+        <br />
+        <br />
+        <table width="100%" >
             <tr>
-                <td>
-        <asp:Calendar ID="Calendar1" runat="server" Enabled="False" OnDayRender="Calendar1_DayRender">
-                        <SelectedDayStyle BackColor="#0099FF" />
-                        <TodayDayStyle BackColor="#999999" />
-                        <WeekendDayStyle BackColor="#EEEEEE" />
-        </asp:Calendar>
-                </td>
-                <td>
+                <td align="center">
                     <img alt="logo" class="auto-style1" src="images/index_logo.png" /></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td></td>
             </tr>
         </table>
     </p>

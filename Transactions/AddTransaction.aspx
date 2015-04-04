@@ -341,7 +341,7 @@
                                         </td>
                                         <td class="auto-style26">&nbsp;</td>
                                         <td align="center" style="background-color: #E1E8F0">
-                                             <asp:Button ID="Button_ResetDate" runat="server" Text="Reset Dates (today)" OnClick="Button_ResetDate_Click" Visible="False" />
+                                             <asp:Button ID="Button_ResetDate" runat="server" Text="Reset Dates (today)" OnClick="Button_ResetDate_Click" Visible="False" ToolTip="Reset all transaction step dates to start the Yeast TODAY and follow the recipes." />
                                         </td>
                                     </tr>
                                 </table>

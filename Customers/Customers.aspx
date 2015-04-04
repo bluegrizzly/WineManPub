@@ -8,7 +8,7 @@
     </h2>
     <div style="text-align:center">
             <asp:Label ID="Label1" runat="server" Text="Search: "></asp:Label>
-            <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True" Width="128px"></asp:TextBox>
+            <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True" Width="128px" ToolTip="Search text: The string can be the beginning or ending part ex: 0570 for tel 514 885-0570.  Name can be firstname last name or only one of these.  Search order is: name, id, tel"></asp:TextBox>
             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="21px" />
     &nbsp;<asp:Label ID="Label2" runat="server" Font-Size="X-Small" Text="(name or tel or id)"></asp:Label>
     </div>

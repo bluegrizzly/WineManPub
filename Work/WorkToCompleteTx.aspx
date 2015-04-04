@@ -67,8 +67,14 @@
                         <asp:Panel id="pnlContents" runat = "server">
                         <fieldset>
                             &nbsp;
-                            <asp:CheckBox ID="CheckBox_ShowReady" runat="server" Text="Show Ready Only (all steps done)" AutoPostBack="True" />
-                            <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show Transactions Done" AutoPostBack="True" />
+                            <asp:Label ID="Label2" runat="server" Text="TransactionID:"></asp:Label>
+                            <asp:TextBox ID="TextBox_TxID" runat="server" AutoPostBack="True" ToolTip="Filtering all transaction steps for this transaction number" Width="45px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearTxID" runat="server" OnClick="Button_ClearTxID_Click" Text="X" Width="20px" />
+                            &nbsp;<asp:Label ID="Label3" runat="server" Text="Customer:"></asp:Label>
+                            <asp:TextBox ID="TextBox_Customer" runat="server" AutoPostBack="True" ToolTip="Filtering transaction steps for customers that  are similar to this text. Can be a part of the first or last name." Width="100px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="20px" />
+                            <asp:CheckBox ID="CheckBox_ShowReady" runat="server" Text="Show Ready Only" AutoPostBack="True" ToolTip="Show only the transactions that have all steps completed" />
+                            <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show Transactions Done" AutoPostBack="True" ToolTip="Show all transactions, including the ones that have been marked as completed. Completed transactions will be shown in gray" />
 
                         </fieldset>
                             <table id="jQGridDemo"></table>
@@ -114,6 +120,8 @@
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
                 "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
+                "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value +
+                "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
                 "&showtx=true",
             datatype: "json",
             colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Steps Status', 'Location', 'Done'],
@@ -144,7 +152,7 @@
             ],
             rowNum: 50,
             multiselect: true,
-            height: 250,
+            height: 270,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,

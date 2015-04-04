@@ -111,13 +111,13 @@
               <Width>3.9034cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.19242cm</Width>
+              <Width>2.58929cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.98617cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.25127cm</Width>
+              <Width>2.78044cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -128,6 +128,9 @@
                   <CellContents>
                     <Textbox Name="Textbox18">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!step_id.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -164,6 +167,9 @@
                   <CellContents>
                     <Textbox Name="Textbox24">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!transaction_id.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -200,6 +206,9 @@
                   <CellContents>
                     <Textbox Name="Textbox28">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!date.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -236,6 +245,9 @@
                   <CellContents>
                     <Textbox Name="Textbox20">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!wine_brand_id.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -308,6 +320,9 @@
                   <CellContents>
                     <Textbox Name="Textbox26">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!first_name.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -344,6 +359,9 @@
                   <CellContents>
                     <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!last_name.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -380,6 +398,9 @@
                   <CellContents>
                     <Textbox Name="Textbox32">
                       <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!telephone.Value</SortExpression>
+                      </UserSort>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -410,6 +431,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -702,9 +724,17 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetA</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Fields!step_id.Value</Value>
+          </SortExpression>
+          <SortExpression>
+            <Value>=Fields!date.Value</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>1.87537cm</Top>
         <Height>1.2cm</Height>
-        <Width>20.48404cm</Width>
+        <Width>21.41008cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -716,11 +746,11 @@
     <Height>1.98958in</Height>
     <Style />
   </Body>
-  <Width>8.09583in</Width>
+  <Width>8.42917in</Width>
   <Page>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.2in</PageWidth>
-    <LeftMargin>0.2in</LeftMargin>
+    <LeftMargin>0.25in</LeftMargin>
     <RightMargin>0.2in</RightMargin>
     <TopMargin>0.2in</TopMargin>
     <BottomMargin>0.2in</BottomMargin>

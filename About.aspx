@@ -14,8 +14,24 @@
             <strong>
             <br />
             <br />
-            Versions: 1.02</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
-Version 1.01 (2 avril 2015)
+            Versions: 1.03</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.03 (6 avril 2015)
+- Transaction page : No restrictions about dates when changing a transaction step date.
+- Transactions to complete page:
+    - Added transaction ID and Custoemer filters.
+- Transaction steps page 
+    - Now take into account the filtering (dates, transaction ID, Step)
+    - New Customer field for filtering
+- Transaction steps page print preview 
+    - Added interactive column sorting.
+    - Added printer choice.
+- Transaction Print: Adjusted the margin for the transaction report printed page and for the work to complete printed page.
+- Added many tooltips on text fields and buttons to better explain their usage. Just leave the mouse over a field.
+- Removed the useless calendar on the home page.
+- Settings page:
+   - New field to set the starting ID of transactions.
+
+Version 1.02 (2 avril 2015)
 - New printer settings for reports in addition of the transaction default printer.
 
 Version 1.01 (19 mars 2015)

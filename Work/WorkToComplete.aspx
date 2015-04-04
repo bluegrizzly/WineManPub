@@ -59,15 +59,16 @@
 
                         <asp:Panel id="pnlContents" runat = "server">
                         <fieldset>
-                            <asp:Label ID="Label2" runat="server" Text="TransactionID:"></asp:Label>
-                            <asp:TextBox ID="TextBox_TxID" runat="server" Width="45px" AutoPostBack="True"></asp:TextBox>
-                            &nbsp;<asp:Button ID="Button_ClearTxID" runat="server" OnClick="Button_ClearTxID_Click" Text="X" Width="20px" />
-&nbsp;<asp:Label ID="Label1" runat="server" Text="Step"></asp:Label>
-                            <asp:DropDownList ID="DropDownList_FilterStep" runat="server" AutoPostBack="True">
+                            &nbsp;<asp:Label ID="Label2" runat="server" Text="TransactionID:"></asp:Label>
+                            <asp:TextBox ID="TextBox_TxID" runat="server" AutoPostBack="True" Width="45px" ToolTip="Filtering all transaction steps for this transaction number"></asp:TextBox>
+                            <asp:Button ID="Button_ClearTxID" runat="server" OnClick="Button_ClearTxID_Click" Text="X" Width="20px" />
+                            &nbsp;<asp:Label ID="Label1" runat="server" Text="Step"></asp:Label>
+                            <asp:DropDownList ID="DropDownList_FilterStep" runat="server" AutoPostBack="True" ToolTip="Filter by transaction step type">
                             </asp:DropDownList>
-                            &nbsp;
-                            <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show work done" AutoPostBack="True" />
-                            
+                            &nbsp;<asp:Label ID="Label3" runat="server" Text="Customer:"></asp:Label>
+                            <asp:TextBox ID="TextBox_Customer" runat="server" AutoPostBack="True" ToolTip="Filtering transaction steps for customers that  are similar to this text. Can be a part of the first or last name." Width="100px"></asp:TextBox>
+                            <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="20px" />
+&nbsp;<asp:CheckBox ID="CheckBox_ShowDone" runat="server" AutoPostBack="True" Text="Show work done" ToolTip="Show the work that was completed.  Dates should be selected before turning on this option to reduce amount of records. " />
                             &nbsp;</fieldset>
                             <table id="jQGridDemo"></table>
                         </asp:Panel>
@@ -79,7 +80,7 @@
                     <td class="auto-style3" valign="top">
                         <fieldset>
                             Date Start:
-                            <asp:TextBox ID="txtDateStart" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
+                          <asp:TextBox ID="txtDateStart" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
                             <asp:Button ID="Button_ClearStart" runat="server" Height="19px" OnClick="Button_ClearStart_Click" Text="X" Width="16px" Font-Bold="False" Font-Size="X-Small" />
                             <br />
                             <br />Date End :
@@ -109,12 +110,13 @@
                 "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
                 "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex +
                 "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value + 
+                "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
                 "&showtx=false",
             datatype: "json",
             colNames: ['id', 'TxId', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 10, stype: 'text', sortable: true, sorttype: 'int', hidden: true },
-                        { name: 'txid', index: 'txid', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
+                        { name: 'txid', index: 'txid', width: 45, stype: 'text', sortable: true, sorttype: 'int' },
                         { name: 'date', index: 'date', width: 80, stype: 'text', sortable: true,
                             formatter: 'date',
                             formatoptions: { srcformat: 'm/d/Y h:i:s A',
@@ -122,10 +124,10 @@
                                              defaultValue: null },
                         },
    		                { name: 'step', index: 'step', width: 70, sortable: true },
-   		                { name: 'brand', index: 'brand', width: 80, sortable: true },
-   		                { name: 'type', index: 'type', width: 80, sortable: true },
+   		                { name: 'brand', index: 'brand', width: 100, sortable: true },
+   		                { name: 'type', index: 'type', width: 100, sortable: true },
    		                { name: 'customer', index: 'customer', width: 140, sortable: true },
-   		                { name: 'tel', index: 'tel', width: 70, sortable: true },
+   		                { name: 'tel', index: 'tel', width: 75, sortable: true },
                         {
                             name: 'done', width: 50, index: 'done',
                             align: 'center',
@@ -136,7 +138,7 @@
             ],
             rowNum: 50,
             multiselect: true,
-            height: 250,
+            height: 270,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
