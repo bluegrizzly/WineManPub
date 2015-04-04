@@ -238,13 +238,13 @@
             <asp:Panel ID="Panel15" runat="server" BorderWidth="2" Width="315" Height="300" HorizontalAlign="Left">
                 <table width="100%">
                 <tr>
-                    <td align="left" class="auto-style15"><h3>&nbsp;3. Bottling Rendez-vous</h3></td>
+                    <td align="left" class="auto-style15" valign="middle"><h3>&nbsp;3. Bottling Appointment</h3></td>
                     <td align="right">
                         <asp:CheckBox ID="CheckBox_3" runat="server" BackColor="Red" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Enabled="False" />
                      </td>
                 </tr>
                 <tr>
-                    <td  align="center">
+                    <td  align="center" valign="middle">
                     <asp:Calendar ID="Calendar_RDV" runat="server" BorderStyle="Solid" BorderWidth="1px" ShowGridLines="True" ShowNextPrevMonth="False" Height="113px" Width="223px" Enabled="False">
                         <SelectedDayStyle BackColor="#0099FF" />
                         <TodayDayStyle BackColor="#999999" />
@@ -260,7 +260,7 @@
                             </td>
                     </tr>
                     <tr>
-                        <td align="center" valign="middle"><strong>Hour</strong>:
+                        <td align="center" valign="middle" class="auto-style18"><strong>Hour</strong>:
                             <asp:Label ID="Label_BottlingHour" runat="server" Text="Label" ForeColor="Black"></asp:Label>
                             </td>
                     </tr>
@@ -271,7 +271,7 @@
                     </tr>
                     <tr>
                         <td valign="middle" align="center">
-                            <asp:Button ID="Button_SelectDate" runat="server" Height="23px" OnClick="Button_SelectDate_Click" Text="Pick a Rendez-vous" Width="148px" />
+                            <asp:Button ID="Button_SelectDate" runat="server" Height="23px" OnClick="Button_SelectDate_Click" Text="Pick an Appointment" Width="148px" />
                         </td>
                     </tr>
                 </table>

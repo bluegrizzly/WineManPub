@@ -16,7 +16,9 @@
             <br />
             Versions: 1.03</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
 Version 1.03 (6 avril 2015)
-- Transaction page : No restrictions about dates when changing a transaction step date.
+- Transaction page:
+    - No restrictions about dates when changing a transaction step date.
+    - Renamed Rendez-vous to Appointment
 - Transactions to complete page:
     - Added transaction ID and Custoemer filters.
 - Transaction steps page 
@@ -30,6 +32,8 @@ Version 1.03 (6 avril 2015)
 - Removed the useless calendar on the home page.
 - Settings page:
    - New field to set the starting ID of transactions.
+- Bug fixing when picking appointments dates.
+
 
 Version 1.02 (2 avril 2015)
 - New printer settings for reports in addition of the transaction default printer.
