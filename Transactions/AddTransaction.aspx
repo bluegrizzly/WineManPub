@@ -113,7 +113,7 @@
             return;
         }
             
-        arguments.IsValid = confirm("Are you sure? \nThis operation will change all transaction step dates.");
+        arguments.IsValid = confirm("Are you sure? \nThis operation will recreate all transaction step dates to match this recipes (category).");
         if (!arguments.IsValid)
         {
             // Replace old value here.
