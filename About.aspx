@@ -33,7 +33,7 @@ Version 1.03 (6 avril 2015)
 - Settings page:
    - New field to set the starting ID of transactions.
 - Bug fixing when picking appointments dates.
-
+- Made the add customer dialog modal, so if you click on the side of it , it doesn't close anymore.
 
 Version 1.02 (2 avril 2015)
 - New printer settings for reports in addition of the transaction default printer.

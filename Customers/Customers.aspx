@@ -109,6 +109,7 @@
                    {//ADD portion
                        closeOnEscape: true,//Closes the popup on pressing escape key
                        closeAfterAdd: true,//Closes the add window after add
+                       modal:true,
                        width: 400,
                        closeAfterEdit: true,
                        afterSubmit: function (response, postdata) {
