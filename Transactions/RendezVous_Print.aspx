@@ -34,8 +34,12 @@
 <body onload="DoPrint()">
     <form id="form1" runat="server">
     <div>
-<asp:Button ID="btnPrint" runat="server" Text="Print" OnClientClick = "return PrintPanel();" Height="31px" Width="65px" />
-&nbsp;<asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" Height="31px" Width="58px" />
+        <asp:Button ID="Button_Back" runat="server" OnClick="Button_Back_Click" Text="Back" Height="31px" Width="58px" />
+        &nbsp;<asp:Button ID="btnPrint" runat="server" Text="Print" OnClientClick = "return PrintPanel();" Height="31px" Width="65px" />
+&nbsp;&nbsp;
+        <asp:Label ID="Label_Printer" runat="server" Text="Printer:" Visible="False"></asp:Label>
+        <asp:DropDownList ID="DropDownList_Printer" runat="server" Visible="False">
+        </asp:DropDownList>
         <asp:Panel ID="Panel_Main" runat="server" Font-Names="Arial">
             <table class="auto-style2">
                 <tr>

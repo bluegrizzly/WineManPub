@@ -14,7 +14,10 @@
             <strong>
             <br />
             <br />
-            Versions: 1.03</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+            Versions: 1.04</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.04 ()
+- Fixed the transaction print
+
 Version 1.03 (6 avril 2015)
 - Transaction page:
     - No restrictions about dates when changing a transaction step date.

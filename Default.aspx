@@ -7,15 +7,11 @@
             width: 484px;
             height: 211px;
         }
-        .auto-style2 {
-            width: 483%;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-       Welcome to WineMan
-    </h2>
+       &nbsp;</h2>
     <p>
         <br />
         <br />

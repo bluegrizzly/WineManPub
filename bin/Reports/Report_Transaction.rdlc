@@ -3864,12 +3864,12 @@
   </Body>
   <Width>10.5in</Width>
   <Page>
-    <PageHeight>8.27cm</PageHeight>
-    <PageWidth>11.69in</PageWidth>
-    <LeftMargin>0.25in</LeftMargin>
-    <RightMargin>0.2in</RightMargin>
-    <TopMargin>0.2in</TopMargin>
-    <BottomMargin>0.2in</BottomMargin>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2.2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
