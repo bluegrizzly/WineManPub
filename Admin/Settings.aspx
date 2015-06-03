@@ -49,6 +49,13 @@
             </td>
         </tr>
 
+        <tr>
+            <td align="right" style="background-color: #E1E8F0">Intervale Between Appointments</td>
+            <td style="background-color: #E1E8F0">
+                <asp:TextBox ID="TextBox_IntervalAppointments" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+
     </table>
 
 

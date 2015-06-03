@@ -27,6 +27,9 @@
             width: 149px;
             height: 43px;
         }
+        #editRow {
+            width: 135px;
+        }
     </style>
 
   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -94,7 +97,8 @@
                             <input id="setToDone" type="button" value="Set to Done"/><br />
                             <input id="selectAll" type="button" value="Select All"/><br />
                             <input id="clear" type="button" value="Clear Selection"/><br />
-                            <br />&nbsp;<asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" Width="135px" />
+                            <br />
+                            <input id="editRow" type="button" value="Edit tx"/><br />&nbsp;<asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" Width="135px" />
 &nbsp;<br />
                         </fieldset></td>
                 </tr>
@@ -113,7 +117,7 @@
                 "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
                 "&showtx=false",
             datatype: "json",
-            colNames: ['id', 'TxId', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Done'],
+            colNames: ['id', 'TxID', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 10, stype: 'text', sortable: true, sorttype: 'int', hidden: true },
                         { name: 'txid', index: 'txid', width: 45, stype: 'text', sortable: true, sorttype: 'int' },
@@ -190,6 +194,27 @@
             grid.jqGrid('resetSelection');
         });
         
+        $("#editRow").click(function () {
+            var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
+            var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'txid');
+            $.ajax({
+                type: "POST",
+                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
+                data: value,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    window.location = data;
+                },
+                error: function (res, status, exeption) {
+                    if (value == "")
+                        alert("please select a row");
+                    else
+                        alert(exeption);
+                }
+            });
+        });
+
         $("#setToDone").click(function () {
             var ids = grid.jqGrid('getGridParam', 'selarrrow');
             if (ids.length > 0)

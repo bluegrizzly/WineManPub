@@ -68,11 +68,12 @@
 <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 
 <script language="javascript" type="text/javascript">
+
     $(function () {
-        $("#<%= TextBox_Date.ClientID %>").datepicker({
-              autoclose: true,
-              dateFormat: "M-dd-yy"
-          });
+        $('.TheDateTimePicker').datepicker({
+            autoclose: true,
+            dateFormat: "M-dd-yy"
+        });
     });
 
       $(function () {
@@ -300,6 +301,7 @@
                                 <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" />
                                 <asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" />
                                 <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="66px" Font-Size="X-Small" Height="22px" style="margin-top: 0px" Visible="False" />
+                                <asp:Button ID="Button_Duplicate" runat="server" OnClick="Button_Duplicate_Click" PostBackUrl="~/Transactions/AddTransaction.aspx" Text="Duplicate" />
                             </p>
                         </td>
                     </tr>
@@ -324,25 +326,18 @@
                             <table class="auto-style25">
                             <tr>
                                 <td>
-                                    <asp:CheckBox ID="CheckBox_EditDates" runat="server" Text="Edit Dates" AutoPostBack="True" OnCheckedChanged="CheckBox_EditDates_CheckedChanged" />
-                                </td>
+                                    &nbsp;</td>
                                 <td>
                             <asp:Panel ID="Panel_EditDates" runat="server" >
                                 <table class="auto-style25">
                                     <tr>
                                         <td>
                                             
+                                            <asp:Button ID="Button_ResetDate" runat="server" Font-Size="Smaller" Height="18px" OnClick="Button_ResetDate_Click" Text="Reset Dates (today)" ToolTip="Reset all transaction step dates to start the Yeast TODAY and follow the recipes." />
+                                            
                                         </td>
-                                        <td align="center" style="background-color: #E1E8F0">
-                                            <asp:DropDownList ID="DropDownList_Steps" runat="server" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="id" OnSelectedIndexChanged="DropDownList_Steps_SelectedIndexChanged" AutoPostBack="True" Visible="False">
-                                            </asp:DropDownList>
-                                            <asp:TextBox ID="TextBox_Date" runat="server" Width="85px" Visible="False"></asp:TextBox>
-                                            <asp:Button ID="Button_ChangeDate" runat="server" Text="Change Date" OnClick="Button_ChangeDate_Click" Visible="False" />
-                                        </td>
-                                        <td class="auto-style26">&nbsp;</td>
-                                        <td align="center" style="background-color: #E1E8F0">
-                                             <asp:Button ID="Button_ResetDate" runat="server" Text="Reset Dates (today)" OnClick="Button_ResetDate_Click" Visible="False" ToolTip="Reset all transaction step dates to start the Yeast TODAY and follow the recipes." />
-                                        </td>
+                                        <td align="left">
+                                             &nbsp;</td>
                                     </tr>
                                 </table>
                             </asp:Panel>

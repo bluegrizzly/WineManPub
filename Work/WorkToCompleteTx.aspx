@@ -18,7 +18,7 @@
         }
         .auto-style3 {
             width: 149px;
-            height: 129px;
+            height: 100px;
         }
         #print {
             width: 135px;
@@ -90,14 +90,18 @@
                             <asp:TextBox ID="txtDateStart" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
                             <asp:Button ID="Button_ClearStart" runat="server" Height="19px" OnClick="Button_ClearStart_Click" Text="X" Width="16px" Font-Bold="False" Font-Size="X-Small" />
                             <br />
-                            <br />Date End :
+                            Date End :
                             <asp:TextBox ID="txtDateEnd" runat="server" AutoPostBack="True" Width="97px"></asp:TextBox>
                             <asp:Button ID="Button_ClearEnd" runat="server" Height="19px" Text="X" Width="16px" Font-Size="X-Small" OnClick="Button_ClearEnd_Click" />
+                            <asp:RadioButtonList ID="RadioButtonList_Date" runat="server" AutoPostBack="True" Font-Size="Small" Height="20px" Width="120px">
+                                <asp:ListItem>Creation</asp:ListItem>
+                                <asp:ListItem>Bottling</asp:ListItem>
+                            </asp:RadioButtonList>
                         </fieldset></td>
                 </tr>
                 <tr>
                     <td class="auto-style2" align="center" valign="top">
-                        &nbsp;<fieldset>
+                        <fieldset>
 
                             <input id="setToDone" type="button" value="Set to Done"/><br />
                             <input id="selectAll" type="button" value="Select All"/><br />
@@ -112,6 +116,16 @@
             </table>
     
     <script type="text/javascript">
+        function CheckRadioListSelectedItem() {
+            var items = document.getElementsByName("<%=RadioButtonList_Date.UniqueID%>");
+            for (var j = 0; j < items.length; j++) {
+                if (items[j].checked) {
+                    return items[j].value;
+                }
+            }
+            return "Unknown";
+        }
+
         var grid = $("#jQGridDemo");
 
         grid.jqGrid({
@@ -122,15 +136,16 @@
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
                 "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value +
                 "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
-                "&showtx=true",
+                "&showtx=true" +
+                "&datekind=" + CheckRadioListSelectedItem(),
             datatype: "json",
-            colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Steps Status', 'Location', 'Done'],
+            colNames: ['TxID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Steps Status', 'Loc', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 50, stype: 'text', sortable: true, sorttype: 'int' },
                         { name: 'client_id', index: 'client_id', width: 140, sortable: true },
                         { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
                         { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
-                        { name: 'wine_category_id', index: 'wine_category_id', width: 70, stype: 'text', sortable: true },
+                        { name: 'wine_category_id', index: 'wine_category_id', width: 50, stype: 'text', sortable: true },
                         {
                             name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
                             formatter: 'date',
@@ -140,8 +155,17 @@
                                 defaultValue: null
                             },
                         },
+                        {
+                            name: 'date_bottling', index: 'date_bottling', width: 80, stype: 'text', sortable: true,
+                            formatter: 'date',
+                            formatoptions: {
+                                srcformat: 'm/d/Y h:i:s A',
+                                newformat: 'Y-M-d',
+                                defaultValue: null
+                            },
+                        },
                         { name: 'steps_done', index: 'steps_done', width: 50, stype: 'text', sortable: true, editable: false, align: 'center' },
-                        { name: 'location', index: 'location', width: 50, stype: 'text', sortable: true, editable: true, align: 'center', cellEdit:true },
+                        { name: 'location', index: 'location', width: 20, stype: 'text', sortable: true, editable: true, align: 'center', cellEdit:true },
                         {
                             name: 'done', width: 30, index: 'done',
                             align: 'center',
@@ -152,6 +176,7 @@
             ],
             rowNum: 50,
             multiselect: true,
+            width: 760,
             height: 270,
             mtype: 'GET',
             loadonce: true,

@@ -26,7 +26,7 @@
         
         <table style="width:100%;">
             <tr>
-                <td class="auto-style2"><h2>Bottling Stations</h2></td>
+                <td class="auto-style2"><h2>Bottling Appointments</h2></td>
                 <td rowspan="3" align class="auto-style4">
                     &nbsp;</td>
                 <td rowspan="3" valign="top">
