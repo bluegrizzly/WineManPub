@@ -15,6 +15,11 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.2 (June 14 2015)
+- Transaction page: 
+    - New checkbox to complete a transaction. Checkbox is enabled if all steps are completed.
+    - Transaction browsing support. When comming from the transaction to complete page, you can browse from the list of transactions in the list. When you can browse 2 buttons will show at the bottom right with the index of the transaction from the list.
+
 Version 1.1.1 (June 11 2015)
 - Customer : Fix issue using ' in adress
 - Transaction Print: Support having 9 steps to fit in 1 page.

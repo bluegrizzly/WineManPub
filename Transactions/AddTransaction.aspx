@@ -58,10 +58,7 @@
     .auto-style25 {
         width: 100%;
     }
-    .auto-style26 {
-        width: 51px;
-    }
-</style>
+    </style>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -335,6 +332,15 @@
                                             
                                             <asp:Button ID="Button_ResetDate" runat="server" Font-Size="Smaller" Height="18px" OnClick="Button_ResetDate_Click" Text="Reset Dates (today)" ToolTip="Reset all transaction step dates to start the Yeast TODAY and follow the recipes." />
                                             
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:CheckBox ID="CheckBox_TxCompleted" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBox_TxCompleted_CheckedChanged" Text="Tx Completed" TextAlign="Left" />
+                                            
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td align="right">
+                                            <asp:Label ID="Label_Iterator" runat="server"></asp:Label>
+                                            <asp:ImageButton ID="Button_Previous" runat="server" ImageUrl="~/images/previous.png" OnClick="Button_Previous_Click" />
+                                            <asp:ImageButton ID="Button_Next" runat="server" ImageUrl="~/images/next.png" OnClick="Button_Next_Click" />
                                         </td>
                                         <td align="left">
                                              &nbsp;</td>

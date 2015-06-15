@@ -304,24 +304,48 @@
         });
 
         $("#editRow").click(function () {
-            var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-            var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'id');
-            $.ajax({
-                type: "POST",
-                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
-                data: value,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    window.location = data;
-                },
-                error: function (res, status, exeption) {
-                    if (value == "")
-                        alert("please select a row");
-                    else
-                        alert(exeption);
+
+            //var ids = grid.jqGrid('getGridParam', 'selarrrow');
+            var ids = grid.jqGrid('getGridParam', 'selarrrow');
+            if (ids.length > 0) {
+                var names = [];
+
+                for (var i = 0, il = ids.length; i < il; i++) {
+                    var name = grid.jqGrid('getCell', ids[i], 'id');
+                    names.push(name);
+                    break;// support only the first selection
                 }
-            });
+
+                names.push("*");
+
+                var allids = grid.jqGrid('getDataIDs');
+                for (var i = 0; i < allids.length; i++) {
+                    var rowId = allids[i];
+                    var rowData = grid.jqGrid('getRowData', rowId);
+                    names.push(rowData.id);
+                    //alert("RowId: " + rowId + " data: " + rowData.id);
+                }
+
+                //alert ("Names: " + names.join(", ") + "; ids: " + ids.join(", "));
+                $("#names").html(names.join(", "));
+                var jsonData = JSON.stringify(names);
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
+                    data: jsonData,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        window.location = data;
+                    },
+                    error: function (res, status, exeption) {
+                        if (value == "")
+                            alert("please select a row");
+                        else
+                            alert(exeption);
+                    }
+                });
+            }
         });
 
 
