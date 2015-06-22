@@ -94,7 +94,7 @@
                 <tr>
                     <td class="auto-style2" align="center" valign="top">
                         &nbsp;<fieldset>
-                            <input id="setToDone" type="button" value="Set to Done"/><br />
+                            <input id="setToDone" type="button" value="Work Done"/><br />
                             <input id="selectAll" type="button" value="Select All"/><br />
                             <input id="clear" type="button" value="Clear Selection"/><br />
                             <br />
@@ -168,7 +168,7 @@
                     }
                 }
                 if (reset) {
-                    document.getElementById("setToDone").value = "Set to Done";
+                    document.getElementById("setToDone").value = "Work Done";
                 }
             },
             gridComplete: function () {
@@ -270,7 +270,7 @@
                        searchtext: "Search",
                        addtext: "Add",
                        edittext: "Edit",
-                       deltext: "Set to Done"
+                       deltext: "Work Done"
                    },
                    {   //EDIT
                        //                       height: 300,

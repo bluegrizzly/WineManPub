@@ -15,13 +15,29 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+
+Version 1.3 (June 21 2015)
+- Customer : fixed telephone format 
+- Appointement page: added the hour 00. This can be used when the client doesn't which time he will come.
+- Transaction Print page: Fill with blank line to have a page always the same height.
+- Add Transaction Page: 
+    - Show the customer's telephone 
+    - Fixed alignements and display in dates section
+    - Show the transaction's creation date.
+    - Added tooltips on elements.
+- Everywhere: Renamed "Set to Done" to "Work Done"
+- Transactions page: tx page navigation is now supported when editing a transaction from the transactions page.
+- New Anaysis reports under the Admin->Reports menu
+    - Created transactions analysis: Gives for last 12 months the total nb of created transactions per month
+    - Active transactions analysis: Gives a analysis of all active transaction that show wine brand and wine types distribution.
+
 Version 1.2 (June 14 2015)
 - Transaction page: 
     - New checkbox to complete a transaction. Checkbox is enabled if all steps are completed.
     - Transaction browsing support. When comming from the transaction to complete page, you can browse from the list of transactions in the list. When you can browse 2 buttons will show at the bottom right with the index of the transaction from the list.
 
 Version 1.1.1 (June 11 2015)
-- Customer : Fix issue using ' in adress
+- Customer : Fixed issue using ' in adress
 - Transaction Print: Support having 9 steps to fit in 1 page.
 
 Version 1.1 (June 3 2015)

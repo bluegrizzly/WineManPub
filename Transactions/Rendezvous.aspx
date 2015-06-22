@@ -56,6 +56,8 @@
                                     &nbsp;</td>
                                 <td align="center" class="auto-style7">
                                     <asp:DropDownList ID="DropDownList_ManualHour" runat="server" AutoPostBack="True" Height="17px" Width="49px">
+                                        <asp:ListItem Value="00">00</asp:ListItem>
+                                        <asp:ListItem Value="08"></asp:ListItem>
                                         <asp:ListItem>09</asp:ListItem>
                                         <asp:ListItem>10</asp:ListItem>
                                         <asp:ListItem>11</asp:ListItem>
@@ -71,6 +73,7 @@
                                         <asp:ListItem>21</asp:ListItem>
                                     </asp:DropDownList>
                                     h<asp:DropDownList ID="DropDownList_ManualMin" runat="server" AutoPostBack="True" Height="16px" Width="47px">
+                                        <asp:ListItem Value="00"></asp:ListItem>
                                         <asp:ListItem>05</asp:ListItem>
                                         <asp:ListItem>10</asp:ListItem>
                                         <asp:ListItem>15</asp:ListItem>

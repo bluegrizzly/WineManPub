@@ -55,194 +55,217 @@
     </tr>
     </table>
 
-            <script type="text/javascript">
-                jQuery("#jQGridDemo").jqGrid({
-                    url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?showcompleted=") %>' +
-                        document.getElementById('<%= ShowCompletedCheckBox.ClientID%>').checked +
-                        "&filterdate=" + document.getElementById('<%= DropDownList_Filter.ClientID%>').value +
-                        "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
-                        "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
-                    datatype: "json",
-                    colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
-                    colModel: [
-                                { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
-   		                        { name: 'client_id', index: 'client_id', width: 140, sortable: true },
-   		                        { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
-                                { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
-                                { name: 'wine_category_id', index: 'wine_category_id', width: 70, stype: 'text', sortable: true },
-                                {
-                                    name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
-                                    formatter: 'date',
-                                    formatoptions: {
-                                        srcformat: 'm/d/Y h:i:s',
-                                        newformat: 'Y-M-d',
-                                        defaultValue: null
-                                    },
+        <script type="text/javascript">
+            var grid = $("#jQGridDemo");
+            jQuery("#jQGridDemo").jqGrid({
+                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?showcompleted=") %>' +
+                    document.getElementById('<%= ShowCompletedCheckBox.ClientID%>').checked +
+                    "&filterdate=" + document.getElementById('<%= DropDownList_Filter.ClientID%>').value +
+                    "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
+                    "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
+                datatype: "json",
+                colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
+                colModel: [
+                            { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
+   		                    { name: 'client_id', index: 'client_id', width: 140, sortable: true },
+   		                    { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
+                            { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
+                            { name: 'wine_category_id', index: 'wine_category_id', width: 70, stype: 'text', sortable: true },
+                            {
+                                name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
+                                formatter: 'date',
+                                formatoptions: {
+                                    srcformat: 'm/d/Y h:i:s',
+                                    newformat: 'Y-M-d',
+                                    defaultValue: null
                                 },
-                                {
-                                    name: 'date_bottling', index: 'date_bottling', width: 110, stype: 'text', sortable: true,
-                                    formatter: 'date',
-                                    formatoptions: {
-                                        srcformat: 'm/d/Y h:i:s A',
-                                        newformat: 'Y-M-d H:i',
-                                        defaultValue: null
-                                    },
+                            },
+                            {
+                                name: 'date_bottling', index: 'date_bottling', width: 110, stype: 'text', sortable: true,
+                                formatter: 'date',
+                                formatoptions: {
+                                    srcformat: 'm/d/Y h:i:s A',
+                                    newformat: 'Y-M-d H:i',
+                                    defaultValue: null
                                 },
+                            },
 
-                                { name: 'bottling_station', index: 'bottling_station', width: 40, sortable: true, align: 'center' },
-                                { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
-                                { name: 'product_code', index: 'product_code', width: 25, sortable: true, align: 'center' },
-                                {
-                                    name: 'done', width: 30, index: 'done',
-                                    align: 'center',
-                                    stype: 'checkbox',
-                                    search: true,
-                                    editable: true,
-                                    edittype: 'checkbox',
-                                    editoptions: { value: "1:0", defaultValue: "1" },
-                                    formatter: "checkbox", formatoptions: { disabled: true }
-                                }
-                    ],
-                    rowNum: 20,
-                    height: 270,
-                    mtype: 'GET',
-                    loadonce: true,
-                    ignoreCase: true,
-                    rowList: [20, 50, 200, 500],
-                    pager: '#jQGridDemoPager',
-                    sortname: 'id',
-                    viewrecords: true,
-                    sortorder: 'desc',
-                    caption: "Transactions",
-                    editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
-
-                    onSelectRow: function (ids) {
-                        url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
-                    },
-                    gridComplete: function () {
-                        var rows = $("#jQGridDemo").getDataIDs();
-                        for (var i = 0; i < rows.length; i++) {
-                            var status = $("#jQGridDemo").getCell(rows[i], "done");
-                            if (status == "1") {
-                                $("#jQGridDemo" ).jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: 'green' });
+                            { name: 'bottling_station', index: 'bottling_station', width: 40, sortable: true, align: 'center' },
+                            { name: 'location', index: 'location', width: 30, sortable: true, align: 'center' },
+                            { name: 'product_code', index: 'product_code', width: 25, sortable: true, align: 'center' },
+                            {
+                                name: 'done', width: 30, index: 'done',
+                                align: 'center',
+                                stype: 'checkbox',
+                                search: true,
+                                editable: true,
+                                edittype: 'checkbox',
+                                editoptions: { value: "1:0", defaultValue: "1" },
+                                formatter: "checkbox", formatoptions: { disabled: true }
                             }
+                ],
+                rowNum: 20,
+                height: 270,
+                mtype: 'GET',
+                loadonce: true,
+                ignoreCase: true,
+                rowList: [20, 50, 200, 500],
+                pager: '#jQGridDemoPager',
+                sortname: 'id',
+                viewrecords: true,
+                sortorder: 'desc',
+                caption: "Transactions",
+                editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
+
+                onSelectRow: function (ids) {
+                    url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>'
+                },
+                gridComplete: function () {
+                    var rows = $("#jQGridDemo").getDataIDs();
+                    for (var i = 0; i < rows.length; i++) {
+                        var status = $("#jQGridDemo").getCell(rows[i], "done");
+                        if (status == "1") {
+                            $("#jQGridDemo" ).jqGrid('setRowData', rows[i], false, { color: 'white', weightfont: 'bold', background: 'green' });
                         }
+                    }
+                }
+            });
+
+
+            $("#editRow").click(function () {
+
+                var ids = $("#jQGridDemo" ).jqGrid('getGridParam', 'selrow');
+                if (ids.length > 0) {
+                    var names = [];
+
+                    for (var i = 0, il = ids.length; i < il; i++) {
+                        var name = grid.jqGrid('getCell', ids[i], 'id');
+                        names.push(name);
+                        break;// support only the first selection
+                    }
+
+                    names.push("*");
+
+                    var allids = grid.jqGrid('getDataIDs');
+                    for (var i = 0; i < allids.length; i++) {
+                        var rowId = allids[i];
+                        var rowData = grid.jqGrid('getRowData', rowId);
+                        names.push(rowData.id);
+                        //alert("RowId: " + rowId + " data: " + rowData.id);
+                    }
+
+                    //alert ("Names: " + names.join(", ") + "; ids: " + ids.join(", "));
+                    $("#names").html(names.join(", "));
+                    var jsonData = JSON.stringify(names);
+                    $.ajax({
+                        type: "POST",
+                        url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
+                        data: jsonData,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (data) {
+                            window.location = data;
+                        },
+                        error: function (res, status, exeption) {
+                            if (value == "")
+                                alert("please select a row");
+                            else
+                                alert(exeption);
+                            }
+                        });
                     }
                 });
 
 
-                    $("#editRow").click(function () {
-                        var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-                        var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'id');
-                        $.ajax({
-                            type: "POST",
-                            url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
-                            data: value,
-                            contentType: "application/json; charset=utf-8",
-                            dataType: "json",
-                            success: function (data) {
-                                window.location = data;
+                $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',
+                            {
+                                edit: false,
+                                add: false,
+                                del: true,
+                                search: true,
+                                searchtext: "Search",
+                                addtext: "Add",
+                                edittext: "Edit",
+                                deltext: "Delete"
                             },
-                            error: function (res, status, exeption) {
-                                if (value == "")
-                                    alert("please select a row");
-                                else
-                                    alert(exeption);
+                            {   //EDIT
+                                //                       height: 300,
+                                //                       width: 400,
+                                //                       top: 50,
+                                //                       left: 100,
+                                //                       dataheight: 280,
+                                closeOnEscape: true,//Closes the popup on pressing escape key
+                                reloadAfterSubmit: true,
+                                drag: true,
+                                afterSubmit: function (response, postdata) {
+                                    if (response.responseText == "") {
+
+                                        $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid');//Reloads the grid after edit
+                                        return [true, '']
+                                    }
+                                    else {
+                                        $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid'); //Reloads the grid after edit
+                                        return [false, response.responseText]//Captures and displays the response text on th Edit window
+                                    }
+                                },
+                                editData: {
+                                    EmpId: function () {
+                                        var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
+                                        var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'Id');
+                                        return value;
+                                    }
+                                }
+                            },
+                            {
+                                closeAfterAdd: true,//Closes the add window after add
+                                afterSubmit: function (response, postdata) {
+                                    if (response.responseText == "") {
+
+                                        $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
+                                        return [true, '']
+                                    }
+                                    else {
+                                        $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
+                                        return [false, response.responseText]
+                                    }
+                                }
+                            },
+                            {   //DELETE
+                                closeOnEscape: true,
+                                closeAfterDelete: true,
+                                reloadAfterSubmit: true,
+                                closeOnEscape: true,
+                                width:500,
+                                drag: true,
+                                beforeShowForm: function ($form) {
+                                    var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
+                                    $("td.delmsg", $form[0]).html("*** WARNING ***\n\nDo you really want delete the transaction: <b>id=" +
+                                            $('#jQGridDemo').jqGrid('getCell', sel_id, 'id') + "</b>?\n\nAll transactions steps related to this transaction\nwill also be deleted ");
+                                },
+                                afterSubmit: function (response, postdata) {
+                                    if (response.responseText == "") {
+
+                                        $("#jQGridDemo").trigger("reloadGrid", [{ current: true }]);
+                                        return [true, response.responseText]
+                                    }
+                                    else {
+                                        $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')
+                                        return [false, response.responseText]
+                                    }
+                                },
+                                delData: {
+                                    EmpId: function () {
+                                        var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
+                                        var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'id');
+                                        return value;
+                                    }
+                                }
+                            },
+                            {//SEARCH
+                                closeOnEscape: true
+
                             }
-                        });
-                });
-
-
-
-                    $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',
-                               {
-                                   edit: false,
-                                   add: false,
-                                   del: true,
-                                   search: true,
-                                   searchtext: "Search",
-                                   addtext: "Add",
-                                   edittext: "Edit",
-                                   deltext: "Delete"
-                               },
-                               {   //EDIT
-                                   //                       height: 300,
-                                   //                       width: 400,
-                                   //                       top: 50,
-                                   //                       left: 100,
-                                   //                       dataheight: 280,
-                                   closeOnEscape: true,//Closes the popup on pressing escape key
-                                   reloadAfterSubmit: true,
-                                   drag: true,
-                                   afterSubmit: function (response, postdata) {
-                                       if (response.responseText == "") {
-
-                                           $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid');//Reloads the grid after edit
-                                           return [true, '']
-                                       }
-                                       else {
-                                           $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid'); //Reloads the grid after edit
-                                           return [false, response.responseText]//Captures and displays the response text on th Edit window
-                                       }
-                                   },
-                                   editData: {
-                                       EmpId: function () {
-                                           var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-                                           var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'Id');
-                                           return value;
-                                       }
-                                   }
-                               },
-                               {
-                                   closeAfterAdd: true,//Closes the add window after add
-                                   afterSubmit: function (response, postdata) {
-                                       if (response.responseText == "") {
-
-                                           $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
-                                           return [true, '']
-                                       }
-                                       else {
-                                           $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
-                                           return [false, response.responseText]
-                                       }
-                                   }
-                               },
-                               {   //DELETE
-                                   closeOnEscape: true,
-                                   closeAfterDelete: true,
-                                   reloadAfterSubmit: true,
-                                   closeOnEscape: true,
-                                   width:500,
-                                   drag: true,
-                                   beforeShowForm: function ($form) {
-                                       var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-                                       $("td.delmsg", $form[0]).html("*** WARNING ***\n\nDo you really want delete the transaction: <b>id=" +
-                                             $('#jQGridDemo').jqGrid('getCell', sel_id, 'id') + "</b>?\n\nAll transactions steps related to this transaction\nwill also be deleted ");
-                                   },
-                                   afterSubmit: function (response, postdata) {
-                                       if (response.responseText == "") {
-
-                                           $("#jQGridDemo").trigger("reloadGrid", [{ current: true }]);
-                                           return [true, response.responseText]
-                                       }
-                                       else {
-                                           $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')
-                                           return [false, response.responseText]
-                                       }
-                                   },
-                                   delData: {
-                                       EmpId: function () {
-                                           var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-                                           var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'id');
-                                           return value;
-                                       }
-                                   }
-                               },
-                               {//SEARCH
-                                   closeOnEscape: true
-
-                               }
-                        );
+                    );
 
             </script>
 </asp:Content>

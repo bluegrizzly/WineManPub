@@ -155,9 +155,15 @@
                             <asp:Label ID="Label_LastName" runat="server" Text="none" Font-Size="13pt" ForeColor="Black"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td align="right" class="auto-style20">Tel:</td>
+                        <td>
+                            <asp:Label ID="Label_Tel" runat="server" ForeColor="Black" Text="none"></asp:Label>
+                        </td>
+                    </tr>
                 </table>                <fieldset>
                 <div class="ui-widget" style="text-align:center" >
-                      <asp:TextBox ID="txtLastName" runat="server" Width="150px" CssClass="textboxAuto"  Font-Size="12px" OnTextChanged="txtLastName_TextChanged" BackColor="#E1E8F0" AutoPostBack="True" />
+                      <asp:TextBox ID="txtLastName" runat="server" Width="150px" CssClass="textboxAuto"  Font-Size="12px" OnTextChanged="txtLastName_TextChanged" BackColor="#E1E8F0" AutoPostBack="True" ToolTip="Type first name, last name, customer ID, or phone  to search the customer. hit space to see them all." />
                       <br />
                       <asp:Label ID="Label1" runat="server" Font-Italic="True" Font-Size="7pt" ForeColor="#999999" Text="Type name, ID or phone to select"></asp:Label>
                 </div>    
@@ -269,7 +275,7 @@
                     </tr>
                     <tr>
                         <td valign="middle" align="center">
-                            <asp:Button ID="Button_SelectDate" runat="server" Height="23px" OnClick="Button_SelectDate_Click" Text="Pick an Appointment" Width="148px" />
+                            <asp:Button ID="Button_SelectDate" runat="server" Height="23px" OnClick="Button_SelectDate_Click" Text="Pick an Appointment" Width="148px" ToolTip="Choose the bottling appointement." />
                         </td>
                     </tr>
                 </table>
@@ -294,11 +300,12 @@
                                 Transaction ID:
                                 <asp:Label ID="Label_TransactionID" runat="server" DefaultValue="0" Name="TxID" Text="Label" Font-Size="Large" style="font-weight: 700" ForeColor="Black"></asp:Label>
                                 <br />
+                                <asp:Label ID="Label_CreationDate" runat="server" Font-Size="Smaller" ForeColor="Silver" Text="Label"></asp:Label>
                                 <br />
-                                <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" />
-                                <asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" />
+                                <asp:Button ID="Button_Commit" runat="server" CausesValidation="False" OnClick="Button_Commit_Click" Text="Create" UseSubmitBehavior="False" ToolTip="Create and commit all changes for this transaction. This will add the transaction to the database." />
+                                <asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" ToolTip="Print the transaction in 2 copies. Note that the autoprint et to on in the settings section will not show a preview (faster)" />
                                 <asp:Button ID="Button_SendEmail" runat="server" OnClick="Button_SendEmail_Click" Text="Send Email" Width="66px" Font-Size="X-Small" Height="22px" style="margin-top: 0px" Visible="False" />
-                                <asp:Button ID="Button_Duplicate" runat="server" OnClick="Button_Duplicate_Click" PostBackUrl="~/Transactions/AddTransaction.aspx" Text="Duplicate" />
+                                <asp:Button ID="Button_Duplicate" runat="server" OnClick="Button_Duplicate_Click" PostBackUrl="~/Transactions/AddTransaction.aspx" Text="Duplicate" ToolTip="Create a copy of the current transaction. You need to update the appointement and hit Create in order to complete the operation." />
                             </p>
                         </td>
                     </tr>
@@ -318,7 +325,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style10" valign="top" colspan="2">
-                            <asp:Table ID="Table_Dates" runat="server" BorderWidth="2px" CellPadding="1" CellSpacing="1" GridLines="Both" Height="62px" HorizontalAlign="Center" Width="670px">
+                            <asp:Table ID="Table_Dates" runat="server" BorderWidth="2px" CellPadding="1" CellSpacing="1" GridLines="Both" Height="62px" HorizontalAlign="Justify" Width="700px">
                             </asp:Table>
                             <table class="auto-style25">
                             <tr>
@@ -333,14 +340,14 @@
                                             <asp:Button ID="Button_ResetDate" runat="server" Font-Size="Smaller" Height="18px" OnClick="Button_ResetDate_Click" Text="Reset Dates (today)" ToolTip="Reset all transaction step dates to start the Yeast TODAY and follow the recipes." />
                                             
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <asp:CheckBox ID="CheckBox_TxCompleted" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBox_TxCompleted_CheckedChanged" Text="Tx Completed" TextAlign="Left" />
+                                            <asp:CheckBox ID="CheckBox_TxCompleted" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBox_TxCompleted_CheckedChanged" Text="Tx Completed" TextAlign="Left" ToolTip="Complete the transaction. This can be done only if transaction steps are all completed." />
                                             
                                         </td>
                                         <td>&nbsp;</td>
                                         <td align="right">
                                             <asp:Label ID="Label_Iterator" runat="server"></asp:Label>
-                                            <asp:ImageButton ID="Button_Previous" runat="server" ImageUrl="~/images/previous.png" OnClick="Button_Previous_Click" />
-                                            <asp:ImageButton ID="Button_Next" runat="server" ImageUrl="~/images/next.png" OnClick="Button_Next_Click" />
+                                            <asp:ImageButton ID="Button_Previous" runat="server" ImageUrl="~/images/previous.png" OnClick="Button_Previous_Click" Height="20px" />
+                                            <asp:ImageButton ID="Button_Next" runat="server" ImageUrl="~/images/next.png" OnClick="Button_Next_Click" Height="20px" />
                                         </td>
                                         <td align="left">
                                              &nbsp;</td>
