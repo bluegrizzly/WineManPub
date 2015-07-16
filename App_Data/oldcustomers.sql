@@ -165,7 +165,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bernice','Getty','235 Blue Haven','Dollard-des-Ormeaux','Quebec','H9G 2N6','(514) 626-9168');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bernie','Cornell','103 Sunderland','Pointe-Claire','Quebec','H9R 1L4','(514) 694-9430');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bernie','Donsky','306-4005 Sources boul.','Dollard Des Ormeaux','Quebec','H9B 0A3','(514) 685-1615');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bernie','Filiatreault','20358 Old Montreal Rd','South Landcaster','Ontario, K0C 2C0','(613) 347-3984',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bernie','Filiatreault','20358 Old Montreal Rd','South Landcaster','Ontario', 'K0C 2C0','(613) 347-3984');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Beryl','Tucker','415 Concord','Beaconsfield','Quebec','H9W 5T1','(514) 695-4694');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Betty','Clark','119 Hastings','Pointe-Claire','Quebec','H9R 3P4','(514) 697-6508');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Beverley','Pope','1925 Bordeaux','Saint-Jerome','Quebec','J5L 2R3','(450) 530-3505');
@@ -219,7 +219,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bryan','Le Huquet','148 Douglas Shand','Pointe Claire','Quebec','H9R 2E3','(514) 695-4617');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Bryan','Scott','4723 Meloche','Pierrefonds','Quebec','H9J 1Y7','(514) 620-5240');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Buck','MacDonald','15 Valerie','Kirkland','Quebec','H9J 1K1','(514) 694-5099');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Burnell','Cox','141 Hemlock Cr','Cornwall','Ontario, K6H 7L7','(613) 935-7778',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Burnell','Cox','141 Hemlock Cr','Cornwall','Ontario', 'K6H 7L7','(613) 935-7778');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('C','Gibouleau','115 Stillview','Pointe-Claire','Quebec','H9R 2X9','(514) 697-7682');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('C.','King','1301 Carson','Dorval','Quebec','H9S 1M5','(514) 636-1960');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('C.A.N.','Reid','60 Strathearn Avenue North','Montreal ouest','Quebec','H4X 1X7','(514) 488-8765');
@@ -279,7 +279,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Charles Emile','Gauvreau','5300 Sir George Simpson','Lachine','Quebec','H8T 1E8','(514) 637-9081');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Charlie','Grapes','96 Giroux','Chateauguay','Quebec','J6J 4V5','(450) 699-3409');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Charlie','Power','282 Andre-Brunet','Kirkland','Quebec','H9H 3L7','(514) 697-5928');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Charlie E','Hurtubise','53 Lucerne','Pointe-Claire','H9R 2V1','(514) 630-7624',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Charlie E','Hurtubise','53 Lucerne','Pointe-Claire','Quebec','H9R 2V1','(514) 630-7624');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chelsea','Lichtenberger','779 Osborne','Montreal','Quebec','H4H 1X3','(514) 292-4357');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chen','Ya Lun','146 Ave Concord','Pointe Claire','Quebec','H9R 1N4','(514) 426-7275');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Cheryl','Campbell-Steer','232 Sherwood','Beaconsfield','Quebec','H9W 2G8','(514) 695-0229');
@@ -290,7 +290,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Bakratsas','6750 Henri Bourassa #305','St Laurent','Quebec','H4R 0G1','(514) 433-6825');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Core','124 Chartwell','Beaconsfield','Quebec','H9W 1C3','(514) 426-1745');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Foley','106 Michael Cresent','Beaconsfield','Quebec','H9W 2C6','(514) 697-0320');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Graham','134 Winthrop ave','Pointe Claire','H9R 3W9','(514) 695-4521',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Graham','134 Winthrop ave','Pointe Claire','Quebec','H9R 3W9','(514) 695-4521');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Schliep',NULL,'','Quebec','','(514) 880-3849');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Chris','Seaward','4 Rue Pothier','Notre-Dame de Ile Perreault','Quebec','J7V 8X6','(514) 901-1756');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Christache','Saraz','686 Surrey','Baie D''urfe','Quebec','H9X 3S1','(514) 457-5884');
@@ -530,7 +530,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Eddy','Locke','315 Brookhaven','Dorval','Quebec','H9S 2N6','(514) 631-8474');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edgar','Roberts','970 Cherrier','Ile-bizard','Quebec','H9E 1C5','(514) 626-4349');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edi','Mocchiutti','660 Maugue','Ile Bizard','Quebec','H9C 2T5','(514) 696-5928');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edith','Fortier','28 Ave Cardiff','Pointe Claire','H9R 5S8','(418) 802-8397',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edith','Fortier','28 Ave Cardiff','Pointe Claire','Quebec','H9R 5S8','(418) 802-8397');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edmond','Tanase',NULL,'','Quebec','','(514) 624-7678');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edmund','Arnsby','37 Chester','Pointe-Claire','Quebec','H9R 4H8','(514) 695-4240');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edna','Osidak','15 Normandy','Baie-D''Urfe','Quebec','H9X 3E4','(514) 457-5005');
@@ -547,7 +547,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edwardo','Quiroga','36 Viger','Kirkland','Quebec','H9J 2E5','(514) 694-9493');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Edwin','Romero','2055 Carson','Dorval','Quebec','H9S 1P4','(514) 631-3468');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Eero','Tae','12 Campbell','Montreal Ouest','Quebec','H4X 1V1','(514) 489-9714');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Eileen','Kay','109 Embleton','Pointe-Claire','H9R 3N1','(514) 697-5560',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Eileen','Kay','109 Embleton','Pointe-Claire','Quebec','H9R 3N1','(514) 697-5560');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Eileen','Wilson','165 Westcliffe','Pointe Claire','Quebec','H9R 1M8','(514) 695-8383');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Elaine','Brookes','241 Castle','Beaconsfield','Quebec','H9M 2W4','(514) 630-1796');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Elaine','Granato','115 Belmont','Pointe Claire','Quebec','H9R 2P4','(514) 695-9918');
@@ -698,12 +698,12 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Lefebvre','1466 Clemenceau','Verdun','Quebec','H4H 2R1','(514) 693-0038');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Louette','431 Fletchers rd','Beaconsfield','Quebec','H9W 1V2','(514) 697-4787');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Love','4426 Royal Ave.','Pierrefonds','Quebec','H9H 2H5','(514) 626-3260');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Roberts','126 clester','Pointe Claire','H9R 4K2','(514) 697-2487',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Roberts','126 clester','Pointe Claire','Quebec','H9R 4K2','(514) 697-2487');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Samios','334  7 rue','Ile Perrot','Quebec','J7V 5V3','(514) 453-8703');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Stante','84 Houde','Kirkland','Quebec','H9J 2D5','(514) 426-2802');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Tanev','90 Circle','Beaconsfield','Quebec','','(514) 574-6909');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Tremblay','591 Boul. Beaconsfield','Beaconfields','Quebec','H9W 4E5','(450) 693-0038');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Triantafilou','170 Albareto','Dollard des Ormeaux','H9G 2Y7','(514) 917-3464',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Triantafilou','170 Albareto','Dollard des Ormeaux','Quebec','H9G 2Y7','(514) 917-3464');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('George','Whitmore','184 Northwood','Pointe Claire','Quebec','H9R 1R4','(514) 694-2374');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Georges','Bozikis','4886 De Celles','Laval','Quebec','H7T 2W7','(450) 663-6392');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Georges','Budea','4820 Meloche','Pierrefonds','Quebec','H9J 1Z2','(514) 696-9100');
@@ -772,7 +772,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Jones','1634 Blueberry Forest','St-Lazare','Quebec','J7T 2K1','(450) 455-0883');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Lusk','40 Parkdale','Pointe Claire','Quebec','H9R 3Y5','(514) 630-0237');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Mcleish','25 Summerhill','Pointe Claire','Quebec','H9R 2K5','(514) 695-4730');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Paterson','PO Box 362','Ingleside','Ontario, K0C 1M0','(514) 695-7598',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Paterson','PO Box 362','Ingleside','Ontario','K0C 1M0','(514) 695-7598');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Scott','5140 Radisson','Vaudreuil','Quebec','J7V 0K2','(514) 999-8875');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gordon','Thomas','21 4th Av South','Roxboro','Quebec','H8Y 2M1','(514) 684-8877');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Grace','Yin','10 Augusta ave','Pointe Claire','Quebec','H9R 5V4','(514) 697-4813');
@@ -795,7 +795,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guillermo','Dupinet','4528 rue Garnier','Montreal','Quebec','H2J 3S7','(514) 222-3873');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Gunnar','Littlejohn','67 Pl Portland','Beaconsfield','Quebec','H9W 3P3','(514) 697-9706');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Fleury','544 Lavergne','Laval','Quebec','H7X 2Y4','(514) 885-3667');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Gosselin','15452 Willow','Pierrefonds','H9H 2W5','(514) 620-0204',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Gosselin','15452 Willow','Pierrefonds','Quebec','H9H 2W5','(514) 620-0204');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Lalonde','3885 De Chenonceau apt 702','Laval','Quebec','H7T 0E6','(450) 934-2022');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Page','10665 Georges Baril','Montreal','Quebec','H2C 2N4','(514) 606-8909');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Guy','Pelletier','560 De Serres','Terrebonne','Quebec','J6Y 1M9','(514) 743-1592');
@@ -917,7 +917,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Martin','165 De l''Ermitage','Laval','Quebec','H7W 4X8','(514) 606-9967');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','McLaughlin','154 Westcliffe','pointe claire','Quebec','H9R 1M9','(514) 695-3504');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Morin','60 Belanger','Pincourt','Quebec','J7V 7B8','(514) 453-7705');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Picard','160 Du Niagara','Kirkland','H9J 2Y9','(514) 428-4115',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Picard','160 Du Niagara','Kirkland','Quebec','H9J 2Y9','(514) 428-4115');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Spinelli','692 Clement','Dorval','Quebec','H9P 2H8','(514) 631-1796');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Tartagria','4088 Acres','Pierrefonds','Quebec','H9H 2T2','(514) 696-7999');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jean','Wesner','1105 boul Leblanc','Laval','Quebec','H7E 4N4','(514) 240-6363');
@@ -954,7 +954,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jennifer','Bertoldi','1555 Pl Fernbank','Dorval','Quebec','H9P 1V6','(514) 775-8004');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jennifer','Byrns','57 cercle Winston','Pointe-Claire','Quebec','H9S 4X5','(514) 428-8066');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jennifer','More','156 Belmont','Pointe Claire','Quebec','H9R 2P9','(514) 697-4824');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jennifer','Shepherd','21249 McNaughton','Bainsville','Ontario, K0C 1E0','(613) 347-3147',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jennifer','Shepherd','21249 McNaughton','Bainsville','Ontario','K0C 1E0','(613) 347-3147');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jerry','Stolar','690 32th Avenue apt 306','Lachine','Quebec','H8T 1Y4','(514) 639-8068');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jerry','Turner','38 Fifth Ave','Pointe Claire','Quebec','H9S 5C7','(514) 697-7606');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Jerry','Vanderwal','38 Sunnyside Ave','Pointe Claire','Quebec','H9S 5G5','(514) 695-4259');
@@ -1028,7 +1028,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Harper','4545 Dugas','Pierrefonds','Quebec','H9J 2B4','(514) 626-2698');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Honka','12787 Charny','Pierrefonds','Quebec','H9A 1B7','(514) 684-1885');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Jackson','13 Agincourt','Kirkland','Quebec','H9J 2K3','(514) 694-6549');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Kilpatrick','109 Crestview','Pointe-Claire','H9R 4A2','(514) 697-0574',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Kilpatrick','109 Crestview','Pointe-Claire','Quebec','H9R 4A2','(514) 697-0574');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Klemola','119 Windcrest','Pointe Claire','Quebec','H9R 3W2','(514) 581-6312');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Kubinsky','421 Lakeshore Road','Beaconsfield','Quebec','H9W 4J3','(514) 697-1085');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Leonard','615 Pine Beach','Dorval','Quebec','H9P 2J9','(514) 631-9299');
@@ -1052,7 +1052,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Stephens','4700 St-Catherine ouest apt 40','Westmount','Quebec','H3Z 1S6','(514) 935-7180');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Storr','108 Monsadel','Kirkland','Quebec','H9J 3A1','(514) 697-0333');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Verners','37 Van Every','Kirkland','Quebec','H9J 2S2','(514) 426-4935');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Walker','1965 Concorde','Cornwall','Ontario, K6H 6M3','(613) 932-1257',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Walker','1965 Concorde','Cornwall','Ontario','K6H 6M3','(613) 932-1257');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Wilkins','356 Stream Ave','Dorval','Quebec','H9S 2P5','(514) 636-4964');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Wilkinson','5435 O''bryan','Montreal','Quebec','H4V 2B1','(514) 487-1958');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('John','Wilson',NULL,'','Quebec','','(514) 694-5754');
@@ -1083,7 +1083,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judex','Claver','1003 Hyman apt 301','Dollard Des Ormeaux','Quebec','H9B 1M4','(514) 685-7657');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judith','Dawson','230 Fairway Drive apt. 7','Beaconsfield','Quebec','H9W 5X3','(514) 426-0247');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judith','Evelyn','103 Chaucer','Pointe-Claire','Quebec','H9R 5J5','(514) 674-1995');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judy','Neil','6145  #rd Line Road','Bainsville','Ontario, K0C 1E0','(613) 317-0210',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judy','Neil','6145  #rd Line Road','Bainsville','Ontario','K0C 1E0','(613) 317-0210');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Judy','Steele','1213 Besner','Les Cedres','Quebec','J7T 1G9','(450) 452-4180');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Julie','Dominick',NULL,'','Quebec','','(514) 684-3587');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Julie','Dube','3925 Boul.Hebert','Valleyfield','Quebec','','(514) 686-2080');
@@ -1106,7 +1106,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karin','Van Dyke','112 Yonge Cr.','Pointe Claire','Quebec','H9R 2L9','(514) 697-7077');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karine','Forand','83 St-Joseph','','Quebec','J5Z 2E4','(438) 879-6314');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karl','Gubenschek','11 Cr Thobodeau','Ile Bizard','Quebec','H9C 2V4','(514) 626-1843');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karl','Mcnamee','212 Wellington St E','Cornwall','Ontario, K6H 6E5','(613) 933-5886',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karl','Mcnamee','212 Wellington St E','Cornwall','Ontario','K6H 6E5','(613) 933-5886');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karl','Simla','98 Montrose','Pointe Claire','Quebec','H9R 2S5','(514) 697-7239');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karl','Steiner','800 Cure Cloutier','Laval','Quebec','H7E 4E4','(450) 629-8944');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Karyn','Baxter','4591 Hingston','Montreal','Quebec','H4A 2K2','(514) 486-4928');
@@ -1177,7 +1177,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lawrence','James','47 Belton av','Pointe-Claire','Quebec','H9S 4A3','(514) 697-7727');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lawrence','McKinnon','130 Chartwell','Beaconsfield','Quebec','H9W 1C3','(514) 697-2087');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lawrence','Melton','15 Kirkland  unit 117','Kirkland','Quebec','H9J 1N2','(514) 697-7512');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lawrence','Wilson','1995 Olive Rd','Windsor','Ontario, N8T 1R4','(519) 945-6066',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lawrence','Wilson','1995 Olive Rd','Windsor','Ontario','N8T 1R4','(519) 945-6066');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lazslo','Rob','148 Lincoln','Beaconsfield','Quebec','H9W 1M8','(514) 505-0964');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lebrun','Dennis','82 Maple','Dollard Des Ormeaux','Quebec','H9B 1E5','(514) 923-2580');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lee','Scouten','4434 Bishop','Pierrefonds','Quebec','H9H 2E2','(514) 626-3213');
@@ -1210,7 +1210,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Linda','Reid','246 Braebrook','Pointe Claire','Quebec','H9R 1V9','(514) 694-1992');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Linda','Riven','82 Jefferson Ave','Pointe Claire','Quebec','H9R 2J8','(514) 428-0161');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Linda','Snyder','Mauvaise addresse','','Quebec','','(514) 694-3187');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lindsay','Morrison','560 Front St. West apt #1022','Toronto','Ontario, M5V 1C1','(514) 867-2839',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lindsay','Morrison','560 Front St. West apt #1022','Toronto','Ontario','M5V 1C1','(514) 867-2839');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lindsay','Reid','153 De La Roche','Pointe-Claire','Quebec','H9R 5B6','(514) 945-7343');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('lindsay','smith','97 huneault','pincour','Quebec','J7V 7K5','(514) 609-8353');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lisa','Dalcourt','9 Place Belvedere Ouest','Notre-Dame-de-l''Ile-Perrot','Quebec','J7V 8P4','(514) 453-3359');
@@ -1229,7 +1229,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lois','Minshull','10 Vermont Apt 603','Pointe Claire','Quebec','H9R 6A6','(514) 505-4130');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Loraine','Ducharme & Legault','140 De La Roche','Pointe-Claire','Quebec','H9R 5B2','(514) 694-6494');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lordan','Cao','1918 Rue Du Bois-des-Casyer','Lassalle','Quebec','','(514) 575-3288');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lorenzo','Loggia','12345 28th Avenue','Montreal','H1E 2A5','(514) 562-3982',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lorenzo','Loggia','12345 28th Avenue','Montreal','Quebec','H1E 2A5','(514) 562-3982');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lorie','Cockwell','114 Lakeview boul','Beaconsfield','Quebec','H9W 4S1','(514) 505-1539');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lorne','Townshend','515 Meadowvale','Dorval','Quebec','H9P 2E6','(514) 631-9969');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Lorraine','Andric','11 De Maricourt apt 4','Ile Perrot','Quebec','J7V 2J5','(514) 577-0429');
@@ -1351,7 +1351,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Landry',NULL,'','Quebec','','(514) 697-0475');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Landsburg','17 Cornish Ave','Pointe-Claire','Quebec','H9R 3K8','(514) 578-6275');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Leslie','46 Saratoga','Kirkland','Quebec','H9H 3K3','(514) 426-0957');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Markarian','993  100th','Laval','H7W 4A2','(450) 682-7662',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Markarian','993  100th','Laval','Quebec','H7W 4A2','(450) 682-7662');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Mitkiewicz','41 rue Fountain','Dollard-des-Ormeaux','Quebec','H9B 1X9','(514) 835-3147');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Paull','4543 Foster','Pierrefonds','Quebec','H9J 3N8','(514) 626-6301');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Mark','Radzichowsky','13255 Acadie','Pierrefonds','Quebec','H9A 1L1','(514) 686-6461');
@@ -1388,9 +1388,9 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Matthew','Miller','14665 Pierrefonds apt 203','Pierrefonds','Quebec','H9H 4X9','(514) 305-1851');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Matthew','Ray','5620 Sir George Simpson','Lachine','Quebec','H8T 1G2','(514) 574-2650');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maureen','Cunningham','52 Turtle Pond','Hudson','Quebec','J0P 1H0','(450) 458-1279');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maureen','Fagan',NULL,'','','(514) 705-3664',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maureen','Fagan',NULL,'','','','(514) 705-3664');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Bluteau','9167 Bl Gouin Ouest #1210','Montreal','Quebec','H4K 2E2','(514) 332-4496');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Charland','4191 Hingston','Montreal','H4A 2J6','(514) 485-3380',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Charland','4191 Hingston','Montreal','Quebec','H4A 2J6','(514) 485-3380');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Deguise','1663 St Charles','Terrebonne','Quebec','J6W 6E7','(450) 416-3818');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Descoteaux','151 Boylan','Dorval','Quebec','H9S 5J7','(514) 631-3540');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Maurice','Dumont','43 Pl Jean Yves','Ile Bizard','Quebec','H9E 1H1','(514) 626-4155');
@@ -1588,7 +1588,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Patrick','Makinson','4458 Glendale','Pierrefonds','Quebec','H9H 2L2','(514) 675-0511');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Patrick','Metras','3495 Rue Ivan-Franko #102','Lachine','Quebec','H8T 1N9','(514) 639-4196');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Barsalou','741 Russell','Laval','Quebec','H7R 6J1','(450) 314-1823');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Bayer','4 Sunrise Cr','Pointe Claire','H9R 4W1','(514) 697-6796',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Bayer','4 Sunrise Cr','Pointe Claire','Quebec','H9R 4W1','(514) 697-6796');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Beaubin',NULL,'','Quebec','','(514) 453-4561');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Boucher','441 Church','Beaconsfield','Quebec','H9W 3S3','(514) 207-0857');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Paul','Brooks','35 54th Avenue','Lachine','Quebec','H8T 3A1','(514) 637-6752');
@@ -1610,7 +1610,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pauline','Davies','240 Castle rd','Beaconsfield','Quebec','H9W 2W3','(514) 630-1714');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pauline','Levac','17 50ieme av','Lachine','Quebec','H8T 2T4','(514) 634-6610');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pawel','Brusillo','186 rue Beethoven','Vaudreuil-Dorion','Quebec','J7V 0M7','(514) 567-9442');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Peggy','Farnsworth','9 Hampton Garden','Pointe Claire','H9S 5B8','(514) 694-2040',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Peggy','Farnsworth','9 Hampton Garden','Pointe Claire','Quebec','H9S 5B8','(514) 694-2040');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pelos','Papapanos','126 Crestview','Pointe Claire','Quebec','H9R 4A1','(514) 697-6250');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Penelope','Coull','455 Racine #609','Dorval','Quebec','H9S 3L1','(514) 634-4743');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Penny','Groome','264 Alice-Carriere','Beaconsfield','Quebec','H9W 6E6','(514) 630-6088');
@@ -1662,7 +1662,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Doran','264 Maurice Saint Louis','Gatineau','Quebec','J9J 3V9','(819) 684-7298');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Filiole','970 Palardy','Laval','Quebec','H7H 3G2','(514) 380-5346');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Francoeur','91  2e Blvd Ouest','Terrasse Vaudreuil','Quebec','J7V 5R9','(514) 453-7767');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Goyette','51 Hastings suite 307','Dollard des Ormeaux','H9G 1Y3','(514) 358-9788',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Goyette','51 Hastings suite 307','Dollard des Ormeaux','Quebec','H9G 1Y3','(514) 358-9788');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Guindon','650 Rue Forbes #102','Vaudrieul Dorion','Quebec','J7V 0M3','(450) 218-6451');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Hamel','324 5e Rue','Saint-Zotique','Quebec','JOP 1ZO','(450) 267-9063');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Pierre','Hamelin','249 Malcolm','Dorval','Quebec','H9S 1T6','(514) 631-5083');
@@ -1772,7 +1772,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Doucet','68 De Bresley','Pointe-Claire','Quebec','H9S 4M2','(514) 697-3296');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Dube','700 Acadia','Lachine','Quebec','H8T 2V8','(514) 637-9734');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Dunn','4230 Pinewood st','Pierrefonds','Quebec','H9H 2W2','(514) 626-2860');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Edgar','3640 Conc 1 Alfred','Lefaivre','Ontario, K0B 1J0','(613) 679-4718',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Edgar','3640 Conc 1 Alfred','Lefaivre','Ontario','K0B 1J0','(613) 679-4718');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Eyton-Jones','29 Laurier Court','Beaconsfield','Quebec','H9W 4S7','(514) 697-4721');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Ganeff','234 Acres','Kirkland','Quebec','H9H 4R2','(514) 426-3454');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Gartner','103 Chestnut av','Pointe-Claire','Quebec','H9R 3A9','(514) 697-3397');
@@ -1783,9 +1783,9 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Laforest','10433 Bellevue','Pierrefonds','Quebec','H8Y 2K1','(514) 684-5414');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Lee','170 56e est av','Lachine','Quebec','H8T 3B9','(514) 639-8745');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Lehmann','410 Chevremont','Ile Bizard','Quebec','H9C 1R2','(514) 696-8116');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Lewis','Po box 249','Vankleek Hill','Ontario, K0B 1R0','(613) 678-3708',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Lewis','Po box 249','Vankleek Hill','Ontario','K0B 1R0','(613) 678-3708');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Lindberg','172 b Amherst','Beaconsfield','Quebec','H9W 2B2','(514) 694-7260');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Mansour','55 Sunshine','Dollar des Ormeaux','H9B 1G1','(514) 684-0407',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Mansour','55 Sunshine','Dollar des Ormeaux','Quebec','H9B 1G1','(514) 684-0407');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Marcucci','314 James Shaw','Beaconsfield','Quebec','H9W 6G5','(514) 794-4840');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Maslon','106 Westbank','Pointe Claire','Quebec','H9R 2X6','(514) 694-6424');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Robert','Mc Nab','118 Alston','Pointe Claire','Quebec','H9R 3E4','(514) 697-4925');
@@ -1939,7 +1939,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Sheila','Vallieres','336 Touzin Av','Dorval','Quebec','H9S 2N2','(514) 636-9080');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Sheilah','Wheeler','83 Viking','Dollard Des Ormeaux','Quebec','H9G 2M5','(514) 626-6431');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Shelly','Elsliger','68 Parkdale','Pointe-Claire','Quebec','H9R 3Y5','(514) 892-2029');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Sherry','Helman','22 Balko','Dollard des Ormeaux','','(514) 696-3795',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Sherry','Helman','22 Balko','Dollard des Ormeaux','Quebec','','(514) 696-3795');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Sheryl','Johnston','139 Arrowhead','Pointe-Claire','Quebec','H9R 3V4','(514) 695-9459');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Shirley','Anderson','4552 Grilli','Pierrefonds','Quebec','H9J 2B2','(514) 626-0121');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Shirley','Gratton','21 Kirkland BLVD #112','Kirkland','Quebec','H9J 1N2','(514) 426-7243');
@@ -2044,7 +2044,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terrance','Dearn','620 Graham','Dorval','Quebec','H9P 2B5','(514) 631-9353');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terrance','Fagan','13 Mercure','Mersier','Quebec','J6R 2G4','(450) 692-1679');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terrance','Sprackett','16 Hampton Gardens','Pointe Claire','Quebec','H9S 5B8','(514) 697-8267');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terry','Coderre','36 Summer Hill','Pointe Claire','H9R 2K4','(514) 428-9513',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terry','Coderre','36 Summer Hill','Pointe Claire','Quebec','H9R 2K4','(514) 428-9513');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terry','Diachun','10 Prom Lacey Green','Kirkland','Quebec','H9H 3H2','(514) 426-1744');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terry','Didus','223 Antoine Villeray','Beaconsfield','Quebec','H9W 6E9','(514) 697-0630');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Terry','Hamill','164 Westcliff','Pointe-Claire','Quebec','H9R 1M9','(514) 426-4003');
@@ -2094,7 +2094,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Trudy','Tritt','109 Glasgow','Pointe Claire','Quebec','H9R 3M6','(514) 697-8975');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Tsang','Hoi Wan','23 Rue De Bonaventure','Kirkland','Quebec','H9J 1S3','(514) 694-7272');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Tuuli','Teras','85 Bayview','Pointe Claire','Quebec','H9S 5C4','(514) 694-5413');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Ute','Beffert','360 Happy Hollow','Vankleek Hill','Ontario, K0B 1R0','(514) 497-5071',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Ute','Beffert','360 Happy Hollow','Vankleek Hill','Ontario','K0B 1R0','(514) 497-5071');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Ute','Brougham','41 Kirkland Boul','Kirkland','Quebec','H9J 1N5','(514) 697-5527');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Val','Rowat','4953 Kent','Pierrefonds','Quebec','H8Z 2T2','(514) 620-6743');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Valentin','Irunca','4574 Foster','Pierrefonds','Quebec','H9J 3N7','(514) 626-9243');
@@ -2126,7 +2126,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wayne','MacNab','196 Coolbreeze','Pointe-Claire','Quebec','H9R 3S7','(514) 697-4948');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wayne','Syvret','7 Smiley pl','Kirkland','Quebec','H9J 3X7','(514) 951-0080');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wayne','Weaver','804-2050 Des Sarcelles','Vaudreuil-Dorion','Quebec','J7V 0J3','(450) 218-0870');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wayne & Shelly','Bennett','68 Parkdale av','Pointe-Claire','H9R 3Y5','(514) 695-9919',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wayne & Shelly','Bennett','68 Parkdale av','Pointe-Claire','Quebec','H9R 3Y5','(514) 695-9919');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wei','Cui',NULL,'','Quebec','','(514) 800-2808');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wendy','Bergeron','428 Edgewood','Beaconsfield','Quebec','H9W 3H4','(514) 697-4258');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Wendy','Bolyn','555 St Leon','Dorval','Quebec','H9P 1Z8','(514) 631-4301');
@@ -2138,7 +2138,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Byrne','180 Rue Des Pruches','Vaudreuil-Dorion','Quebec','J7V 0E6','(514) 237-7783');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Chmilnitzky','90  Hood','Kirkland','Quebec','H9J 2T5','(514) 426-0022');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Dubois','266 Stream','Dorval','Quebec','H9S 2P1','(514) 631-7516');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Humes','20 Viburnum','Pointe-Claire','H9R 5A7','(514) 695-0667',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Humes','20 Viburnum','Pointe-Claire','Quebec','H9R 5A7','(514) 695-0667');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','O''neill','108 Prince Ruppert','Pointe Claire','Quebec','H9R 1M2','(514) 697-6867');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Ochs','310 Somervale Gardins','Pointe Claire','Quebec','H9R 3H8','(514) 291-6348');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('William','Sanders','300 Hymus  app 2724','Pointe-Claire','Quebec','H9R 6C3','(514) 697-3779');
@@ -2166,7 +2166,7 @@ INSERT INTO customers(first_name,last_name,address,city,province,postal_code,tel
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yokota','Archambault','25 Av Raynor #501','Pointe-Claire','Quebec','H9S 5H7','(514) 457-3087');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yolande','Grant','243 Green Circle','Dorval','Quebec','H9S 3T7','(514) 631-9293');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yongmei','Pan','316 Place Terry-Fox','Kirkland','Quebec','H9H 3J2','(514) 348-9888');
-INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yongtao','Li','18077 Rue Dumais','Pierrefonds','H9K 1M3','(514) 430-2088',NULL);
+INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yongtao','Li','18077 Rue Dumais','Pierrefonds','Quebec','H9K 1M3','(514) 430-2088');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yotso','Baikoushev','4 Normandy','Baie D''Urfee','Quebec','H9X 3E2','(514) 623-7991');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yu','Liu','16 ave Glanlynn','Pointe-Claire','Quebec','H9R 3N7','(514) 426-9331');
 INSERT INTO customers(first_name,last_name,address,city,province,postal_code,telephone) VALUES ('Yueshi','Lei','5 Bayview Ave','Pointe-Claire','Quebec','H9S 5C1','(514) 315-4105');
