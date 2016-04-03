@@ -6,6 +6,10 @@
         .auto-style1 {
             width: 484px;
             height: 211px;
+            text-align: center;
+        }
+        .auto-style2 {
+            width: 100%;
         }
         </style>
 </asp:Content>
@@ -14,15 +18,16 @@
        &nbsp;</h2>
     <p>
         <br />
-        <br />
-        <br />
-        <table width="100%" >
+        <table align="center" class="auto-style2">
             <tr>
+                <td>&nbsp;</td>
                 <td align="center">
-                    <img alt="logo" class="auto-style1" src="images/index_logo.png" /></td>
-                <td></td>
+                    <img alt="logo" class="auto-style1" src="images/index_logo.png" align="center" /></td>
+                <td>&nbsp;</td>
             </tr>
         </table>
+        <br />
+        <br />
     </p>
 
 </asp:Content>
