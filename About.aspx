@@ -15,6 +15,10 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.8.5 (April 8 2016)
+- Bug fixing 
+    - Transaction ID Start At in setting now start at this number even if there is a transaction that has higher IDs
+    - Transaction Product code now have a -None- value (by default) that can be selected
 Version 1.8 (April 5 2016)
 - Fixed deletion of a production step. Now it will show the right categories and transactions to delete before.
 
