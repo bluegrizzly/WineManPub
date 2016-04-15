@@ -15,6 +15,9 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.8.6 (April 14 2016)
+- Improved the phone number search in the the customers page and the transaction  page. You can now just type the phone number all together (ex: 7670987)
+
 Version 1.8.5 (April 8 2016)
 - Bug fixing 
     - Transaction ID Start At in setting now start at this number even if there is a transaction that has higher IDs
