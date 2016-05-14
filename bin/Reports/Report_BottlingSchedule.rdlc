@@ -99,7 +99,7 @@
               <Width>0.42678in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.32291in</Width>
+              <Width>0.33333in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.96128in</Width>
@@ -348,7 +348,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23958in</Height>
+              <Height>0.48958in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -378,7 +378,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -411,7 +411,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -426,7 +426,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CUSTO_FirstName.Value &amp; " " &amp; Fields!CUSTO_LastName.Value</Value>
+                              <Value>=Fields!CUSTO_FirstName.Value + System.Environment.NewLine + Fields!CUSTO_LastName.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -443,7 +443,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -475,7 +475,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -507,7 +507,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -539,7 +539,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -570,7 +570,7 @@
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -608,8 +608,9 @@
           </SortExpression>
         </SortExpressions>
         <Top>0.98833in</Top>
-        <Height>0.44791in</Height>
-        <Width>3.32671in</Width>
+        <Left>0.00694in</Left>
+        <Height>0.69791in</Height>
+        <Width>3.33713in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -640,7 +641,7 @@
         <rd:DefaultName>Textbox67</rd:DefaultName>
         <Top>0.71056in</Top>
         <Height>0.25in</Height>
-        <Width>3.32671in</Width>
+        <Width>3.34407in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -712,7 +713,7 @@
         <Top>0.71056in</Top>
         <Left>6.77528in</Left>
         <Height>0.25in</Height>
-        <Width>3.33208in</Width>
+        <Width>3.35291in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -981,7 +982,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23958in</Height>
+              <Height>0.48958in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1011,7 +1012,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1044,7 +1045,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1059,7 +1060,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CUSTO_FirstName.Value &amp; " " &amp; Fields!CUSTO_LastName.Value</Value>
+                              <Value>=Fields!CUSTO_FirstName.Value  + System.Environment.NewLine +  Fields!CUSTO_LastName.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1076,7 +1077,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1108,7 +1109,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1140,7 +1141,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1172,7 +1173,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1203,7 +1204,7 @@
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1242,7 +1243,7 @@
         </SortExpressions>
         <Top>0.98833in</Top>
         <Left>3.38574in</Left>
-        <Height>0.44791in</Height>
+        <Height>0.69791in</Height>
         <Width>3.33208in</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -1259,7 +1260,7 @@
               <Width>0.42678in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.3125in</Width>
+              <Width>0.33333in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.96665in</Width>
@@ -1508,7 +1509,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23958in</Height>
+              <Height>0.48958in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1538,7 +1539,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1571,7 +1572,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1586,7 +1587,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!CUSTO_FirstName.Value &amp; " " &amp; Fields!CUSTO_LastName.Value</Value>
+                              <Value>=Fields!CUSTO_FirstName.Value  + System.Environment.NewLine +  Fields!CUSTO_LastName.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1603,7 +1604,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1635,7 +1636,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1667,7 +1668,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1699,7 +1700,7 @@
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1730,7 +1731,7 @@
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingTop>6pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
@@ -1769,8 +1770,8 @@
         </SortExpressions>
         <Top>0.98833in</Top>
         <Left>6.77528in</Left>
-        <Height>0.44791in</Height>
-        <Width>3.33208in</Width>
+        <Height>0.69791in</Height>
+        <Width>3.35291in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>

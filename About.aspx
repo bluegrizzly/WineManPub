@@ -15,6 +15,13 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.8.7 (May 14 2016)
+- Bottling Schedule Print: Added more space.
+- Bottling Schedule Print: Going back will go to the last selected date
+- Bottling appointment screen: Now show all transactions in a single hour slot. This is permitted by the system. 
+- Bug fix: Duplicate a transaction was not showing some dates in the bottling appointements screen
+- Bug fix: After the creation of a transaction, changing a date would not work.
+
 Version 1.8.6 (April 14 2016)
 - Improved the phone number search in the the customers page and the transaction  page. You can now just type the phone number all together (ex: 7670987)
 
