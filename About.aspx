@@ -15,6 +15,10 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.8.8 (May 25 2016)
+- Bug Fix: Add New transaction the second time was giving an error
+- Bug Fix: if step has invalid ID, transaction step to complete was not showing anything
+
 Version 1.8.7 (May 14 2016)
 - Bottling Schedule Print: Added more space.
 - Bottling Schedule Print: Going back will go to the last selected date
