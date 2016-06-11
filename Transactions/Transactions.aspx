@@ -37,7 +37,11 @@
             <asp:Label ID="Label1" runat="server" Text="Customer: "></asp:Label>
             <asp:TextBox ID="TextBox_CustomerSearch" runat="server" AutoPostBack="True" ToolTip="Search transaction with customer. Can be beginning or ending part  of the first or last name."></asp:TextBox>
             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="21px" />
-    <asp:CheckBox ID="ShowCompletedCheckBox" runat="server" Text="Show completed tx" AutoPostBack="True" ToolTip="Show the transactions that have been marked as completed." />
+    &nbsp; View:<asp:DropDownList ID="DropDownList_ShowDone" runat="server" AutoPostBack="True" ToolTip="Filter view" Width="126px">
+                                <asp:ListItem Value="0">In Progress Only</asp:ListItem>
+                                <asp:ListItem Value="1">Done Only</asp:ListItem>
+                                <asp:ListItem Value="2">All</asp:ListItem>
+                            </asp:DropDownList>
         </fieldset>
         <asp:Panel ID="Panel2" runat="server" ScrollBars="Auto">
             <table id="jQGridDemo">
@@ -58,13 +62,12 @@
         <script type="text/javascript">
             var grid = $("#jQGridDemo");
             jQuery("#jQGridDemo").jqGrid({
-                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?showcompleted=") %>' +
-                    document.getElementById('<%= ShowCompletedCheckBox.ClientID%>').checked +
+                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?showcompleted=") %>' + document.getElementById('<%= DropDownList_ShowDone.ClientID%>').value +
                     "&filterdate=" + document.getElementById('<%= DropDownList_Filter.ClientID%>').value +
                     "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
                     "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
                 datatype: "json",
-                colNames: ['ID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
+                colNames: ['id', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
                 colModel: [
                             { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
    		                    { name: 'client_id', index: 'client_id', width: 140, sortable: true },
@@ -104,16 +107,17 @@
                                 formatter: "checkbox", formatoptions: { disabled: true }
                             }
                 ],
-                rowNum: 20,
+                rowNum: 1000,
                 height: 270,
                 mtype: 'GET',
                 loadonce: true,
                 ignoreCase: true,
-                rowList: [20, 50, 200, 500],
+                rowList: [1000, 2000, 5000],
                 pager: '#jQGridDemoPager',
                 sortname: 'id',
                 viewrecords: true,
-                sortorder: 'desc',
+                sortorder: 'asc',
+                multiselect: false,
                 caption: "Transactions",
                 editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
 
@@ -133,16 +137,14 @@
 
 
             $("#editRow").click(function () {
+                var ids = $("#jQGridDemo").jqGrid('getGridParam', 'selrow');
 
-                var ids = $("#jQGridDemo" ).jqGrid('getGridParam', 'selrow');
                 if (ids.length > 0) {
                     var names = [];
 
-                    for (var i = 0, il = ids.length; i < il; i++) {
-                        var name = grid.jqGrid('getCell', ids[i], 'id');
-                        names.push(name);
-                        break;// support only the first selection
-                    }
+                    var rowData = $("#jQGridDemo").jqGrid("getRowData" ,ids);
+                    var name = rowData['id'];
+                    names.push(name);
 
                     names.push("*");
 

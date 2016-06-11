@@ -63,13 +63,13 @@
                             formatter:'select', editoptions:{value:"W:W;R:R;X:X;F:F;RQ:RQ;B:B;S:S"} 
                         }
                         ],
-            rowNum: 200,
+            rowNum: 500,
             height: 250,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [200, 400, 600],
+            rowList: [500, 1000, 5000],
             pager: '#jQGridDemoPager',
             multiSort: true,
             sortname: 'name asc, step',

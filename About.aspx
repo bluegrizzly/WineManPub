@@ -15,6 +15,33 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.9
+- Transactions page:
+    - Added new combo box : View.  This filter the transaction done or not
+    - Sort by default in ascendent ID order and made default page to 500 
+    - The table size if now 1000 by default.
+    - Improve speed of getting transaactions records
+- Add Transaction page:
+    - Customer research have been improve using the same alogythm as the transactions page. (you can use tel number unformatted, ex: 6880987)
+- Admin->Production Step:
+    - Added a new field : Required For Completion.  When this is false, the step doesn't need to be completed to complete a transaction.
+    - The field in the transaction screen will be gray.
+    - The number of steps will not count them
+- Transaction Steps Page:
+    - Added Set Location button
+    - Added Location Column
+    - Added the Previous next support of all transactions in the grid when you go editing the transaction
+- General:
+    - Made the grids sorted by increasing numbers 
+    - Made the grids default number of rows much higher (1000 for customers and tx, 100,500 for settings)
+    - Improved Performance of populating the Transactions grids and transaction steps grids
+-Bug Fix: Page error when inverting sort of transactions page and click edit tx
+-Bug Fix: Fixed customer research in Transaction screen 
+-Bug Fix: Transaction Steps page was returning one more day of the end date specified
+-Bug Fix: Transaction research with customer was returning all transaction done/not done
+-Bug Fix: Duplicate a transaction and selecting a different hour was causing the hour to be placed at the same place as the previous tx.
+-Bug Fix: Crash when trying to edit a transaction from a list of more than 300 rows.
+
 Version 1.8.8 (May 25 2016)
 - Bug Fix: Add New transaction the second time was giving an error
 - Bug Fix: if step has invalid ID, transaction step to complete was not showing anything

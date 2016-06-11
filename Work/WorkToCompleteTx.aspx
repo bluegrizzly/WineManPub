@@ -73,8 +73,12 @@
                             &nbsp;<asp:Label ID="Label3" runat="server" Text="Customer:"></asp:Label>
                             <asp:TextBox ID="TextBox_Customer" runat="server" AutoPostBack="True" ToolTip="Filtering transaction steps for customers that  are similar to this text. Can be a part of the first or last name." Width="100px"></asp:TextBox>
                             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="20px" />
-                            <asp:CheckBox ID="CheckBox_ShowReady" runat="server" Text="Show Ready Only" AutoPostBack="True" ToolTip="Show only the transactions that have all steps completed" />
-                            <asp:CheckBox ID="CheckBox_ShowDone" runat="server" Text="Show Transactions Done" AutoPostBack="True" ToolTip="Show all transactions, including the ones that have been marked as completed. Completed transactions will be shown in gray" />
+                            &nbsp;View:<asp:DropDownList ID="DropDownList_ShowDone" runat="server" AutoPostBack="True" ToolTip="Filter view" Width="126px">
+                                <asp:ListItem Value="0">In Progress Only</asp:ListItem>
+                                <asp:ListItem Value="1">Done Only</asp:ListItem>
+                                <asp:ListItem Value="2">All</asp:ListItem>
+                            </asp:DropDownList>
+                            &nbsp;<asp:CheckBox ID="CheckBox_ShowReady" runat="server" AutoPostBack="True" Text="Show Ready Only" ToolTip="Show only the transactions that have all steps completed" />
 
                         </fieldset>
                             <table id="jQGridDemo"></table>
@@ -132,7 +136,7 @@
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
                 document.getElementById('<%= txtDateStart.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
-                "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
+                "&showdone=" + document.getElementById('<%= DropDownList_ShowDone.ClientID %>').value +
                 "&showreadyonly=" + document.getElementById('<%= CheckBox_ShowReady.ClientID %>').checked +
                 "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value +
                 "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
@@ -174,18 +178,18 @@
                             formatter: "checkbox", formatoptions: { disabled: true }
                         }
             ],
-            rowNum: 50,
+            rowNum: 500,
             multiselect: true,
             width: 760,
             height: 270,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [50, 200, 500],
+            rowList: [500, 1000, 5000],
             pager: '#jQGridDemoPager',
             sortname: 'id',
             viewrecords: true,
-            sortorder: 'desc',
+            sortorder: 'asc',
             caption: "Transactions",
             editurl: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx") %>',
 
@@ -304,8 +308,6 @@
         });
 
         $("#editRow").click(function () {
-
-            //var ids = grid.jqGrid('getGridParam', 'selarrrow');
             var ids = grid.jqGrid('getGridParam', 'selarrrow');
             if (ids.length > 0) {
                 var names = [];

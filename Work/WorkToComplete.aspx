@@ -30,6 +30,9 @@
         #editRow {
             width: 135px;
         }
+        #txtLocation {
+            width: 24px;
+        }
     </style>
 
   <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -71,8 +74,12 @@
                             &nbsp;<asp:Label ID="Label3" runat="server" Text="Customer:"></asp:Label>
                             <asp:TextBox ID="TextBox_Customer" runat="server" AutoPostBack="True" ToolTip="Filtering transaction steps for customers that  are similar to this text. Can be a part of the first or last name." Width="100px"></asp:TextBox>
                             <asp:Button ID="Button_ClearCustomer" runat="server" OnClick="Button_ClearCustomer_Click" Text="X" Width="20px" />
-&nbsp;<asp:CheckBox ID="CheckBox_ShowDone" runat="server" AutoPostBack="True" Text="Show work done" ToolTip="Show the work that was completed.  Dates should be selected before turning on this option to reduce amount of records. " />
-                            &nbsp;</fieldset>
+                            &nbsp; View:&nbsp;<asp:DropDownList ID="DropDownList_ShowDone" runat="server" AutoPostBack="True" ToolTip="Filter view">
+                                <asp:ListItem Value="0">In Progress Only</asp:ListItem>
+                                <asp:ListItem Value="1">Done Only</asp:ListItem>
+                                <asp:ListItem Value="2">All</asp:ListItem>
+                            </asp:DropDownList>
+                            </fieldset>
                             <table id="jQGridDemo"></table>
                         </asp:Panel>
                         <div id="jQGridDemoPager">
@@ -98,6 +105,9 @@
                             <input id="selectAll" type="button" value="Select All"/><br />
                             <input id="clear" type="button" value="Clear Selection"/><br />
                             <br />
+                            <input id="setLocation" type="button" value="Set Location"/>
+                            <input id="txtLocation" type="text" /><br />
+                            <br />
                             <input id="editRow" type="button" value="Edit tx"/><br />&nbsp;<asp:Button ID="Button_Print" runat="server" OnClick="Button_Print_Click" Text="Print" Width="135px" />
 &nbsp;<br />
                         </fieldset></td>
@@ -111,13 +121,13 @@
             url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?date=") %>' +
                 document.getElementById('<%= txtDateStart.ClientID %>').value +
                 "&dateend=" + document.getElementById('<%= txtDateEnd.ClientID %>').value +
-                "&showdone=" + document.getElementById('<%= CheckBox_ShowDone.ClientID %>').checked +
+                "&showdone=" + document.getElementById('<%= DropDownList_ShowDone.ClientID %>').value +
                 "&filterstep=" + document.getElementById('<%= DropDownList_FilterStep.ClientID %>').selectedIndex +
                 "&txid=" + document.getElementById('<%= TextBox_TxID.ClientID %>').value + 
                 "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
                 "&showtx=false",
             datatype: "json",
-            colNames: ['id', 'TxID', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Done'],
+            colNames: ['id', 'TxID', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Loc', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 10, stype: 'text', sortable: true, sorttype: 'int', hidden: true },
                         { name: 'txid', index: 'txid', width: 45, stype: 'text', sortable: true, sorttype: 'int' },
@@ -127,11 +137,12 @@
                                              newformat: 'Y-M-d',
                                              defaultValue: null },
                         },
-   		                { name: 'step', index: 'step', width: 70, sortable: true },
-   		                { name: 'brand', index: 'brand', width: 100, sortable: true },
-   		                { name: 'type', index: 'type', width: 100, sortable: true },
-   		                { name: 'customer', index: 'customer', width: 140, sortable: true },
-   		                { name: 'tel', index: 'tel', width: 75, sortable: true },
+                        { name: 'step', index: 'step', width: 70, sortable: true },
+                        { name: 'brand', index: 'brand', width: 100, sortable: true },
+                        { name: 'type', index: 'type', width: 100, sortable: true },
+                        { name: 'customer', index: 'customer', width: 140, sortable: true },
+                        { name: 'tel', index: 'tel', width: 75, sortable: true },
+                        { name: 'location', index: 'location', width: 20, stype: 'text', sortable: true, editable: true, align: 'center', cellEdit: true },
                         {
                             name: 'done', width: 50, index: 'done',
                             align: 'center',
@@ -140,19 +151,19 @@
                             formatter: "checkbox", formatoptions: { disabled: true }
                         }
             ],
-            rowNum: 50,
+            rowNum: 500,
             multiselect: true,
             height: 270,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [20, 50, 100],
+            rowList: [500, 1000, 5000],
             pager: '#jQGridDemoPager',
             sortname: 'step',
             viewrecords: true,
 //            rownumbers: true,
             gridview: true,
-            sortorder: 'desc',
+            sortorder: 'asc',
             caption: "Transactions steps",
             editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>',
             onSelectRow: function (id) {
@@ -194,25 +205,75 @@
             grid.jqGrid('resetSelection');
         });
         
-        $("#editRow").click(function () {
-            var sel_id = $('#jQGridDemo').jqGrid('getGridParam', 'selrow');
-            var value = $('#jQGridDemo').jqGrid('getCell', sel_id, 'txid');
-            $.ajax({
-                type: "POST",
-                url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
-                data: value,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (data) {
-                    window.location = data;
-                },
-                error: function (res, status, exeption) {
-                    if (value == "")
-                        alert("please select a row");
-                    else
-                        alert(exeption);
+        $("#setLocation").click(function () {
+            var ids = grid.jqGrid('getGridParam', 'selarrrow');
+            if (ids.length > 0) {
+                var names = [];
+                for (var i = 0, il = ids.length; i < il; i++) {
+                    var name = grid.jqGrid('getCell', ids[i], 'txid');
+                    names.push(name);
                 }
-            });
+                $("#names").html(names.join(", "));
+                var jsonData = JSON.stringify(names);
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx?operation=setlocation&showtx=true&location=") %>' +
+                            txtLocation.value,
+                    data: jsonData,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        window.location.reload();
+                    },
+                    error: function (res, status, exeption) {
+                        alert(res);
+                    }
+                });
+            }
+        });
+
+        $("#editRow").click(function () {
+            var ids = grid.jqGrid('getGridParam', 'selarrrow');
+            if (ids.length > 0) {
+                var names = [];
+
+                for (var i = 0, il = ids.length; i < il; i++) {
+                    var name = grid.jqGrid('getCell', ids[i], 'txid');
+                    names.push(name);
+                    break;// support only the first selection
+                }
+
+                names.push("*");
+
+                var allids = grid.jqGrid('getDataIDs');
+                for (var i = 0; i < allids.length; i++) {
+                    var rowId = allids[i];
+                    var rowData = grid.jqGrid('getRowData', rowId);
+                    if (names.indexOf(rowData.txid) <=0) // do not add the same tx twice
+                        names.push(rowData.txid);
+                    //alert("RowId: " + rowId + " data: " + rowData.txid);
+                }
+
+                //alert ("Names: " + names.join(", ") + "; ids: " + ids.join(", "));
+                $("#names").html(names.join(", "));
+                var jsonData = JSON.stringify(names);
+                $.ajax({
+                    type: "POST",
+                    url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
+                    data: jsonData,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        window.location = data;
+                    },
+                    error: function (res, status, exeption) {
+                        if (value == "")
+                            alert("please select a row");
+                        else
+                            alert(exeption);
+                    }
+                });
+            }
         });
 
         $("#setToDone").click(function () {

@@ -76,13 +76,13 @@
                             formatter: "checkbox", formatoptions: { disabled: true }
                         }
             ],
-            rowNum: 10,
+            rowNum: 500,
             height: 250,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [10, 20, 50, 100],
+            rowList: [500, 1000, 5000],
             pager: '#jQGridDemoPager',
             gridview: true,
             sortname: 'name',

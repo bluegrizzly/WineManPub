@@ -46,15 +46,15 @@
                             formatter:'select', editoptions:{value:"0:English;1:French"},
                             searchoptions: {value:"0:English;1:French"} 
                         }],
-            rowNum: 20,
+            rowNum: 1000,
             height: 300,
             mtype: 'GET',
             loadonce: true,
-            rowList: [20, 50, 200, 500],
+            rowList: [1000, 2000, 5000],
             pager: '#jQGridDemoPager',
             sortname: 'last_name',
             viewrecords: true,
-            sortorder: 'desc',
+            sortorder: 'asc',
             caption: "Customers Details",
             ignoreCase: true,
             editurl: '<%=ResolveUrl("~/Customers/CustomersHandler.ashx") %>'
@@ -109,10 +109,12 @@
                    {//ADD portion
                        closeOnEscape: true,//Closes the popup on pressing escape key
                        closeAfterAdd: true,//Closes the add window after add
-                       modal:true,
+                       modal: true,
                        width: 400,
                        closeAfterEdit: true,
+
                        afterSubmit: function (response, postdata) {
+
                            if (response.responseText == "") {
                                $(this).jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid')//Reloads the grid after Add
                                return [true, '']

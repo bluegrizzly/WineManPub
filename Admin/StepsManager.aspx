@@ -35,7 +35,7 @@
             url: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=steps&explicitsetid=true") %>',
             datatype: "json",
             ajaxSelectOptions: { cache: false },
-            colNames: ['Id', 'Name', 'Name French', 'Final Step', 'Active'],
+            colNames: ['Id', 'Name', 'Name French', 'Final Step', 'Active', 'Required For Completion'],
             colModel: [
                         { name: 'id', index: 'id', width: 30, stype: 'int', sortable: true, sorttype: 'int', editable: true },
                         { name: 'name', index: 'name', width: 200, stype: 'text', sortable: true, editable: true },
@@ -53,20 +53,27 @@
                             editable: true,
                             edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
                             formatter: "checkbox", formatoptions: { disabled: true }
+                        },
+                        {
+                            name: 'required_for_completion', width: 50, index: 'required_for_completion',
+                            align: 'center',
+                            editable: true,
+                            edittype: 'checkbox', editoptions: { value: "1:0", defaultValue: "1" },
+                            formatter: "checkbox", formatoptions: { disabled: true }
                         }],
-            rowNum: 50,
+            rowNum: 100,
             height: 300,
             width: 750,
             multiselect: false,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
-            rowList: [50, 100, 200],
+            rowList: [100, 200],
             pager: '#jQGridDemoPager',
             sortname: 'name',
             viewrecords: true,
             sortorder: 'asc',
-            caption: "Wine Brands",
+            caption: "Production Steps",
             editurl: '<%=ResolveUrl("~/Admin/AdminHandler.ashx?db=steps&explicitsetid=true") %>'
         });
 
