@@ -15,7 +15,13 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
-Version 1.9
+Version 1.9.1 (June 27 2016)
+- Transaction Steps: Improved performance for fetching data. (50% faster)
+- Customers: No look for tel bur  field when doing customer researches
+- Bug fix: Transactions - View All - *enter contract number*: some field were missing
+- Bug fix: Modify Transaction. Set Transaction complete checkbox was not working
+
+Version 1.9 (June 11 2016)
 - Transactions page:
     - Added new combo box : View.  This filter the transaction done or not
     - Sort by default in ascendent ID order and made default page to 500 
