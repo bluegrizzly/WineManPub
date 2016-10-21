@@ -15,6 +15,9 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 1.9.2 (Oct 20 2016)
+- Steps to complete: Now the End date is inclusive in the research.
+
 Version 1.9.1 (June 27 2016)
 - Transaction Steps: Improved performance for fetching data. (50% faster)
 - Customers: No look for tel bur  field when doing customer researches
