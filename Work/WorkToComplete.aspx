@@ -127,7 +127,7 @@
                 "&customer=" + document.getElementById('<%= TextBox_Customer.ClientID %>').value +
                 "&showtx=false",
             datatype: "json",
-            colNames: ['id', 'TxID', 'Date', 'Step', 'Brand', 'Type', 'Customer', 'Tel', 'Loc', 'Done'],
+            colNames: ['id', 'TxID', 'Date', 'Step', 'Symbol', 'Brand', 'Type', 'Customer', 'Tel', 'Loc', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 10, stype: 'text', sortable: true, sorttype: 'int', hidden: true },
                         { name: 'txid', index: 'txid', width: 45, stype: 'text', sortable: true, sorttype: 'int' },
@@ -138,6 +138,7 @@
                                              defaultValue: null },
                         },
                         { name: 'step', index: 'step', width: 70, sortable: true },
+                        { name: 'symbol', index: 'symbol', width: 10, sortable: true },
                         { name: 'brand', index: 'brand', width: 100, sortable: true },
                         { name: 'type', index: 'type', width: 100, sortable: true },
                         { name: 'customer', index: 'customer', width: 140, sortable: true },
@@ -154,16 +155,19 @@
             rowNum: 500,
             multiselect: true,
             height: 270,
+            autowidth: true,
             mtype: 'GET',
             loadonce: true,
             ignoreCase: true,
             rowList: [500, 1000, 5000],
             pager: '#jQGridDemoPager',
-            sortname: 'step',
+            sortable: true,
+            sortname: "step",
+            sortorder: 'asc',
+            viewsortcols: [true,'vertical',true],
             viewrecords: true,
 //            rownumbers: true,
             gridview: true,
-            sortorder: 'asc',
             caption: "Transactions steps",
             editurl: '<%=ResolveUrl("~/Work/WorkToCompleteHandler.ashx") %>',
             onSelectRow: function (id) {
@@ -264,7 +268,7 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data) {
-                        window.location = data;
+                        window.open(data, "_blank");
                     },
                     error: function (res, status, exeption) {
                         if (value == "")

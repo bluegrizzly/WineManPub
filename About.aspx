@@ -15,6 +15,21 @@
             <br />
             <br />
             Versions: 1.1</strong><asp:TextBox ID="TextBox_Versions" runat="server" Font-Size="Small" ForeColor="#333333" Height="282px" ReadOnly="True" TextMode="MultiLine" Width="100%" BackColor="#F2F2F2">
+Version 2.0 ()
+- Transactions page: 
+    - Added Symbol column
+    - Improved performance
+    - When clicking "Tx completed", do not show a aknowldegment message anymore. 
+- Transaction to complete page:
+    - Added Symbol column
+    - Improved performance
+    - Sort by transaction id if a step is selected in filter
+- Customer research: now support research of a first name or last name with more than 1 word (ex: Alain & France)
+- Transaction research (all screens) when seraching for a specific transaction ID, all other filters are ignored and the transaction is displayed.
+- Edit transaction: now open in a new window. (make sure you are not blocking popups)
+- Bottling Appointments: Move boxes to add new hours on the side.
+
+
 Version 1.9.2 (Oct 20 2016)
 - Steps to complete: Now the End date is inclusive in the research.
 

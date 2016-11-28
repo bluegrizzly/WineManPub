@@ -143,15 +143,16 @@
                 "&showtx=true" +
                 "&datekind=" + CheckRadioListSelectedItem(),
             datatype: "json",
-            colNames: ['TxID', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Steps Status', 'Loc', 'Done'],
+            colNames: ['TxID', 'Customer', 'Symbol', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Steps Status', 'Loc', 'Done'],
             colModel: [
                         { name: 'id', index: 'id', width: 50, stype: 'text', sortable: true, sorttype: 'int' },
-                        { name: 'client_id', index: 'client_id', width: 140, sortable: true },
-                        { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
-                        { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
+                        { name: 'client_id', index: 'client_id', width: 100, sortable: true },
+                        { name: 'symbol', index: 'symbol', width: 10, sortable: true },
+                        { name: 'wine_brand_id', index: 'wine_brand_id', width: 80, stype: 'text', sortable: true },
+                        { name: 'wine_type_id', index: 'wine_type_id', width: 80, stype: 'text', sortable: true },
                         { name: 'wine_category_id', index: 'wine_category_id', width: 50, stype: 'text', sortable: true },
                         {
-                            name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
+                            name: 'date_creation', index: 'date_creation', width: 70, stype: 'text', sortable: true,
                             formatter: 'date',
                             formatoptions: {
                                 srcformat: 'm/d/Y h:i:s A',
@@ -160,7 +161,7 @@
                             },
                         },
                         {
-                            name: 'date_bottling', index: 'date_bottling', width: 80, stype: 'text', sortable: true,
+                            name: 'date_bottling', index: 'date_bottling', width: 70, stype: 'text', sortable: true,
                             formatter: 'date',
                             formatoptions: {
                                 srcformat: 'm/d/Y h:i:s A',
@@ -168,7 +169,7 @@
                                 defaultValue: null
                             },
                         },
-                        { name: 'steps_done', index: 'steps_done', width: 50, stype: 'text', sortable: true, editable: false, align: 'center' },
+                        { name: 'steps_done', index: 'steps_done', width: 20, stype: 'text', sortable: true, editable: false, align: 'center' },
                         { name: 'location', index: 'location', width: 20, stype: 'text', sortable: true, editable: true, align: 'center', cellEdit:true },
                         {
                             name: 'done', width: 30, index: 'done',
@@ -180,7 +181,7 @@
             ],
             rowNum: 500,
             multiselect: true,
-            width: 760,
+            autowidth: true,
             height: 270,
             mtype: 'GET',
             loadonce: true,
@@ -338,7 +339,7 @@
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (data) {
-                        window.location = data;
+                        window.open(data, "_blank");
                     },
                     error: function (res, status, exeption) {
                         if (value == "")

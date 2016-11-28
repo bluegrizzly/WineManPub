@@ -13,7 +13,7 @@
     &nbsp;<asp:Label ID="Label2" runat="server" Font-Size="X-Small" Text="(name or tel or id)"></asp:Label>
     </div>
         <asp:Panel ID="Panel1" runat="server" ScrollBars="Horizontal" Width="100%">
-    <table id="jQGridDemo">
+    <table id="jQGridDemo" Width="100%">
     </table>
     <div id="jQGridDemoPager">
     </div>
@@ -48,6 +48,7 @@
                         }],
             rowNum: 1000,
             height: 300,
+            width: 920,
             mtype: 'GET',
             loadonce: true,
             rowList: [1000, 2000, 5000],

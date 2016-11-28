@@ -67,13 +67,14 @@
                     "&filtercustomer=" + document.getElementById('<%= TextBox_CustomerSearch.ClientID%>').value +
                     "&filtertxid=" + document.getElementById('<%= TextBox_TxIDSearch.ClientID%>').value,
                 datatype: "json",
-                colNames: ['id', 'Customer', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
+                colNames: ['id', 'Customer', 'Symbol', 'Brand', 'Type', 'Category', 'Creation Date', 'Bottling Date', 'Station', 'Location', 'Code', 'Done'],
                 colModel: [
                             { name: 'id', index: 'id', width: 40, stype: 'text', sortable: true, sorttype: 'int' },
    		                    { name: 'client_id', index: 'client_id', width: 140, sortable: true },
+                            { name: 'symbol', index: 'symbol', width: 10, sortable: true },
    		                    { name: 'wine_brand_id', index: 'wine_brand_id', width: 100, stype: 'text', sortable: true },
                             { name: 'wine_type_id', index: 'wine_type_id', width: 100, stype: 'text', sortable: true },
-                            { name: 'wine_category_id', index: 'wine_category_id', width: 70, stype: 'text', sortable: true },
+                            { name: 'wine_category_id', index: 'wine_category_id', width: 50, stype: 'text', sortable: true },
                             {
                                 name: 'date_creation', index: 'date_creation', width: 80, stype: 'text', sortable: true,
                                 formatter: 'date',
@@ -109,6 +110,7 @@
                 ],
                 rowNum: 1000,
                 height: 270,
+                autowidth: true,
                 mtype: 'GET',
                 loadonce: true,
                 ignoreCase: true,
@@ -163,10 +165,11 @@
                         type: "POST",
                         url: '<%=ResolveUrl("~/Transactions/TransactionHandler.ashx?operation=editrow") %>',
                         data: jsonData,
+                        async:false,
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
                         success: function (data) {
-                            window.location = data;
+                            window.open(data, "_blank");
                         },
                         error: function (res, status, exeption) {
                             if (value == "")

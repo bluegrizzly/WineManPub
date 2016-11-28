@@ -27,9 +27,9 @@
         <table style="width:100%;">
             <tr>
                 <td class="auto-style2"><h2>Bottling Appointments</h2></td>
-                <td rowspan="3" align class="auto-style4">
+                <td rowspan="5" align class="auto-style4">
                     &nbsp;</td>
-                <td rowspan="3" valign="top">
+                <td rowspan="5" valign="top">
                     <asp:Panel ID="Panel1" runat="server" BorderStyle="Solid" BorderWidth="1px" Height="400px" ScrollBars="Auto">
                         <table class="auto-style5">
                             <tr>
@@ -55,6 +55,24 @@
                                 <td align="center">
                                     &nbsp;</td>
                                 <td align="center" class="auto-style7">
+                                    &nbsp;</td>
+                                <td align="center">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+        <asp:Calendar ID="Calendar_RDV" runat="server" OnSelectionChanged="Calendar_RDV_SelectionChanged" OnDayRender="Calendar_RDV_DayRender">
+                        <SelectedDayStyle BackColor="SkyBlue" />
+                        <TodayDayStyle BackColor="#999999" />
+                        <WeekendDayStyle BackColor="#EEEEEE" />
+        </asp:Calendar>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" align="center">
                                     <asp:DropDownList ID="DropDownList_ManualHour" runat="server" AutoPostBack="True" Height="17px" Width="49px">
                                         <asp:ListItem Value="00">00</asp:ListItem>
                                         <asp:ListItem Value="08"></asp:ListItem>
@@ -86,22 +104,12 @@
                                         <asp:ListItem>50</asp:ListItem>
                                         <asp:ListItem>55</asp:ListItem>
                                     </asp:DropDownList>
-                                    &nbsp;<asp:Button ID="Button_AddHour_S1" runat="server" Text="Add" ToolTip="Insert a specific hour in the table." />
-                                </td>
-                                <td align="center">&nbsp;</td>
-                            </tr>
-                        </table>
-                    </asp:Panel>
+                                    <asp:Button ID="Button_AddHour_S1" runat="server" Text="Add" ToolTip="Insert a specific hour in the table." />
                 </td>
             </tr>
             <tr>
                 <td valign="top">
-        <asp:Calendar ID="Calendar_RDV" runat="server" OnSelectionChanged="Calendar_RDV_SelectionChanged" OnDayRender="Calendar_RDV_DayRender">
-                        <SelectedDayStyle BackColor="SkyBlue" />
-                        <TodayDayStyle BackColor="#999999" />
-                        <WeekendDayStyle BackColor="#EEEEEE" />
-        </asp:Calendar>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td align="center"><asp:Button ID="Button_Select" runat="server" OnClick="Button_Select_Click" Text="Select" Height="30px" Width="68px" style="margin-top: 14px" />
